@@ -88,9 +88,9 @@
     }
     &__waves {
         position:absolute;
-        left: -10em;
+        left: -5em;
         bottom: -10px;
-        animation: wave linear 10s infinite;
+        animation: wave linear 5s infinite alternate;
     }
 }
 
@@ -100,7 +100,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-10%);
+        transform: translateX(-5%);
 
     }
 }
