@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
 .intro {
     width: 100%!important;
     height: 200vh !important;
@@ -24,7 +28,8 @@
     }
     &__title {
         font-size: 7rem;
-        font-family: 'Nixie One', cursive;      
+        font-family: 'Nixie One', cursive; 
+        animation: title 2s linear forwards;     
     }
     &__para {
         font-size: 1.2rem;
@@ -35,6 +40,10 @@
         border: 4px solid aliceblue;
         padding: 15px;
         border-radius: 10px;
+
+        i {
+            margin-left: 10px;
+        }
     }
     &__cloud--one {
         position: relative;
@@ -94,16 +103,6 @@
     }
 }
 
-
-@keyframes wave {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-5%);
-
-    }
-}
 
 
 @media screen and (max-width: 600px) {

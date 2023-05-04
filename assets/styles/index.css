@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nixie+One&family=Nunito&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
 }
 
 .intro {
@@ -24,6 +30,7 @@
 .intro__title {
   font-size: 7rem;
   font-family: "Nixie One", cursive;
+  animation: title 2s linear forwards;
 }
 .intro__para {
   font-size: 1.2rem;
@@ -34,6 +41,9 @@
   border: 4px solid aliceblue;
   padding: 15px;
   border-radius: 10px;
+}
+.intro__para i {
+  margin-left: 10px;
 }
 .intro__cloud--one {
   position: relative;
@@ -94,5 +104,15 @@ section {
   }
   100% {
     transform: translateX(-5%);
+  }
+}
+@keyframes title {
+  from {
+    opacity: 0;
+    letter-spacing: normal;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.1rem;
   }
 }/*# sourceMappingURL=index.css.map */

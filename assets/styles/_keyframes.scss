@@ -1,0 +1,22 @@
+
+// wave animation
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-5%);
+    }
+}
+
+@keyframes title {
+    from {
+        opacity: 0;
+        letter-spacing: normal;
+
+    }
+    to {
+        opacity: 1;
+        letter-spacing: .1rem;
+    }
+}
