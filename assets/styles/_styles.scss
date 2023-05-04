@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid rgba(255, 0, 0, 0.651);
 }
 
 .intro {
-    width: auto!important;
+    width: 100%!important;
     height: 200vh !important;
     background: linear-gradient(180deg, rgb(0, 25, 39) 0%, rgba(0,114,212,1) 100%);
-    overflow-x: hidden;
+    overflow: hidden;
 
     &__container {
         position: absolute;
@@ -17,18 +18,17 @@
     &__heading {
         text-align: center;
         position: relative;
-        top: 20%;
+        top: 15%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: aliceblue;
     }
-
     &__title {
-        font-size: 9rem;
+        font-size: 7rem;
         font-family: 'Nixie One', cursive;      
     }
     &__para {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -37,41 +37,38 @@
         padding: 15px;
         border-radius: 10px;
     }
+    &__cloud--one {
+        position: relative;
+        top: 55em;
+        left: 10em;
+    }
+    &__cloud--two {
+        position: relative;
+        top: 65em;
+        right: 50em;
+    }
+    &__cloud--three {
+        position: relative;
+        top: 75em;
+        left: 80em;
+    }
+    &__cloud--four {
+        position: relative;
+        top: 85em;
+        right: -5em;
+    }
+    &__cloud--five {
+        position: relative;
+        top: 95em;
+        left: 15em;
+    }
 }
-
-
-
-.cloud-one {
-    position: relative;
-    top: 60em;
-    left: 10em;
-}
-
-.cloud-two {
-    position: relative;
-    top: 70em;
-    right: 50em;
-}
-
-.cloud-three {
-    position: relative;
-    top: 85em;
-    left: 80em;
-}
-
-.cloud-four {
-    position: relative;
-    top: 100em;
-    right: -10em;
-}
-
-section {
-    width: auto;
+ section {
     height: 100vh;
-    background-color: rgb(32, 52, 83);
+    width: 100%;
+    background-color: rgb(32, 52, 83); 
 }
 
 @media screen and (max-width: 600px) {
-
 
   }

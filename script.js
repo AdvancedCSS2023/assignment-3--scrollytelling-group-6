@@ -7,14 +7,16 @@ ScrollTrigger.create({
     animation: clouds,
     trigger: "img",
     start: "top center",
-    end: "100%",
+    end: "300%",
     scrub: 1,
+    markers: true,
 });
 
-clouds.to(".cloud-one", { x: 1200 }, 0,)
-clouds.to(".cloud-two", { x: 900 }, 0)
-clouds.to(".cloud-three", { x: -900 }, 0)
-clouds.to(".cloud-four", { x: 600 }, 0)
+clouds.to(".intro__cloud--one", { x: 1200 }, 0,)
+clouds.to(".intro__cloud--two", { x: 900 }, 0)
+clouds.to(".intro__cloud--three", { x: -700 }, 0)
+clouds.to(".intro__cloud--four", { x:900 }, 0)
+clouds.to(".intro__cloud--five", { x: -1000 }, 0)
 
 
 

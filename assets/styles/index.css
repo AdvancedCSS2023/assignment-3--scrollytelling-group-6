@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid rgba(255, 0, 0, 0.651);
 }
 
 .intro {
-  width: auto !important;
+  width: 100% !important;
   height: 200vh !important;
   background: linear-gradient(180deg, rgb(0, 25, 39) 0%, rgb(0, 114, 212) 100%);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .intro__container {
   position: absolute;
@@ -16,17 +17,17 @@
 .intro__heading {
   text-align: center;
   position: relative;
-  top: 20%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: aliceblue;
 }
 .intro__title {
-  font-size: 9rem;
+  font-size: 7rem;
   font-family: "Nixie One", cursive;
 }
 .intro__para {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -35,33 +36,34 @@
   padding: 15px;
   border-radius: 10px;
 }
-
-.cloud-one {
+.intro__cloud--one {
   position: relative;
-  top: 60em;
+  top: 55em;
   left: 10em;
 }
-
-.cloud-two {
+.intro__cloud--two {
   position: relative;
-  top: 70em;
+  top: 65em;
   right: 50em;
 }
-
-.cloud-three {
+.intro__cloud--three {
   position: relative;
-  top: 85em;
+  top: 75em;
   left: 80em;
 }
-
-.cloud-four {
+.intro__cloud--four {
   position: relative;
-  top: 100em;
-  right: -10em;
+  top: 85em;
+  right: -5em;
+}
+.intro__cloud--five {
+  position: relative;
+  top: 95em;
+  left: 15em;
 }
 
 section {
-  width: auto;
   height: 100vh;
+  width: 100%;
   background-color: rgb(32, 52, 83);
 }/*# sourceMappingURL=index.css.map */
