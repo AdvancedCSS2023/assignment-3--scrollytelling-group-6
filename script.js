@@ -19,12 +19,12 @@ clouds.to(".intro__cloud--five", { x: -1000 }, 0)
 
 
 gsap.to('.wave1', {
-    xPercent: -30,
+    xPercent: -35,
     ease: "none",
     scrollTrigger: {
       trigger: ".wave1",
-      start: "top center",
-      end: "bottom 40%",
+      start: "top 30%",
+      end: "250%",
       scrub: 1,
       markers: true,
     }
@@ -32,12 +32,12 @@ gsap.to('.wave1', {
 
 
   gsap.to('.wave2', {
-    xPercent: -20,
+    xPercent: -30,
     ease: "none",
     scrollTrigger: {
       trigger: ".wave1",
-      start: "top center",
-      end: "bottom 40%",
+      start: "top 30%",
+      end: "250%",
       scrub: 1,
       markers: true,
     }
@@ -45,12 +45,12 @@ gsap.to('.wave1', {
 
   
 gsap.to('.wave3', {
-    xPercent: -40,
+    xPercent: -35,
     ease: "none",
     scrollTrigger: {
       trigger: ".wave1",
-      start: "top center",
-      end: "bottom 40%",
+      start: "top 30%",
+      end: "250%",
       scrub: 1,
       markers: true,
     }
