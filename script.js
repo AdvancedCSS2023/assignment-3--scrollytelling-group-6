@@ -18,11 +18,13 @@ clouds.to(".intro__cloud--four", { x:900 }, 0)
 clouds.to(".intro__cloud--five", { x: -1000 }, 0)
 
 
-gsap.to('.wave1', {
+// waves 
+
+gsap.to('.ocean__waves--one', {
     xPercent: -35,
     ease: "none",
     scrollTrigger: {
-      trigger: ".wave1",
+      trigger: ".ocean__waves--one",
       start: "top 30%",
       end: "250%",
       scrub: 1,
@@ -30,12 +32,11 @@ gsap.to('.wave1', {
     }
   })
 
-
-  gsap.to('.wave2', {
+  gsap.to('.ocean__waves--two', {
     xPercent: -30,
     ease: "none",
     scrollTrigger: {
-      trigger: ".wave1",
+      trigger: ".ocean__waves--one",
       start: "top 30%",
       end: "250%",
       scrub: 1,
@@ -43,12 +44,11 @@ gsap.to('.wave1', {
     }
   })
 
-  
-gsap.to('.wave3', {
+gsap.to('.ocean__waves--three', {
     xPercent: -35,
     ease: "none",
     scrollTrigger: {
-      trigger: ".wave1",
+      trigger: ".ocean__waves--one",
       start: "top 30%",
       end: "250%",
       scrub: 1,
