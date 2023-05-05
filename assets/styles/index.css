@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid red;
 }
 
 body {
@@ -11,8 +12,8 @@ body {
 }
 
 .intro {
-  width: 100% !important;
-  height: 200vh !important;
+  width: 100%;
+  min-height: 300vh;
   background: linear-gradient(180deg, rgb(0, 25, 39) 0%, rgb(117, 191, 255) 100%);
   overflow: hidden;
 }
@@ -45,30 +46,30 @@ body {
 .intro__para i {
   margin-left: 10px;
 }
-.intro__cloud--one {
+.intro__clouds--one {
   position: relative;
-  top: 55em;
+  top: 50em;
   left: 10em;
 }
-.intro__cloud--two {
+.intro__clouds--two {
   position: relative;
   top: 65em;
   right: 50em;
 }
-.intro__cloud--three {
-  position: relative;
-  top: 75em;
-  left: 80em;
-}
-.intro__cloud--four {
+.intro__clouds--three {
   position: relative;
   top: 85em;
-  right: -5em;
+  left: -90em;
 }
-.intro__cloud--five {
+.intro__clouds--four {
   position: relative;
-  top: 95em;
-  left: 15em;
+  top: 85em;
+  right: -50em;
+}
+.intro__clouds--five {
+  position: relative;
+  top: 110em;
+  left: 10em;
 }
 
 section {
@@ -79,6 +80,7 @@ section {
 
 .ocean::before {
   display: block;
+  background-color: rgb(117, 191, 255);
   content: "";
   height: 400vh;
 }
@@ -103,8 +105,20 @@ section {
   z-index: 2;
   bottom: -5em;
   left: -3em;
+  min-width: 480px;
+  max-width: 600px;
 }
 
+@media screen and (max-width: 900px) {
+  .beach {
+    bottom: -2em;
+    left: -4em;
+  }
+  .beach > img {
+    width: 95%;
+    height: 95%;
+  }
+}
 @keyframes wave {
   0% {
     transform: translateX(0);
