@@ -84,7 +84,7 @@ body {
     &::before {
         display: block;
         content: "";
-        height: 200vh;
+        height: 400vh;
     }
     &__wrapper {
     position: relative;
@@ -101,6 +101,12 @@ body {
         bottom: -10px;
         animation: wave linear 5s infinite alternate;
     }
+}
+.beach {
+    position: absolute;
+    z-index: 2;
+    bottom: -5em;
+    left: -3em;
 }
 
 

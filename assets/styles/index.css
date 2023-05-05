@@ -80,7 +80,7 @@ section {
 .ocean::before {
   display: block;
   content: "";
-  height: 200vh;
+  height: 400vh;
 }
 .ocean__wrapper {
   position: relative;
@@ -96,6 +96,13 @@ section {
   left: -5em;
   bottom: -10px;
   animation: wave linear 5s infinite alternate;
+}
+
+.beach {
+  position: absolute;
+  z-index: 2;
+  bottom: -5em;
+  left: -3em;
 }
 
 @keyframes wave {
