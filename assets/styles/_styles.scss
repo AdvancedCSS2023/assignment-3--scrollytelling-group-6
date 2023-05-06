@@ -1,18 +1,19 @@
+@import "colors";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
 }
 
 body {
     font-family: 'Nunito', sans-serif;
+    color: $text__primary;
 }
 
 .intro {
     width: 100%;
-    min-height: 300vh;
-    background: linear-gradient(180deg, rgb(0, 25, 39) 0%, rgb(117, 191, 255) 100%);
+    min-height: 330vh;
+    background: linear-gradient(180deg, $darkblue 0%, $skyblue 100%);
     overflow: hidden;
 
     &__container {
@@ -22,10 +23,10 @@ body {
     &__heading {
         text-align: center;
         position: relative;
-        top: 15%;
+        top: 10%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: aliceblue;
+        color: $text__secondary;
     }
     &__title {
         font-size: 7rem;
@@ -38,13 +39,33 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         margin-top: 10em;
-        border: 4px solid aliceblue;
+        border: 4px solid #f0f8ff;
         padding: 15px;
         border-radius: 10px;
-
-        i {
-            margin-left: 10px;
-        }
+    }
+    &__text--one { // intersection observer on this
+        display: block;
+        color: $text__secondary;
+        max-width: 350px;
+        line-height: 4rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+        position: relative;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__text--two {
+        color: $text__secondary;
+        line-height: 4rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+        position: relative;
+        top: 40%;
+        transform: translateX(-50%, -50%);
+        text-align: center;
+        
     }
     &__clouds {
         &--one {
@@ -84,53 +105,33 @@ body {
 }
 
 // waves
-.ocean {
+.scene {
     &::before {
         display: block;
-        background-color: rgb(117, 191, 255);
         content: "";
-        height: 400vh;
+        height: 1200vh; //regulates the vertical scroll
     }
     &__wrapper {
+    background: $skyblue;
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: rgb(117, 191, 255);
     overflow: hidden;
     position: sticky;
     bottom: 0em;
     }
-    &__waves {
+    &__ocean {
         position:absolute;
         left: -5em;
         bottom: -10px;
         animation: wave linear 5s infinite alternate;
-
     }
-}
 
-.beach {
+    &__beach {
     position: absolute;
     z-index: 2;
     bottom: -5em;
     left: -3em;
     min-width: 480px;
-    max-width: 600px;
 }
-
-
-
-@media screen and (max-width: 900px) {
-
-    .beach {
-        bottom: -2em;
-        left: -4em;
-    }
-
-    .beach > img {
-        width: 95%;
-        height: 95%;
-    }
-
-
-  }
+}

@@ -1,20 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nixie+One&family=Nunito&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 body {
   font-family: "Nunito", sans-serif;
+  color: #000000;
 }
 
 .intro {
   width: 100%;
-  min-height: 300vh;
-  background: linear-gradient(180deg, rgb(0, 25, 39) 0%, rgb(117, 191, 255) 100%);
+  min-height: 330vh;
+  background: linear-gradient(180deg, #001927 0%, #75bfff 100%);
   overflow: hidden;
 }
 .intro__container {
@@ -23,10 +23,10 @@ body {
 .intro__heading {
   text-align: center;
   position: relative;
-  top: 15%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: aliceblue;
+  color: #f0f8ff;
 }
 .intro__title {
   font-size: 7rem;
@@ -39,12 +39,32 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 10em;
-  border: 4px solid aliceblue;
+  border: 4px solid #f0f8ff;
   padding: 15px;
   border-radius: 10px;
 }
-.intro__para i {
-  margin-left: 10px;
+.intro__text--one {
+  display: block;
+  color: #f0f8ff;
+  max-width: 350px;
+  line-height: 4rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.intro__text--two {
+  color: #f0f8ff;
+  line-height: 4rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  top: 40%;
+  transform: translateX(-50%, -50%);
+  text-align: center;
 }
 .intro__clouds--one {
   position: relative;
@@ -78,47 +98,34 @@ section {
   background-color: rgb(32, 52, 83);
 }
 
-.ocean::before {
+.scene::before {
   display: block;
-  background-color: rgb(117, 191, 255);
   content: "";
-  height: 400vh;
+  height: 1200vh;
 }
-.ocean__wrapper {
+.scene__wrapper {
+  background: #75bfff;
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: rgb(117, 191, 255);
   overflow: hidden;
   position: sticky;
   bottom: 0em;
 }
-.ocean__waves {
+.scene__ocean {
   position: absolute;
   left: -5em;
   bottom: -10px;
   animation: wave linear 5s infinite alternate;
 }
-
-.beach {
+.scene__beach {
   position: absolute;
   z-index: 2;
   bottom: -5em;
   left: -3em;
   min-width: 480px;
-  max-width: 600px;
 }
 
-@media screen and (max-width: 900px) {
-  .beach {
-    bottom: -2em;
-    left: -4em;
-  }
-  .beach > img {
-    width: 95%;
-    height: 95%;
-  }
-}
 @keyframes wave {
   0% {
     transform: translateX(0);
@@ -135,5 +142,22 @@ section {
   to {
     opacity: 1;
     letter-spacing: 0.1rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .intro {
+    background: linear-gradient(180deg, #010C12 0%, #273953 100%);
+  }
+  .intro__clouds {
+    opacity: 0.5;
+  }
+  .scene__wrapper {
+    background: #273953;
+  }
+}
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .scene__beach {
+    bottom: -2em;
+    left: -4em;
   }
 }/*# sourceMappingURL=index.css.map */

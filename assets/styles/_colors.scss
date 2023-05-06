@@ -1,0 +1,27 @@
+// Descriptive Colors
+$white: #fff;
+$black: #000000;
+$aliceblue: #f0f8ff;
+$skyblue: #75bfff;
+$darkblue: #001927;
+$green: #2c970c;
+
+$darkGradient__darkmode: #010C12;
+$blue__darkmode: #273953;
+
+// Functional Colors
+// default scheme
+$background__primary: $skyblue;
+$background__secondary: $darkblue;
+$text__primary: $black;
+$text__secondary: $aliceblue;
+$text__accent: $green;
+
+
+
+
+
+// dark scheme
+
+$background__secondary--dark: $darkGradient__darkmode;
+$background__primary--dark: $blue__darkmode;

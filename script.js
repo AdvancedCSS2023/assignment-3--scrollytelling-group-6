@@ -20,37 +20,38 @@ clouds.to(".intro__clouds--five", { x: -900 }, 0)
 
 // waves 
 
-gsap.to('.ocean__waves--one', {
-    xPercent: -40,
+gsap.to('.scene__wave--one', {
+    xPercent: -50,
     ease: "none",
     scrollTrigger: {
-      trigger: ".ocean__waves--one",
+      trigger: ".scene__wave--three",
       start: "top 40%",
-      end: "+=3000px", // changes duration by increasing the end point
+      end: "+=700%", // changes duration by increasing the end point
       scrub: 1,
       markers: true,
     }
   })
 
-  gsap.to('.ocean__waves--two', {
-    xPercent: -40,
+
+  gsap.to('.scene__wave--two', {
+    xPercent: -50,
     ease: "none",
     scrollTrigger: {
-      trigger: ".ocean__waves--one",
+      trigger: ".scene__wave--three",
       start: "top 40%",
-      end: "+=3000px",
+      end: "+=700%",
       scrub: 1,
       markers: true,
     }
   })
 
-gsap.to('.ocean__waves--three', {
-    xPercent: -45,
+gsap.to('.scene__wave--three', {
+    xPercent: -50,
     ease: "none",
     scrollTrigger: {
-      trigger: ".ocean__waves--one",
+      trigger: ".scene__wave--three",
       start: "top 40%",
-      end: "+=3000px",
+      end: "+=700%",
       scrub: 1,
       markers: true,
     }
