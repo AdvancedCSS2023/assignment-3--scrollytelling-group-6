@@ -1,14 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nixie+One&family=Nunito&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid rgba(255, 0, 0, 0.651);
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #000000;
 }
 
 .intro {
-  width: 100% !important;
-  height: 200vh !important;
-  background: linear-gradient(180deg, rgb(0, 25, 39) 0%, rgb(0, 114, 212) 100%);
+  width: 100%;
+  min-height: 330vh;
+  background: linear-gradient(180deg, #001927 0%, #75bfff 100%);
   overflow: hidden;
 }
 .intro__container {
@@ -17,14 +23,15 @@
 .intro__heading {
   text-align: center;
   position: relative;
-  top: 15%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: aliceblue;
+  color: #f0f8ff;
 }
 .intro__title {
   font-size: 7rem;
   font-family: "Nixie One", cursive;
+  animation: title 2s linear forwards;
 }
 .intro__para {
   font-size: 1.2rem;
@@ -32,38 +39,125 @@
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 10em;
-  border: 4px solid aliceblue;
+  border: 4px solid #f0f8ff;
   padding: 15px;
   border-radius: 10px;
 }
-.intro__cloud--one {
+.intro__text--one {
+  display: block;
+  color: #f0f8ff;
+  max-width: 350px;
+  line-height: 4rem;
+  font-size: 2.5rem;
+  font-weight: 600;
   position: relative;
-  top: 55em;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.intro__text--two {
+  color: #f0f8ff;
+  line-height: 4rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  top: 40%;
+  transform: translateX(-50%, -50%);
+  text-align: center;
+}
+.intro__clouds--one {
+  position: relative;
+  top: 50em;
   left: 10em;
 }
-.intro__cloud--two {
+.intro__clouds--two {
   position: relative;
   top: 65em;
   right: 50em;
 }
-.intro__cloud--three {
-  position: relative;
-  top: 75em;
-  left: 80em;
-}
-.intro__cloud--four {
+.intro__clouds--three {
   position: relative;
   top: 85em;
-  right: -5em;
+  left: -90em;
 }
-.intro__cloud--five {
+.intro__clouds--four {
   position: relative;
-  top: 95em;
-  left: 15em;
+  top: 85em;
+  right: -50em;
+}
+.intro__clouds--five {
+  position: relative;
+  top: 110em;
+  left: 10em;
 }
 
 section {
   height: 100vh;
   width: 100%;
   background-color: rgb(32, 52, 83);
+}
+
+.scene::before {
+  display: block;
+  content: "";
+  height: 1200vh;
+}
+.scene__wrapper {
+  background: #75bfff;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: sticky;
+  bottom: 0em;
+}
+.scene__ocean {
+  position: absolute;
+  left: -5em;
+  bottom: -10px;
+  animation: wave linear 5s infinite alternate;
+}
+.scene__beach {
+  position: absolute;
+  z-index: 2;
+  bottom: -5em;
+  left: -3em;
+  min-width: 480px;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+@keyframes title {
+  from {
+    opacity: 0;
+    letter-spacing: normal;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.1rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .intro {
+    background: linear-gradient(180deg, #010C12 0%, #273953 100%);
+  }
+  .intro__clouds {
+    opacity: 0.5;
+  }
+  .scene__wrapper {
+    background: #273953;
+  }
+}
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .scene__beach {
+    bottom: -2em;
+    left: -4em;
+  }
 }/*# sourceMappingURL=index.css.map */
