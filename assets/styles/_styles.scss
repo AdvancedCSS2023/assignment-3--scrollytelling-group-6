@@ -53,7 +53,7 @@ body {
             position: absolute;
             top: 30em;
             opacity: 0;
-            transform: translateX($from--right);
+            transform: translateX($from--left);
             span {
                 animation: color-change 2s ease-in infinite alternate;
             }
@@ -144,13 +144,13 @@ body {
 
 &__man {
     position: absolute;
-    left: 34em;
+    left: 40em;
     bottom: 6em;
 }
 &__bottle {
     position: absolute;
     bottom: 11em;
-    left: 37em;
+    left: 43em;
     z-index: 2;
 }
 

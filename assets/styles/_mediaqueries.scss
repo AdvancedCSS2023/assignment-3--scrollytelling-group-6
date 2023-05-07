@@ -21,7 +21,7 @@
   }
 
   // orientation portrait will ask to switch to landscape
-@media (orientation: portrait) {
+@media screen and (max-width: 500px) and (orientation: portrait) {
 
 main {
   display: none;
@@ -30,8 +30,8 @@ main {
 }
 
 
-// preferred orientation for the story for screens less than 900px
-@media screen and (max-width: 900px) and (orientation: landscape) {
+// preferred orientation for the story for screens less than 950px
+@media screen and (max-width: 950px) and (orientation: landscape) {
   
   .intro {
     min-height: 600vh;
@@ -47,10 +47,20 @@ main {
   }
 
   .scene__island {
-    max-width: 50%;
-    bottom: 0em;
-    
+    max-width: 500px;
+  }
+
+  .scene__man {
+    left: 30em;
+  }
+  .scene__bottle {
+    left: 32em;
+  }
+
+  .scene__boat {
+    left: 25em;
+    max-width: 300px;
+  }
+
 }
 
-
-  }

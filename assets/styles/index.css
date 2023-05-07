@@ -119,7 +119,7 @@ body {
   position: absolute;
   top: 30em;
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(-50px);
 }
 .intro__texts--one span {
   animation: color-change 2s ease-in infinite alternate;
@@ -198,13 +198,13 @@ body {
 }
 .scene__man {
   position: absolute;
-  left: 34em;
+  left: 40em;
   bottom: 6em;
 }
 .scene__bottle {
   position: absolute;
   bottom: 11em;
-  left: 37em;
+  left: 43em;
   z-index: 2;
 }
 
@@ -262,12 +262,12 @@ body {
     background: #273953;
   }
 }
-@media (orientation: portrait) {
+@media screen and (max-width: 500px) and (orientation: portrait) {
   main {
     display: none;
   }
 }
-@media screen and (max-width: 900px) and (orientation: landscape) {
+@media screen and (max-width: 950px) and (orientation: landscape) {
   .intro {
     min-height: 600vh;
   }
@@ -279,8 +279,17 @@ body {
     max-height: 60%;
   }
   .scene__island {
-    max-width: 50%;
-    bottom: 0em;
+    max-width: 500px;
+  }
+  .scene__man {
+    left: 30em;
+  }
+  .scene__bottle {
+    left: 32em;
+  }
+  .scene__boat {
+    left: 25em;
+    max-width: 300px;
   }
 }
 /*

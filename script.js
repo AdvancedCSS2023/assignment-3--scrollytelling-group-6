@@ -22,7 +22,7 @@ clouds.to(".intro__clouds--five", { x: -900 }, 0)
 
 gsap.to('.scene__wave--one', {
     xPercent: -50,
-    ease: "power2.in",
+    ease: "none",
     scrollTrigger: {
       trigger: ".scene__wave--three",
       start: "top 40%",
@@ -33,7 +33,7 @@ gsap.to('.scene__wave--one', {
   })
   gsap.to('.scene__wave--two', {
     xPercent: -50,
-    ease: "power2.in",
+    ease: "none",
     scrollTrigger: {
       trigger: ".scene__wave--three",
       start: "top 40%",
@@ -45,7 +45,7 @@ gsap.to('.scene__wave--one', {
 
 gsap.to('.scene__wave--three', {
     xPercent: -50,
-    ease: "power2.in",
+    ease: "none",
     scrollTrigger: {
       trigger: ".scene__wave--three",
       start: "top 40%",
@@ -76,13 +76,13 @@ gsap.to('.scene__wave--three', {
   // man to boat 
 
   gsap.to('.scene__man', {
-    xPercent: 550,
-    ease: "power4.in",
+    xPercent: 300,
+    ease: "none",
     scrollTrigger: {
       trigger: ".scene__man",
       start: "top top",
-      end: "+=3000px",
-      scrub: 1,
+      end: "+=1000px",
+      scrub: 0.5,
       markers: true
     }
   })
@@ -98,12 +98,20 @@ window.onbeforeunload = function() {
 
 let mm = gsap.matchMedia();
 
-mm.add("(max-width: 600px)", () => {
+mm.add("(max-width: 950px)", () => {
 
   let tl = gsap.timeline();
 
-  tl.to("scene__man", {
-    scale: 0.1
+  tl.to(".scene__man",{
+    scale: 0.7,
+    x: -250,
+    y: 50,  
+  })
+
+  tl.to(".scene__bottle", {
+    scale: 0.7,
+    x: -250,
+    y: 45,
   })
 })
 
