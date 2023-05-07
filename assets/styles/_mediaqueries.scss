@@ -23,8 +23,29 @@
   // orientation
 @media screen and (max-width: 600px) and (orientation: portrait) {
 
+.intro__text {
+  font-size: 2rem
+}
 
-  }
+  .scene__island {
+    max-width: 300px;
+    bottom: 0em;
+    
+}
+
+.scene__boat {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.scene__bottle {
+  max-width: 50px;
+
+}
+
+}
+
+
 
   @media screen and (max-width: 800px) and (orientation: landscape) {
 

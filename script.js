@@ -76,7 +76,7 @@ gsap.to('.scene__wave--three', {
   // man to boat 
 
   gsap.to('.scene__man', {
-    xPercent: 750,
+    xPercent: 550,
     ease: "power4.in",
     scrollTrigger: {
       trigger: ".scene__man",
@@ -93,6 +93,19 @@ gsap.to('.scene__wave--three', {
 window.onbeforeunload = function() {
     window.scrollTo(0, 0);
 }
+
+
+
+let mm = gsap.matchMedia();
+
+mm.add("(max-width: 600px)", () => {
+
+  let tl = gsap.timeline();
+
+  tl.to("scene__man", {
+    scale: 0.1
+  })
+})
 
 
 // intersection observers

@@ -111,26 +111,26 @@ body {
 }
 .intro__texts--one {
   color: #f0f8ff;
-  max-width: 500px;
-  position: absolute;
-  top: 25em;
+  margin: 0 2em 0 2em;
   line-height: 4rem;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 600;
+  position: absolute;
+  top: 40em;
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateX(50px);
 }
 .intro__texts--one span {
   animation: color-change 2s ease-in infinite alternate;
 }
 .intro__texts--two {
   color: #f0f8ff;
-  padding: 0 2em 0 2em;
+  margin: 0 2em 0 2em;
   line-height: 4rem;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 600;
   position: absolute;
-  top: 55em;
+  top: 60em;
   opacity: 0;
   transform: translateX(50px);
 }
@@ -187,28 +187,29 @@ section {
   animation: wave linear 5s infinite alternate;
 }
 .scene__beach {
-  position: absolute;
   z-index: 2;
-  bottom: -4em;
-  left: -3em;
-  min-width: 480px;
+}
+.scene__island {
+  position: absolute;
+  bottom: -2em;
+  left: -5em;
 }
 .scene__boat {
   position: absolute;
-  bottom: 6em;
-  right: 20em;
+  bottom: 5em;
+  left: 55em;
   z-index: 2;
   animation: boat-move 1s linear infinite alternate;
 }
 .scene__man {
   position: absolute;
-  bottom: 11em;
-  left: 40em;
+  left: 34em;
+  bottom: 6em;
 }
 .scene__bottle {
   position: absolute;
-  bottom: 15.5em;
-  left: 43em;
+  bottom: 11em;
+  left: 37em;
   z-index: 2;
 }
 
@@ -264,6 +265,22 @@ section {
   }
   .scene__wrapper {
     background: #273953;
+  }
+}
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .intro__text {
+    font-size: 2rem;
+  }
+  .scene__island {
+    max-width: 300px;
+    bottom: 0em;
+  }
+  .scene__boat {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .scene__bottle {
+    max-width: 50px;
   }
 }
 /*
