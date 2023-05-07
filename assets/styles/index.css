@@ -64,6 +64,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid plum;
 }
 
 body {
@@ -73,7 +74,7 @@ body {
 
 .intro {
   width: 100%;
-  min-height: 400vh;
+  min-height: 350vh;
   background: linear-gradient(180deg, #001927 0%, #75bfff 100%);
   overflow: hidden;
 }
@@ -116,7 +117,7 @@ body {
   font-size: 2.2rem;
   font-weight: 600;
   position: absolute;
-  top: 40em;
+  top: 30em;
   opacity: 0;
   transform: translateX(50px);
 }
@@ -130,7 +131,7 @@ body {
   font-size: 2.2rem;
   font-weight: 600;
   position: absolute;
-  top: 60em;
+  top: 70em;
   opacity: 0;
   transform: translateX(50px);
 }
@@ -160,16 +161,10 @@ body {
   left: 10em;
 }
 
-section {
-  height: 100vh;
-  width: 100%;
-  background-color: rgb(32, 52, 83);
-}
-
 .scene::before {
   display: block;
   content: "";
-  height: 1200vh;
+  height: 1300vh;
 }
 .scene__wrapper {
   background: #75bfff;
@@ -267,20 +262,25 @@ section {
     background: #273953;
   }
 }
-@media screen and (max-width: 600px) and (orientation: portrait) {
+@media (orientation: portrait) {
+  main {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .intro {
+    min-height: 600vh;
+  }
   .intro__text {
     font-size: 2rem;
   }
+  .intro__clouds img {
+    max-width: 60%;
+    max-height: 60%;
+  }
   .scene__island {
-    max-width: 300px;
+    max-width: 50%;
     bottom: 0em;
-  }
-  .scene__boat {
-    max-width: 100px;
-    max-height: 100px;
-  }
-  .scene__bottle {
-    max-width: 50px;
   }
 }
 /*

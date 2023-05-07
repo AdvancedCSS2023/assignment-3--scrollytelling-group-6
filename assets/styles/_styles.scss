@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid plum;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 
 .intro {
     width: 100%;
-    min-height: 400vh;
+    min-height: 350vh;
     background: linear-gradient(180deg, $darkblue 0%, $skyblue 100%);
     overflow: hidden;
 
@@ -50,7 +51,7 @@ body {
             font-size: 2.2rem;
             font-weight: 600;
             position: absolute;
-            top: 40em;
+            top: 30em;
             opacity: 0;
             transform: translateX($from--right);
             span {
@@ -64,7 +65,7 @@ body {
             font-size: 2.2rem;
             font-weight: 600;
             position: absolute;
-            top: 60em;
+            top: 70em;
             opacity: 0;
             transform: translateX($from--right);
         }
@@ -100,18 +101,14 @@ body {
         }
     }
 }
- section {
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(32, 52, 83); 
-}
+
 
 // waves
 .scene {
     &::before {
         display: block;
         content: "";
-        height: 1200vh; //regulates the vertical scroll
+        height: 1300vh; //regulates the vertical scroll
     }
     &__wrapper {
     background: $skyblue;

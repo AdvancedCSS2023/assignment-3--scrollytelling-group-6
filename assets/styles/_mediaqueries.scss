@@ -20,33 +20,37 @@
     //text -->
   }
 
-  // orientation
-@media screen and (max-width: 600px) and (orientation: portrait) {
+  // orientation portrait will ask to switch to landscape
+@media (orientation: portrait) {
 
-.intro__text {
-  font-size: 2rem
+main {
+  display: none;
 }
 
+}
+
+
+// preferred orientation for the story for screens less than 900px
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  
+  .intro {
+    min-height: 600vh;
+  }
+
+  .intro__text {
+    font-size: 2rem
+  }
+
+  .intro__clouds img{ //want to include more of the clouds in the viewport here..
+    max-width: 60%;
+    max-height: 60%;
+  }
+
   .scene__island {
-    max-width: 300px;
+    max-width: 50%;
     bottom: 0em;
     
 }
 
-.scene__boat {
-  max-width: 100px;
-  max-height: 100px;
-}
-
-.scene__bottle {
-  max-width: 50px;
-
-}
-
-}
-
-
-
-  @media screen and (max-width: 800px) and (orientation: landscape) {
 
   }

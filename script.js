@@ -22,22 +22,22 @@ clouds.to(".intro__clouds--five", { x: -900 }, 0)
 
 gsap.to('.scene__wave--one', {
     xPercent: -50,
-    ease: "power4.in",
+    ease: "power2.in",
     scrollTrigger: {
       trigger: ".scene__wave--three",
       start: "top 40%",
-      end: "+=800%", // changes duration by increasing the end point
+      end: "+=900%", // changes duration by increasing the end point
       scrub: 1,
 
     }
   })
   gsap.to('.scene__wave--two', {
     xPercent: -50,
-    ease: "power4.in",
+    ease: "power2.in",
     scrollTrigger: {
       trigger: ".scene__wave--three",
       start: "top 40%",
-      end: "+=800%",
+      end: "+=900%",
       scrub: 1,
 
     }
@@ -45,11 +45,11 @@ gsap.to('.scene__wave--one', {
 
 gsap.to('.scene__wave--three', {
     xPercent: -50,
-    ease: "power4.in",
+    ease: "power2.in",
     scrollTrigger: {
       trigger: ".scene__wave--three",
       start: "top 40%",
-      end: "+=800%",
+      end: "+=900%",
       scrub: 1,
 
     }
