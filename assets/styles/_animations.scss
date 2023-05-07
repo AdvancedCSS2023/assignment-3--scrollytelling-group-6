@@ -1,0 +1,60 @@
+//vars to use
+
+$from--left: -50px;
+$from--right: 50px;
+
+
+
+// class animations (for Intersection obs)
+
+.center-fadeIn {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 2s, opacity 2s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 4s ease-in;
+}
+
+//KEYFRAMES
+// wave animation
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-5%);
+    }
+}
+
+// title entrance
+@keyframes title {
+    from {
+        opacity: 0;
+        letter-spacing: normal;
+
+    }
+    to {
+        opacity: 1;
+        letter-spacing: .1rem;
+    }
+}
+
+// marker effect
+@keyframes color-change {
+    to{
+       color: #f84646; 
+    }
+}
+
+@keyframes boat-move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(3%);
+        transform: rotate(-1deg);
+    }
+}

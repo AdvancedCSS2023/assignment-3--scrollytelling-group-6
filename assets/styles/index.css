@@ -1,5 +1,65 @@
+/*
+
+@mixin marker-effect {
+    position: absolute;
+    background-color: rgb(241, 60, 60);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@mixin marker-wrap {
+    overflow: hidden;
+    display: inline-block;
+    position: relative; 
+}
+
+*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nixie+One&family=Nunito&display=swap");
+.center-fadeIn {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 2s, opacity 2s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 4s ease-in;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+@keyframes title {
+  from {
+    opacity: 0;
+    letter-spacing: normal;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.1rem;
+  }
+}
+@keyframes color-change {
+  to {
+    color: #f84646;
+  }
+}
+@keyframes boat-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(3%);
+    transform: rotate(-1deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +73,7 @@ body {
 
 .intro {
   width: 100%;
-  min-height: 330vh;
+  min-height: 400vh;
   background: linear-gradient(180deg, #001927 0%, #75bfff 100%);
   overflow: hidden;
 }
@@ -21,12 +81,13 @@ body {
   position: absolute;
 }
 .intro__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  position: relative;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #f0f8ff;
+  padding-top: 15em;
 }
 .intro__title {
   font-size: 7rem;
@@ -34,37 +95,44 @@ body {
   animation: title 2s linear forwards;
 }
 .intro__para {
+  width: 200px;
   font-size: 1.2rem;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 10em;
+  margin-top: 8em;
   border: 4px solid #f0f8ff;
   padding: 15px;
   border-radius: 10px;
 }
-.intro__text--one {
-  display: block;
-  color: #f0f8ff;
-  max-width: 350px;
-  line-height: 4rem;
-  font-size: 2.5rem;
-  font-weight: 600;
-  position: relative;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
+.intro__texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
-.intro__text--two {
+.intro__texts--one {
   color: #f0f8ff;
+  max-width: 500px;
+  position: absolute;
+  top: 25em;
   line-height: 4rem;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 600;
-  position: relative;
-  top: 40%;
-  transform: translateX(-50%, -50%);
-  text-align: center;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.intro__texts--one span {
+  animation: color-change 2s ease-in infinite alternate;
+}
+.intro__texts--two {
+  color: #f0f8ff;
+  padding: 0 2em 0 2em;
+  line-height: 4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  position: absolute;
+  top: 55em;
+  opacity: 0;
+  transform: translateX(50px);
 }
 .intro__clouds--one {
   position: relative;
@@ -121,9 +189,38 @@ section {
 .scene__beach {
   position: absolute;
   z-index: 2;
-  bottom: -5em;
+  bottom: -4em;
   left: -3em;
   min-width: 480px;
+}
+.scene__boat {
+  position: absolute;
+  bottom: 6em;
+  right: 20em;
+  z-index: 2;
+  animation: boat-move 1s linear infinite alternate;
+}
+.scene__man {
+  position: absolute;
+  bottom: 11em;
+  left: 40em;
+}
+.scene__bottle {
+  position: absolute;
+  bottom: 15.5em;
+  left: 43em;
+  z-index: 2;
+}
+
+.center-fadeIn {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 2s, opacity 2s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 4s ease-in;
 }
 
 @keyframes wave {
@@ -144,6 +241,20 @@ section {
     letter-spacing: 0.1rem;
   }
 }
+@keyframes color-change {
+  to {
+    color: #f84646;
+  }
+}
+@keyframes boat-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(3%);
+    transform: rotate(-1deg);
+  }
+}
 @media (prefers-color-scheme: dark) {
   .intro {
     background: linear-gradient(180deg, #010C12 0%, #273953 100%);
@@ -155,9 +266,20 @@ section {
     background: #273953;
   }
 }
-@media screen and (max-width: 600px) and (orientation: portrait) {
-  .scene__beach {
-    bottom: -2em;
-    left: -4em;
-  }
-}/*# sourceMappingURL=index.css.map */
+/*
+
+@mixin marker-effect {
+    position: absolute;
+    background-color: rgb(241, 60, 60);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@mixin marker-wrap {
+    overflow: hidden;
+    display: inline-block;
+    position: relative; 
+}
+
+*//*# sourceMappingURL=index.css.map */

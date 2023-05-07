@@ -1,8 +1,12 @@
 @import "colors";
+@import "mixins";
+@import "animations";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
 body {
@@ -12,7 +16,7 @@ body {
 
 .intro {
     width: 100%;
-    min-height: 330vh;
+    min-height: 400vh;
     background: linear-gradient(180deg, $darkblue 0%, $skyblue 100%);
     overflow: hidden;
 
@@ -21,51 +25,50 @@ body {
     }
 
     &__heading {
-        text-align: center;
-        position: relative;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include flex;
         color: $text__secondary;
+        padding-top: 15em;
     }
     &__title {
         font-size: 7rem;
         font-family: 'Nixie One', cursive; 
         animation: title 2s linear forwards;     
     }
-    &__para {
+    &__para {   
+        width: 200px;
         font-size: 1.2rem;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin-top: 10em;
+        margin-top: 8em;
         border: 4px solid #f0f8ff;
         padding: 15px;
         border-radius: 10px;
     }
-    &__text--one { // intersection observer on this
-        display: block;
-        color: $text__secondary;
-        max-width: 350px;
-        line-height: 4rem;
-        font-size: 2.5rem;
-        font-weight: 600;
-        position: relative;
-        left: 50%;
-        top: 40%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    &__text--two {
-        color: $text__secondary;
-        line-height: 4rem;
-        font-size: 2.5rem;
-        font-weight: 600;
-        position: relative;
-        top: 40%;
-        transform: translateX(-50%, -50%);
-        text-align: center;
-        
+    &__texts {
+        @include flex;
+        &--one { // intersection observer on this
+            color: $text__secondary;
+            max-width: 500px;
+            position: absolute;
+            top: 25em;
+            line-height: 4rem;
+            font-size: 2.4rem;  
+            font-weight: 600;
+            opacity: 0;
+            transform: translateX($from--left);
+            span {
+                animation: color-change 2s ease-in infinite alternate;
+            }
+        }   
+        &--two {
+            color: $text__secondary;
+            padding: 0 2em 0 2em;
+            line-height: 4rem;
+            font-size: 2.4rem;
+            font-weight: 600;
+            position: absolute;
+            top: 55em;
+            opacity: 0;
+            transform: translateX($from--right);
+        }
     }
     &__clouds {
         &--one {
@@ -120,18 +123,38 @@ body {
     position: sticky;
     bottom: 0em;
     }
-    &__ocean {
-        position:absolute;
-        left: -5em;
-        bottom: -10px;
-        animation: wave linear 5s infinite alternate;
+&__ocean {
+    position:absolute;
+    left: -5em;
+    bottom: -10px;
+    animation: wave linear 5s infinite alternate;
     }
 
-    &__beach {
+&__beach {
     position: absolute;
     z-index: 2;
-    bottom: -5em;
+    bottom: -4em;
     left: -3em;
     min-width: 480px;
+        
+}
+&__boat {
+    position: absolute;
+    bottom: 6em;
+    right: 20em;
+    z-index: 2;
+    animation: boat-move 1s linear infinite alternate;
+}
+&__man {
+    position: absolute;
+    bottom: 11em;
+    left: 40em;
+}
+&__bottle {
+    position: absolute;
+    bottom: 15.5em;
+    left: 43em;
+    z-index: 2;
 }
 }
+

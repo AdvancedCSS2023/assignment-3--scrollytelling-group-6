@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 
 // clouds moving on scroll
@@ -22,38 +22,68 @@ clouds.to(".intro__clouds--five", { x: -900 }, 0)
 
 gsap.to('.scene__wave--one', {
     xPercent: -50,
-    ease: "none",
+    ease: "power4.in",
     scrollTrigger: {
       trigger: ".scene__wave--three",
       start: "top 40%",
-      end: "+=700%", // changes duration by increasing the end point
+      end: "+=800%", // changes duration by increasing the end point
       scrub: 1,
-      markers: true,
+
     }
   })
-
-
   gsap.to('.scene__wave--two', {
     xPercent: -50,
-    ease: "none",
+    ease: "power4.in",
     scrollTrigger: {
       trigger: ".scene__wave--three",
       start: "top 40%",
-      end: "+=700%",
+      end: "+=800%",
       scrub: 1,
-      markers: true,
+
     }
   })
 
 gsap.to('.scene__wave--three', {
     xPercent: -50,
-    ease: "none",
+    ease: "power4.in",
     scrollTrigger: {
       trigger: ".scene__wave--three",
       start: "top 40%",
-      end: "+=700%",
+      end: "+=800%",
       scrub: 1,
-      markers: true,
+
+    }
+  })
+
+
+  // bottle motion path
+  let bottleScroll = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".scene__bottle",
+      start: "top center",
+      end: "+=600px",
+      scrub: 0.5,
+    }
+  }); 
+  bottleScroll.to('.scene__bottle', {
+    motionPath: {
+      path: "M33.834,60.412 C52.803,53.384 59.846,32.141 132.889,30.3 174.1335,29.25995 206.57465,33.52242 231.73044,50.10079 252.31246,63.66491 302.668,120.119 295.078,173.275",
+      duration: 5,
+      align: "self",
+      autoRotate: -35,
+    }});
+  
+  // man to boat 
+
+  gsap.to('.scene__man', {
+    xPercent: 750,
+    ease: "power4.in",
+    scrollTrigger: {
+      trigger: ".scene__man",
+      start: "top top",
+      end: "+=3000px",
+      scrub: 1,
+      markers: true
     }
   })
 
@@ -63,3 +93,30 @@ gsap.to('.scene__wave--three', {
 window.onbeforeunload = function() {
     window.scrollTo(0, 0);
 }
+
+
+// intersection observers
+
+
+const texts = document.querySelectorAll(".intro__text");
+
+const options = {
+  root: null,
+  threshold: 1,
+  rootMargin: "1px",
+};
+
+const observer = new IntersectionObserver(function (entries) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.add("center-fadeIn");
+  });
+}, options);  
+
+texts.forEach((text) => {
+  observer.observe(text);
+});
+
+
