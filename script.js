@@ -179,33 +179,40 @@ gsap.to('.scene__wave--three', {
   })
 
 
-//reload reset
-window.onbeforeunload = function() {
-    window.scrollTo(0, 0);
-}
-
-
-
+  //
 let mm = gsap.matchMedia();
 
 mm.add("(max-width: 950px)", () => {
 
   let tl = gsap.timeline();
 
-  tl.to(".scene__man",{
+  tl.to(".scene__island",{
     scale: 0.7,
-    x: -250,
+    y: 80,
+    x: -50,
+  })
+
+  tl.to(".scene__man",{
+    scale: 0.6,
+    x: -300,
     y: 50,  
   })
 
   tl.to(".scene__bottle", {
-    scale: 0.7,
-    x: -250,
+    scale: 0.6,
+    x: -300,
     y: 45,
+  })
+  tl.to(".scene__boat", {
+    scale: 0.7,
+    x: -150,
   })
 })
 
-
+//reload reset
+window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+}
 // intersection observers
 
 
