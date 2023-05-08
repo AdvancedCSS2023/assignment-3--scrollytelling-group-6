@@ -1,5 +1,16 @@
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
+// sticky container for the scenes frame
+ScrollTrigger.create({
+  trigger: '.scene',
+  start: 'top top', 
+  endTrigger: '#end-trigger', 
+  pin: true,
+  pinSpacing: false,
+  id: 'scene'
+});
+
+
 
 // clouds moving on scroll
 let clouds = gsap.timeline();
@@ -8,7 +19,7 @@ ScrollTrigger.create({
     trigger: "img",
     start: "top 70%",
     end: "300%",
-    scrub: 1,
+    scrub: 1, 
 });
 
 clouds.to(".intro__clouds--one", { x: 1200 }, 0,)
@@ -22,46 +33,46 @@ clouds.to(".intro__clouds--five", { x: -900 }, 0)
 
 gsap.to('.scene__wave--one', {
     xPercent: -50,
-    ease: "none",
+    ease: "power1.in",
     scrollTrigger: {
-      trigger: ".scene__wave--three",
+      trigger: ".textboxes__textbox--3",
       start: "top 40%",
-      end: "+=900%", // changes duration by increasing the end point
+      endTrigger: "#end-trigger", 
       scrub: 1,
+      markers: true,
 
     }
   })
   gsap.to('.scene__wave--two', {
     xPercent: -50,
-    ease: "none",
+    ease: "power1.in",
     scrollTrigger: {
-      trigger: ".scene__wave--three",
+      trigger: ".textboxes__textbox--3",
       start: "top 40%",
-      end: "+=900%",
+      endTrigger: "#end-trigger", 
       scrub: 1,
-
     }
   })
 
 gsap.to('.scene__wave--three', {
     xPercent: -50,
-    ease: "none",
+    ease: "power1.in",
     scrollTrigger: {
-      trigger: ".scene__wave--three",
+      trigger: ".textboxes__textbox--3",
       start: "top 40%",
-      end: "+=900%",
+      endTrigger: "#end-trigger", 
       scrub: 1,
 
     }
   })
 
 
-  // bottle motion path
+  // bottle to ocean motion path
   let bottleScroll = gsap.timeline({
     scrollTrigger: {
-      trigger: ".scene__bottle",
+      trigger: ".textboxes__textbox--2",
       start: "top center",
-      end: "+=600px",
+      end: "+=500px",
       scrub: 0.5,
     }
   }); 
@@ -72,21 +83,100 @@ gsap.to('.scene__wave--three', {
       align: "self",
       autoRotate: -35,
     }});
+
+    gsap.to('.scene__bottle', {
+      opacity: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".textboxes__textbox--3",
+        start: "top top",
+        end: "+=500px",
+        scrub: 0.5,
+      }
+    })
   
   // man to boat 
-
   gsap.to('.scene__man', {
     xPercent: 300,
     ease: "none",
     scrollTrigger: {
-      trigger: ".scene__man",
+      trigger: ".textboxes__textbox--3",
       start: "top top",
       end: "+=1000px",
       scrub: 0.5,
-      markers: true
     }
   })
 
+
+  //move island out of frame
+  gsap.to('.scene__island', {
+    xPercent: -300,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".textboxes__textbox--4",
+      start: "top top",
+      end: "+=600px",
+      scrub: 1,
+    }
+  })
+
+  //move man and boat to center 
+
+  gsap.to('.scene__man', {
+    x: -350,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".textboxes__textbox--5",
+      start: "top top",
+      end: "+=1000px",
+      scrub: 0.5,
+    }
+  })
+  gsap.to('.scene__boat', {
+    x: -350,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".textboxes__textbox--5",
+      start: "top top",
+      end: "+=1000px",
+      scrub: 0.5,
+    }
+  })
+ 
+
+  //co2 appear
+  gsap.to('.scene__co2--1', {
+    opacity: 0.8,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".textboxes__textbox--6",
+      start: "top top",
+      end: "+=500px",
+      scrub: 0.5,
+    }
+  })
+
+  gsap.to('.scene__co2--2', {
+    opacity: 0.8,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".textboxes__textbox--6",
+      start: "top top",
+      end: "+=800px",
+      scrub: 0.5,
+    }
+  })
+
+  gsap.to('.scene__co2--3', {
+    opacity: 0.8,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".textboxes__textbox--6",
+      start: "top top",
+      end: "+=1200px",
+      scrub: 0.5,
+    }
+  })
 
 
 //reload reset
@@ -120,6 +210,7 @@ mm.add("(max-width: 950px)", () => {
 
 
 const texts = document.querySelectorAll(".intro__text");
+const sectionText = document.querySelectorAll(".textboxes__inner-text");
 
 const options = {
   root: null,
@@ -140,4 +231,7 @@ texts.forEach((text) => {
   observer.observe(text);
 });
 
+sectionText.forEach((text2) => {
+  observer.observe(text2);
+});
 

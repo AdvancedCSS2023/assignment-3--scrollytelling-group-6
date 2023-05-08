@@ -51,10 +51,9 @@ $from--right: 50px;
 
 @keyframes boat-move {
     0% {
-        transform: translateY(0);
+        transform: rotate(0);
     }
     100% {
-        transform: translateY(3%);
-        transform: rotate(-1deg);
+        transform: rotate(1deg);
     }
 }
