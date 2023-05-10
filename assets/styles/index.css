@@ -81,6 +81,32 @@
     transform: rotate(-80deg) translateX(-80px);
   }
 }
+@keyframes eyes-blink {
+  0% {
+    transform: scaleY(1);
+  }
+  15% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  38% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -329,6 +355,11 @@ body {
   animation: move-arm 5s ease infinite alternate;
 }
 
+.eyes-man {
+  animation: eyes-blink 3s infinite;
+  transform-origin: center 20%;
+}
+
 .learn-more {
   z-index: 2;
   background: url(../img/trash-ocean.png) no-repeat center;
@@ -407,6 +438,7 @@ body {
   bottom: -10em;
   height: 100vh;
   background-color: #0693E3;
+  display: none;
 }
 
 .scene__fish1 {
@@ -635,6 +667,32 @@ body {
   }
   100% {
     transform: rotate(-80deg) translateX(-80px);
+  }
+}
+@keyframes eyes-blink {
+  0% {
+    transform: scaleY(1);
+  }
+  15% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  38% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1);
   }
 }
 @media (prefers-color-scheme: dark) {

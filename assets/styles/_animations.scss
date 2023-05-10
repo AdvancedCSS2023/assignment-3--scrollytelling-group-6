@@ -84,3 +84,14 @@ $from--right: 50px;
     }
 
 }
+
+@keyframes eyes-blink {
+    0% { transform:scaleY(1) }
+    15% { transform:scaleY(1) }
+    20% { transform:scaleY(0) }
+    25% { transform:scaleY(1) }
+    38% { transform:scaleY(1) }
+    40% { transform:scaleY(0) }
+    45% { transform:scaleY(1) }
+    80% { transform:scaleY(1) }
+}
