@@ -262,8 +262,40 @@ body {
 
 
 #blader_9{
-    animation: blad_5 3s linear infinite alternate;
+    animation: blad 4s linear infinite alternate;
 }  
+
+#blader_10{
+    animation: blad 6s linear infinite alternate;
+}
+
+#blader_11{
+    animation: blad 6s linear infinite alternate;
+}  
+
+#blader_12{
+    animation: blad 6s linear infinite alternate;
+}  
+
+#blader_14{
+    animation: blad 6s linear infinite alternate;
+}
+
+#blader_15{
+    animation: blad 5s linear infinite alternate;
+}
+
+#blader_16{
+    animation: blad 10s linear infinite alternate;
+}
+
+#blader_17{
+    animation: blad 10s linear infinite alternate;
+}
+
+#blader_18{
+    animation: blad 10s linear infinite alternate;
+}
 
 
 @keyframes blad {
@@ -272,16 +304,16 @@ body {
         
       }
       25%{
-          transform: rotateX(1deg) ;
+        transform: rotate(1deg) translate(1px) skewX(0deg);
           
         }
       
         75%{
-          transform: rotate(1deg) translateY(1px);
+            transform: rotate(0deg) translate(1px) skewX(0deg);
           
         }
       100%{
-          transform: rotate(0deg) translate(0px) skewX(0deg);
+          transform: rotate(1deg) translate(0px) skewX(0deg);
           
         }
 
