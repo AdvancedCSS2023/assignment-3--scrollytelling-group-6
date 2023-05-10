@@ -251,7 +251,7 @@ body {
 }
 .side__inner {
   transform: translateX(-50px);
-  color: #f0f8ff;
+  color: rgb(100, 100, 100);
   font-size: 1.7rem;
   margin: 0 20%;
   opacity: 0;
