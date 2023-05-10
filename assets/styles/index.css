@@ -81,6 +81,7 @@
     transform: rotate(-80deg) translateX(-80px);
   }
 }
+<<<<<<< HEAD
 @keyframes eyes-blink {
   0% {
     transform: scaleY(1);
@@ -105,6 +106,115 @@
   }
   80% {
     transform: scaleY(1);
+=======
+@keyframes blad {
+  0% {
+    transform: rotate(0deg) translate(0px) skewX(0deg);
+  }
+  25% {
+    transform: rotate(1deg) translate(1px) skewX(0deg);
+  }
+  75% {
+    transform: rotate(0deg) translate(1px) skewX(0deg);
+  }
+  100% {
+    transform: rotate(1deg) translate(0px) skewX(0deg);
+  }
+}
+@keyframes swim-left {
+  0% {
+    right: 20vh;
+  }
+  50% {
+    transform: rotate 40em;
+    transform: translateY(2em);
+  }
+  80% {
+    transform: translateY(1em);
+    transform: scaleY(-1);
+    opacity: 1;
+  }
+  100% {
+    right: 55vh;
+    transform: translateY(2em) rotate(-8deg);
+    transform: scaleY(-1);
+    opacity: 0;
+  }
+}
+@keyframes die {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: translateY(-4.7em) rotate(-30deg);
+  }
+  100% {
+    transform: translateY(-2.6em);
+    opacity: 2;
+  }
+}
+@keyframes oil_1 {
+  0% {
+    transform: rotate(2em);
+  }
+  100% {
+    transform: translateY(20em);
+    opacity: 0;
+  }
+}
+@keyframes oil_2 {
+  0% {
+    transform: rotate(1em);
+  }
+  100% {
+    transform: translateY(50em);
+    opacity: 0;
+  }
+}
+@keyframes oil_3 {
+  0% {
+    transform: rotate(2em);
+  }
+  100% {
+    transform: translateY(10em);
+    opacity: 0;
+  }
+}
+@keyframes garbage {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: translateX(-2em);
+    opacity: 1;
+  }
+}
+@keyframes garbage1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translateX(4.7em) rotate(60deg);
+  }
+  100% {
+    transform: translateX(-4.6em);
+    opacity: 1;
+  }
+}
+@keyframes garbage2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4.7em) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(-4.6em);
+    opacity: 1;
+>>>>>>> b2b38a8996b679438a97624889b0f7ae86046117
   }
 }
 * {
@@ -415,23 +525,41 @@ body {
 }
 
 #blader_9 {
-  animation: blad_5 3s linear infinite alternate;
+  animation: blad 4s linear infinite alternate;
 }
 
-@keyframes blad {
-  0% {
-    transform: rotate(0deg) translate(0px) skewX(0deg);
-  }
-  25% {
-    transform: rotateX(1deg);
-  }
-  75% {
-    transform: rotate(1deg) translateY(1px);
-  }
-  100% {
-    transform: rotate(0deg) translate(0px) skewX(0deg);
-  }
+#blader_10 {
+  animation: blad 6s linear infinite alternate;
 }
+
+#blader_11 {
+  animation: blad 6s linear infinite alternate;
+}
+
+#blader_12 {
+  animation: blad 6s linear infinite alternate;
+}
+
+#blader_14 {
+  animation: blad 6s linear infinite alternate;
+}
+
+#blader_15 {
+  animation: blad 5s linear infinite alternate;
+}
+
+#blader_16 {
+  animation: blad 10s linear infinite alternate;
+}
+
+#blader_17 {
+  animation: blad 10s linear infinite alternate;
+}
+
+#blader_18 {
+  animation: blad 10s linear infinite alternate;
+}
+
 .fish-container {
   position: absolute;
   width: 100%;
@@ -463,38 +591,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-@keyframes swim-left {
-  0% {
-    right: 20vh;
-  }
-  50% {
-    transform: rotate 40em;
-    transform: translateY(2em);
-  }
-  80% {
-    transform: translateY(1em);
-    transform: scaleY(-1);
-    opacity: 1;
-  }
-  100% {
-    right: 55vh;
-    transform: translateY(2em) rotate(-8deg);
-    transform: scaleY(-1);
-    opacity: 0;
-  }
-}
-@keyframes die {
-  0% {
-    transform: rotate(1deg);
-  }
-  50% {
-    transform: translateY(-4.7em) rotate(-30deg);
-  }
-  100% {
-    transform: translateY(-2.6em);
-    opacity: 2;
-  }
-}
 .garbage {
   position: absolute;
   top: 350px;
@@ -542,69 +638,6 @@ body {
   animation: oil_1 4s linear forwards;
 }
 
-@keyframes oil_1 {
-  0% {
-    transform: rotate(2em);
-  }
-  100% {
-    transform: translateY(20em);
-    opacity: 0;
-  }
-}
-@keyframes oil_2 {
-  0% {
-    transform: rotate(1em);
-  }
-  100% {
-    transform: translateY(50em);
-    opacity: 0;
-  }
-}
-@keyframes oil_3 {
-  0% {
-    transform: rotate(2em);
-  }
-  100% {
-    transform: translateY(10em);
-    opacity: 0;
-  }
-}
-@keyframes garbage {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-50deg);
-  }
-  100% {
-    transform: translateX(-2em);
-    opacity: 1;
-  }
-}
-@keyframes garbage1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: translateX(4.7em) rotate(60deg);
-  }
-  100% {
-    transform: translateX(-4.6em);
-    opacity: 1;
-  }
-}
-@keyframes garbage2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: translateY(-4.7em) rotate(-10deg);
-  }
-  100% {
-    transform: translateY(-4.6em);
-    opacity: 1;
-  }
-}
 .center-fadeIn {
   transform: translateX(0);
   opacity: 1;
@@ -669,6 +702,7 @@ body {
     transform: rotate(-80deg) translateX(-80px);
   }
 }
+<<<<<<< HEAD
 @keyframes eyes-blink {
   0% {
     transform: scaleY(1);
@@ -693,6 +727,115 @@ body {
   }
   80% {
     transform: scaleY(1);
+=======
+@keyframes blad {
+  0% {
+    transform: rotate(0deg) translate(0px) skewX(0deg);
+  }
+  25% {
+    transform: rotate(1deg) translate(1px) skewX(0deg);
+  }
+  75% {
+    transform: rotate(0deg) translate(1px) skewX(0deg);
+  }
+  100% {
+    transform: rotate(1deg) translate(0px) skewX(0deg);
+  }
+}
+@keyframes swim-left {
+  0% {
+    right: 20vh;
+  }
+  50% {
+    transform: rotate 40em;
+    transform: translateY(2em);
+  }
+  80% {
+    transform: translateY(1em);
+    transform: scaleY(-1);
+    opacity: 1;
+  }
+  100% {
+    right: 55vh;
+    transform: translateY(2em) rotate(-8deg);
+    transform: scaleY(-1);
+    opacity: 0;
+  }
+}
+@keyframes die {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: translateY(-4.7em) rotate(-30deg);
+  }
+  100% {
+    transform: translateY(-2.6em);
+    opacity: 2;
+  }
+}
+@keyframes oil_1 {
+  0% {
+    transform: rotate(2em);
+  }
+  100% {
+    transform: translateY(20em);
+    opacity: 0;
+  }
+}
+@keyframes oil_2 {
+  0% {
+    transform: rotate(1em);
+  }
+  100% {
+    transform: translateY(50em);
+    opacity: 0;
+  }
+}
+@keyframes oil_3 {
+  0% {
+    transform: rotate(2em);
+  }
+  100% {
+    transform: translateY(10em);
+    opacity: 0;
+  }
+}
+@keyframes garbage {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: translateX(-2em);
+    opacity: 1;
+  }
+}
+@keyframes garbage1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translateX(4.7em) rotate(60deg);
+  }
+  100% {
+    transform: translateX(-4.6em);
+    opacity: 1;
+  }
+}
+@keyframes garbage2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4.7em) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(-4.6em);
+    opacity: 1;
+>>>>>>> b2b38a8996b679438a97624889b0f7ae86046117
   }
 }
 @media (prefers-color-scheme: dark) {
