@@ -195,7 +195,7 @@ body {
     }
     &__inner {
         transform: translateX($from--left);
-        color: $aliceblue;
+        color: rgb(100, 100, 100);
         font-size: 1.7rem;
         margin: 0 20%;
         opacity: 0;
@@ -207,8 +207,6 @@ body {
             }
 
 }
-
-
 
 .what-can-u-do {
     background: url(../img/beach-cleaning.png) no-repeat center;

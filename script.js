@@ -243,7 +243,7 @@ window.onbeforeunload = function() {
 
 
 const texts = document.querySelectorAll(".intro__text");
-
+const sectionText = document.querySelectorAll(".side__inner"); 
 
 const options = {
   root: null,
@@ -263,20 +263,6 @@ const observer = new IntersectionObserver(function (entries) {
 texts.forEach((text) => {
   observer.observe(text);
 });
-
-
-const sectionText = document.querySelectorAll(".side__inner"); 
-const observer2 = new IntersectionObserver(function (entries) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    }
-    entry.target.classList.add("center-fadeIn");
-
-    observer.unobserve(entry.target);
-  });
-}, options); 
-
 sectionText.forEach((text2) => {
-  observer2.observe(text2);
+  observer.observe(text2);
 });
