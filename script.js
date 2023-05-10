@@ -244,6 +244,7 @@ window.onbeforeunload = function() {
 
 const texts = document.querySelectorAll(".intro__text");
 const sectionText = document.querySelectorAll(".side__inner"); 
+const text3 = document.querySelectorAll(".actions__text");
 
 const options = {
   root: null,
@@ -265,4 +266,7 @@ texts.forEach((text) => {
 });
 sectionText.forEach((text2) => {
   observer.observe(text2);
+});
+text3.forEach((text3) => {
+  observer.observe(text3);
 });

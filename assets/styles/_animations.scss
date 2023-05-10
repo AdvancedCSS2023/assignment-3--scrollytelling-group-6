@@ -57,3 +57,30 @@ $from--right: 50px;
         transform: rotate(1deg);
     }
 }
+
+
+@keyframes zoom-bg {
+    0% {
+      background-size: 100%;
+  
+    }
+    50% {
+      background-size: 110%;
+    }
+    100% {
+      background-size: 100%;
+    }
+  }
+
+  @keyframes move-arm {
+    0% {
+      transform: rotate(-50deg) translateX(-60px);
+    }
+    50% {
+      transform: rotate(-90deg) translateX(-80px);
+    }
+    100% {
+      transform: rotate(-80deg) translateX(-80px);
+    }
+
+}
