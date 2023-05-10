@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid plum;
 }
 
 body {
@@ -103,7 +104,7 @@ body {
 
 .contain {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.7fr;
     gap: 0;
 }
 
@@ -157,48 +158,70 @@ body {
 &__co2--1{
     position: absolute;
     bottom: 8em;
-    left: 14em;
+    left: 10em;
     opacity: 0;
 }
 &__co2--2{
     position: absolute;
     bottom: 9.5em;
-    left: 11em;
+    left: 7em;
     opacity: 0;
 }
 &__co2--3{
     position: absolute;
     bottom: 12em;
-    left: 9em;
+    left: 5em;
     opacity: 0;
 }
 
+&__island-two {
+    position: absolute;
+    bottom: -9em;
+    right: -47em;
 }
 
-.textboxes {
+}
+
+.side {
     width: 100%;
     &__box {
     background-color: $skyblue;
     height: 150vh;
+    scroll-snap-type: y mandatory;
     @include flex;
         &:last-child {
         height: 100vh;
     }
     }
-    &__inner-text {
+    &__inner {
         transform: translateX($from--left);
-        opacity: 0;
         color: $aliceblue;
-    }
+        font-size: 1.7rem;
+        margin: 0 20%;
+        opacity: 0;
+        scroll-snap-align: start;
+}
+    &__box:nth-child(1) 
+            span {
+                background-color: $yellow;
+            }
 
 }
 
 
 
 .what-can-u-do {
-    background-image: url(../img/beach-cleaning.png);
-    background-size: 100%;
-    background-position: center;
+    background: url(../img/beach-cleaning.png) no-repeat center;
+    background-size: cover;
     width: 100%;
     height: 100vh;
 }
+
+.portrait-info {
+    height: 100vh;
+    @include flex;
+        p { 
+            margin: 0 25%;
+            font-size: 1.3rem;
+        }
+}   
