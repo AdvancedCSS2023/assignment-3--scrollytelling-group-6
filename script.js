@@ -7,9 +7,7 @@ ScrollTrigger.create({
   endTrigger: '#end-trigger', 
   pin: true,
   pinSpacing: false,
-  id: 'scene'
 });
-
 
 
 // clouds moving on scroll
@@ -35,7 +33,7 @@ gsap.to('.scene__wave--one', {
     xPercent: -50,
     ease: "power1.in",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--3",
+      trigger: ".side__sidebox--3",
       start: "top 40%",
       endTrigger: "#end-trigger", 
       scrub: 1,
@@ -47,7 +45,7 @@ gsap.to('.scene__wave--one', {
     xPercent: -50,
     ease: "power1.in",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--3",
+      trigger: ".side__sidebox--3",
       start: "top 40%",
       endTrigger: "#end-trigger", 
       scrub: 1,
@@ -58,7 +56,7 @@ gsap.to('.scene__wave--three', {
     xPercent: -50,
     ease: "power1.in",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--3",
+      trigger: ".side__sidebox--3",
       start: "top 40%",
       endTrigger: "#end-trigger", 
       scrub: 1,
@@ -70,10 +68,11 @@ gsap.to('.scene__wave--three', {
   // bottle to ocean motion path
   let bottleScroll = gsap.timeline({
     scrollTrigger: {
-      trigger: ".textboxes__textbox--2",
-      start: "top center",
+      trigger: ".side__sidebox--1",
+      start: "center",
       end: "+=500px",
       scrub: 0.5,
+      markers: true,
     }
   }); 
   bottleScroll.to('.scene__bottle', {
@@ -88,21 +87,21 @@ gsap.to('.scene__wave--three', {
       opacity: 0,
       ease: "none",
       scrollTrigger: {
-        trigger: ".textboxes__textbox--3",
-        start: "top top",
-        end: "+=500px",
+        trigger: ".side__sidebox--2",
+        start: "top center",
+        end: "+=600px",
         scrub: 0.5,
       }
     })
   
   // man to boat 
   gsap.to('.scene__man', {
-    xPercent: 300,
+    xPercent: 380,
     ease: "none",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--3",
+      trigger: ".side__sidebox--3",
       start: "top top",
-      end: "+=1000px",
+      end: "+=500px",
       scrub: 0.5,
     }
   })
@@ -113,9 +112,9 @@ gsap.to('.scene__wave--three', {
     xPercent: -300,
     ease: "none",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--4",
+      trigger: ".side__sidebox--4",
       start: "top top",
-      end: "+=600px",
+      end: "+=500px",
       scrub: 1,
     }
   })
@@ -123,22 +122,22 @@ gsap.to('.scene__wave--three', {
   //move man and boat to center 
 
   gsap.to('.scene__man', {
-    x: -350,
+    x: -450,
     ease: "none",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--5",
+      trigger: ".side__sidebox--5",
       start: "top top",
-      end: "+=1000px",
+      end: "+=400px",
       scrub: 0.5,
     }
   })
   gsap.to('.scene__boat', {
-    x: -350,
+    x: -450,
     ease: "none",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--5",
+      trigger: ".side__sidebox--5",
       start: "top top",
-      end: "+=1000px",
+      end: "+=400px",
       scrub: 0.5,
     }
   })
@@ -149,7 +148,7 @@ gsap.to('.scene__wave--three', {
     opacity: 0.8,
     ease: "none",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--6",
+      trigger: ".side__sidebox--6",
       start: "top top",
       end: "+=500px",
       scrub: 0.5,
@@ -160,7 +159,7 @@ gsap.to('.scene__wave--three', {
     opacity: 0.8,
     ease: "none",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--6",
+      trigger: ".side__sidebox--6",
       start: "top top",
       end: "+=800px",
       scrub: 0.5,
@@ -171,15 +170,42 @@ gsap.to('.scene__wave--three', {
     opacity: 0.8,
     ease: "none",
     scrollTrigger: {
-      trigger: ".textboxes__textbox--6",
+      trigger: ".side__sidebox--6",
       start: "top top",
       end: "+=1200px",
       scrub: 0.5,
     }
   })
 
+  gsap.to('.scene__island-two', {
+    x: -500,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".side__sidebox--7",
+      start: "top top",
+      end: "+=700px",
+      scrub: 0.5,
+    }
+  })
 
-  //
+  gsap.to('.scene__wrapper', {
+   scale: 2,
+   transformOrigin: "0 80%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".side__sidebox--9",
+      start: "top center",
+      end: "+=300px",
+      scrub: 0.5,
+    }
+  })
+
+
+
+
+
+
+  // media
 let mm = gsap.matchMedia();
 
 mm.add("(max-width: 950px)", () => {
@@ -217,12 +243,12 @@ window.onbeforeunload = function() {
 
 
 const texts = document.querySelectorAll(".intro__text");
-const sectionText = document.querySelectorAll(".textboxes__inner-text");
+
 
 const options = {
   root: null,
   threshold: 1,
-  rootMargin: "1px",
+  rootMargin: "50px",
 };
 
 const observer = new IntersectionObserver(function (entries) {
@@ -238,7 +264,19 @@ texts.forEach((text) => {
   observer.observe(text);
 });
 
-sectionText.forEach((text2) => {
-  observer.observe(text2);
-});
 
+const sectionText = document.querySelectorAll(".side__inner"); 
+const observer2 = new IntersectionObserver(function (entries) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.add("center-fadeIn");
+
+    observer.unobserve(entry.target);
+  });
+}, options); 
+
+sectionText.forEach((text2) => {
+  observer2.observe(text2);
+});

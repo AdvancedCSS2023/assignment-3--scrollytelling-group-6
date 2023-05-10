@@ -25,25 +25,39 @@
   }
 
   // orientation portrait will ask to switch to landscape
-@media screen and (max-width: 500px) and (orientation: portrait) {
+@media (orientation: portrait) {
 
 main {
   display: none;
 }
+
+.portrait-info, .portrait-info * {
+  display: flex !important;
+}
+}
+
+@media (orientation: landscape) {
+  .portrait-info, .portrait-info * {
+    display: none;
+  }
 
 }
 
 
 // preferred orientation for the story for screens less than 950px
 @media screen and (max-width: 950px) and (orientation: landscape) {
+
+  .portrait-info, .portrait-info * {
+    display: none;
+  }
   
   .intro {
     min-height: 700vh;
   }
-
   .intro__text {
     font-size: 2rem
   }
+
 
   .intro__clouds img{ //want to include more of the clouds in the viewport here..
     max-width: 60%;
@@ -64,6 +78,11 @@ main {
   .scene__boat {
     left: 25em;
     max-width: 300px;
+  }
+
+  .side__inner {
+    font-size: 1.3rem;
+    margin: 0 10%;
   }
 
 }
