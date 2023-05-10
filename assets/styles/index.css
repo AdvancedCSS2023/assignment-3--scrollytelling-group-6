@@ -281,6 +281,61 @@ body {
   font-size: 1.3rem;
 }
 
+.fish-container {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  bottom: 0em;
+  height: 100vh;
+  background-color: #202d35;
+}
+
+.scene__fish1 {
+  position: absolute;
+  right: 10rem;
+  top: 4rem;
+  z-index: 2;
+  transform: translateY(100%);
+  animation: swim-left 4s linear forwards;
+}
+
+.scene__deadfish1 {
+  position: absolute;
+  z-index: 2;
+  left: 480px;
+  top: 140px;
+  transform: translateY(100%);
+  opacity: 0;
+  animation-name: die;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes swim-left {
+  0% {
+    right: 20vh;
+  }
+  50% {
+    transform: rotate 60em;
+  }
+  100% {
+    right: 50vh;
+    opacity: 0;
+  }
+}
+@keyframes die {
+  0% {
+    transform: rotate(2deg);
+  }
+  80% {
+    transform: translateY(-4.6em);
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: translateY(-4.6em);
+    opacity: 1;
+  }
+}
 .center-fadeIn {
   transform: translateX(0);
   opacity: 1;
