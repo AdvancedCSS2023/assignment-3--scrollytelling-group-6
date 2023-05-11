@@ -332,6 +332,7 @@ const texts = document.querySelectorAll(".intro__text");
 const sectionText = document.querySelectorAll(".side__inner"); 
 const text3 = document.querySelectorAll(".actions__text");
 
+
 const options = {
   root: null,
   threshold: 1,
@@ -355,4 +356,28 @@ sectionText.forEach((text2) => {
 });
 text3.forEach((text3) => {
   observer.observe(text3);
+});
+
+
+
+// intersection observers for intro
+const garbage = document.querySelectorAll(".bigGarbage");
+
+const options_garbage = {
+  root: null,
+  threshold: 0.5,
+  rootMargin: "50px",
+};
+
+const observer_garbage = new IntersectionObserver(function (entries) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.add(".bigGarbage");
+  });
+}, options_garbage);  
+
+garbage.forEach((garbage) => {
+  observer_garbage.observe(garbage);
 });

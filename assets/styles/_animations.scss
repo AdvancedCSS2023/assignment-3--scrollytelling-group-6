@@ -17,7 +17,23 @@ $from--right: 50px;
     transition: transform 4s ease-in;
 }
 
+.bigGarbage{
+   animation: spin linear 40s infinite alternate, spin linear 20s infinite;
+  opacity: 1;
+  transition: transform 5s ease-in-out, opacity 2s;
+
+}
+
 //KEYFRAMES
+
+@keyframes spin {
+  0% {
+      transform: rotate(1);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
 // wave animation
 @keyframes wave {
     0% {

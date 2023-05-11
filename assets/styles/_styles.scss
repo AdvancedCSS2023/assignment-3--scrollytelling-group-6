@@ -102,6 +102,18 @@ body {
     }
 }
 
+
+
+.bigGarbage{ 
+    position: relative;
+    top: 150px;
+    transform: scale(5) translateX(4%) translate($from--right);
+    opacity: 0;
+    animation: spin linear 80s infinite alternate, spin linear 90s infinite;
+   
+}
+
+
 .contain {
     display: grid;
     grid-template-columns: 1fr 1.7fr;
