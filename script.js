@@ -361,3 +361,4 @@ const observer_garbage = new IntersectionObserver(function (entries) {
 garbage.forEach((garbage) => {
   observer_garbage.observe(garbage);
 });
+

@@ -24,7 +24,25 @@ $from--right: 50px;
 
 }
 
+
+.co2_Txt{
+  position: relative;
+  top: 500px;
+  animation: blad 4s linear infinite alternate;
+  opacity: 0.4;
+ 
+}
+
 //KEYFRAMES
+@keyframes co2 {
+  0% {
+      transform: translateY(5px);
+  }
+  100% {
+      transform: translateY(36px);
+  }
+}
+
 
 @keyframes spin {
   0% {
