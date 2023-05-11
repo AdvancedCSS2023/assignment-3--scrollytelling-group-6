@@ -22,10 +22,6 @@ $from--right: 50px;
   opacity: 0.8;
 }
 
-
-
-
-
 .co2_Txt{
   position: relative;
   animation: co2 80s linear infinite alternate;
@@ -72,8 +68,20 @@ $from--right: 50px;
  
 }
 
-
+.bird{
+  animation: bird 20s infinite;
+}
 //KEYFRAMES
+
+@keyframes bird {
+  0% {
+    transform: translateX(500%);
+}
+100% {
+    transform: translateX(-100%);
+}
+
+}
 
 @keyframes boat {
   0% {
@@ -298,6 +306,7 @@ $from--right: 50px;
   @keyframes swim-left {
   
     0% {
+      transform: translateX(500%);
       right: 20vh;
     }
     50%{
