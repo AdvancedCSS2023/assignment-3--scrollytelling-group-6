@@ -266,8 +266,53 @@ gsap.to('.scene__fish-container', {
   })
 
 
-  //man going onto island
+  // opacity 0 man
 
+  gsap.to('.scene__man', {
+    opacity: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".side__sidebox--13",
+      start: "top center",
+      end: "+=500px",
+      scrub: 0.5,
+    }
+  })
+//opacity 1 green man
+
+gsap.to('.scene__man-green', {
+  opacity: 1,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".side__sidebox--14",
+    start: "top center",
+    end: "+=400px",
+    scrub: 0.5,
+  }
+})
+
+gsap.to(".scene__cup",{
+  x: 20,
+  y:40,
+  scrollTrigger: {
+    trigger: ".side__sidebox--14",
+    start: "top top",
+    end: "+=450px",
+    scrub: 0.5,
+  }
+});
+gsap.to(".scene__cup",{
+  opacity: 1,
+  keyframes: {
+    opacity: [0, 1, 1, 0]
+  },
+  scrollTrigger: {
+    trigger: ".side__sidebox--14",
+    start: "top center",
+    end: "+=1000px",
+    scrub: 0.5,
+  }
+}); 
 
 
 
@@ -315,7 +360,7 @@ const text3 = document.querySelectorAll(".actions__text");
 
 const options = {
   root: null,
-  threshold: 1,
+  threshold: 0.8,
   rootMargin: "50px",
 };
 
@@ -334,18 +379,22 @@ texts.forEach((text) => {
 sectionText.forEach((text2) => {
   observer.observe(text2);
 });
+
 text3.forEach((text3) => {
   observer.observe(text3);
 });
 
 
 
+//**
+
 // intersection observers for intro
-const garbage = document.querySelectorAll(".bigGarbage");
+
+/** const garbage = document.querySelectorAll(".bigGarbage");
 
 const options_garbage = {
   root: null,
-  threshold: 0.5,
+  threshold: 1,
   rootMargin: "50px",
 };
 
@@ -354,11 +403,11 @@ const observer_garbage = new IntersectionObserver(function (entries) {
     if (!entry.isIntersecting) {
       return;
     }
-    entry.target.classList.add(".bigGarbage");
+    entry.target.classList.add(".bigGarbage-anim");
   });
 }, options_garbage);  
 
 garbage.forEach((garbage) => {
   observer_garbage.observe(garbage);
 });
-
+ */

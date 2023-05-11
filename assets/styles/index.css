@@ -29,9 +29,8 @@
 }
 
 .bigGarbage {
-  animation: spin linear 40s infinite alternate, spin linear 20s infinite;
-  opacity: 1;
-  transition: transform 5s ease-in-out, opacity 2s;
+  animation: spin-scale 35s infinite alternate;
+  opacity: 0.8;
 }
 
 .co2_Txt {
@@ -51,10 +50,10 @@
 }
 @keyframes spin {
   0% {
-    transform: rotate(1);
+    transform: rotate(0) scale(4.5);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(40deg) scale(3);
   }
 }
 @keyframes wave {
@@ -320,7 +319,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #000000;
+  color: #2b2c33;
 }
 
 .intro {
@@ -415,9 +414,7 @@ body {
 .bigGarbage {
   position: relative;
   top: 150px;
-  transform: scale(5) translateX(4%) translate(50px);
-  opacity: 0;
-  animation: spin linear 80s infinite alternate, spin linear 90s infinite;
+  right: 60px;
 }
 
 .contain {
@@ -496,6 +493,18 @@ body {
   bottom: 0em;
   right: -34em;
 }
+.scene__man-green {
+  position: absolute;
+  left: 50em;
+  bottom: 6em;
+  opacity: 0;
+}
+.scene__cup {
+  position: absolute;
+  left: 54em;
+  bottom: 10em;
+  opacity: 0;
+}
 
 .side {
   width: 100%;
@@ -514,8 +523,10 @@ body {
 }
 .side__inner {
   transform: translateX(-50px);
-  color: rgb(245, 245, 245);
-  font-size: 1.7rem;
+  padding-top: 3em;
+  color: #2b2c33;
+  font-size: 1.8rem;
+  font-weight: 700;
   margin: 0 20%;
   opacity: 0;
 }
@@ -692,35 +703,6 @@ body {
   transition: transform 4s ease-in;
 }
 
-.bigGarbage {
-  animation: spin linear 40s infinite alternate, spin linear 20s infinite;
-  opacity: 1;
-  transition: transform 5s ease-in-out, opacity 2s;
-}
-
-.co2_Txt {
-  position: relative;
-  top: 500px;
-  animation: blad 4s linear infinite alternate;
-  opacity: 0.4;
-}
-
-@keyframes co2 {
-  0% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(36px);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(1);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes wave {
   0% {
     transform: translateX(0);

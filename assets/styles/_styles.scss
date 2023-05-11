@@ -102,17 +102,11 @@ body {
     }
 }
 
-
-
 .bigGarbage{ 
     position: relative;
     top: 150px;
-    transform: scale(5) translateX(4%) translate($from--right);
-    opacity: 0;
-    animation: spin linear 80s infinite alternate, spin linear 90s infinite;
-   
+    right: 60px;
 }
-
 
 .contain {
     display: grid;
@@ -197,6 +191,20 @@ body {
     right: -34em;
 }
 
+&__man-green {
+    position: absolute;
+    left: 50em;
+    bottom: 6em; 
+    opacity: 0;
+}
+
+&__cup{
+    position: absolute;
+    left: 54em;
+    bottom: 10em;
+    opacity: 0;
+}
+
 }
 
 .side {
@@ -211,8 +219,10 @@ body {
     }
     &__inner {
         transform: translateX($from--left);
-        color: rgb(245, 245, 245);
-        font-size: 1.7rem;
+        padding-top: 3em;
+        color: $grayblue;
+        font-size: 1.8rem;
+        font-weight: 700;
         margin: 0 20%;
         opacity: 0;
 }

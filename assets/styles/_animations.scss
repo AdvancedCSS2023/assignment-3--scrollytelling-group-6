@@ -18,10 +18,8 @@ $from--right: 50px;
 }
 
 .bigGarbage{
-   animation: spin linear 40s infinite alternate, spin linear 20s infinite;
-  opacity: 1;
-  transition: transform 5s ease-in-out, opacity 2s;
-
+  animation: spin-scale 35s infinite alternate;
+  opacity: 0.8;
 }
 
 
@@ -44,12 +42,12 @@ $from--right: 50px;
 }
 
 
-@keyframes spin {
+@keyframes spin-scale {
   0% {
-      transform: rotate(1);
+      transform: rotate(0) scale(4.5);
   }
   100% {
-      transform: rotate(360deg);
+      transform: rotate(40deg) scale(3);
   }
 }
 // wave animation
