@@ -659,35 +659,28 @@ body {
   width: 100%;
   height: 100vh;
   animation: zoom-bg 30s ease infinite;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .learn-more__textbox2 {
-  position: relative;
-  top: 70px;
-  width: 600px;
+  width: 500px;
   height: 250px;
   background-color: white;
   border-radius: 80px 70px 70px 0px;
   border-top-width: 10px;
   border-top-style: ridge;
   border-top-color: rgb(103, 67, 67);
-  top: 50px;
-  left: 23em;
   font-size: 40px;
   font-style: bold;
+  margin-bottom: 15em;
 }
 .learn-more__man_2 {
-  position: relative;
-  width: 90%;
-  height: 76.7vh;
   color: #fff;
-  display: flex;
-  flex-direction: row;
-  text-align: left;
 }
 .learn-more__man_2__man {
-  position: relative;
   z-index: 1;
-  transform: scale(1.5);
   left: 8em;
 }
 
