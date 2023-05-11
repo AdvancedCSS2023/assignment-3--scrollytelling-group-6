@@ -47,6 +47,12 @@ main {
 // preferred orientation for the story for screens less than 950px
 @media screen and (max-width: 950px) and (orientation: landscape) {
 
+
+  .contain {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+}
   .portrait-info, .portrait-info * {
     display: none;
   }
@@ -85,12 +91,43 @@ main {
     margin: 0 10%;
   }
 
+  .actions h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2.5em;
+  }
+
   .actions__man {
     transform: scale(0.7);
-    bottom: -10em;
+    bottom: 18em;
+    left: 3em;
   }
   .actions__text {
-    transform: scale(.5);
+    font-size: 1rem;
+    margin-left:0;
+  }
+
+  li::before {
+    display: none;
+  }
+
+  .scene__fish-container {
+    width: 100%;
+  }
+
+  .scene__fish-container > * {
+    transform: scale(0.5);
+  }
+  .scene__deadfish1 {
+    left:10em;
+  }
+
+  .oil {
+    left: 0;
+  }
+  .garbage-wrapper {
+    position: relative;
+    top: 5em;
+    left: -10em;
   }
 
 }

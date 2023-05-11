@@ -24,11 +24,19 @@ $from--right: 50px;
 
 
 .co2_Txt{
-  position: relative;
-  top: 500px;
+  position: absolute;
   animation: blad 4s linear infinite alternate;
   opacity: 0.4;
- 
+}
+
+.right-arm {
+  transform-origin: 35%;
+  animation: move-arm 5s ease infinite alternate;
+}
+
+.eyes-man {
+  animation: eyes-blink 3s infinite;
+  transform-origin: center 20%;
 }
 
 //KEYFRAMES

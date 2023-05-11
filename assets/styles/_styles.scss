@@ -103,8 +103,7 @@ body {
 }
 
 .bigGarbage{ 
-    position: relative;
-    top: 150px;
+    position: absolute;
     right: 60px;
 }
 
@@ -208,10 +207,12 @@ body {
 }
 
 .side {
+    position: relative;
     width: 100%;
     &__box {
     background-color: $skyblue;
     height: 170vh;
+    overflow:hidden;
     @include flex;
         &:last-child {
         height: 100vh;
@@ -276,16 +277,6 @@ body {
         margin-bottom: .5em;
         font-size: 2.5rem;
     }
-}
-
-.right-arm {
-    transform-origin: 35%;
-    animation: move-arm 5s ease infinite alternate;
-}
-
-.eyes-man {
-    animation: eyes-blink 3s infinite;
-    transform-origin: center 20%;
 }
 
 .learn-more {
