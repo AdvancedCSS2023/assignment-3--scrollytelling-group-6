@@ -65,11 +65,6 @@
 .eyes-man {
   animation: eyes-blink 3s infinite;
   transform-origin: center 20%;
-  position: relative;
-  animation: co2 80s linear infinite alternate;
-  opacity: 0.4;
-  top: 5em;
-  left: 30px;
 }
 
 .fish_txt1 {
@@ -132,10 +127,10 @@
 }
 @keyframes spin-scale {
   0% {
-    transform: rotate(0) scale(2);
+    transform: rotate(0) scale(5);
   }
   100% {
-    transform: rotate(40deg);
+    transform: rotate(40deg) scale(3);
   }
 }
 @keyframes wave {
@@ -851,11 +846,6 @@ body {
 .eyes-man {
   animation: eyes-blink 3s infinite;
   transform-origin: center 20%;
-  position: relative;
-  animation: co2 80s linear infinite alternate;
-  opacity: 0.4;
-  top: 5em;
-  left: 30px;
 }
 
 .fish_txt1 {
@@ -918,10 +908,10 @@ body {
 }
 @keyframes spin-scale {
   0% {
-    transform: rotate(0) scale(2);
+    transform: rotate(0) scale(5);
   }
   100% {
-    transform: rotate(40deg);
+    transform: rotate(40deg) scale(3);
   }
 }
 @keyframes wave {

@@ -22,10 +22,6 @@ $from--right: 50px;
   opacity: 0.8;
 }
 
-
-
-
-
 .co2_Txt{
   position: absolute;
   animation: blad 4s linear infinite alternate;
@@ -58,11 +54,6 @@ $from--right: 50px;
 .eyes-man {
   animation: eyes-blink 3s infinite;
   transform-origin: center 20%;
-  position: relative;
-  animation: co2 80s linear infinite alternate;
-  opacity: 0.4;
-  top: 5em;
-  left: 30px;
 }
 
 .fish_txt1{
@@ -142,10 +133,10 @@ $from--right: 50px;
 
 @keyframes spin-scale {
   0% {
-      transform: rotate(0) scale(2);
+      transform: rotate(0) scale(5);
   }
   100% {
-      transform: rotate(40deg);
+      transform: rotate(40deg) scale(3);
   }
 }
 // wave animation
