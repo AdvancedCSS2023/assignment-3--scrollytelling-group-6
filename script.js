@@ -266,10 +266,30 @@ gsap.to('.scene__fish-container', {
   })
 
 
-  //man going onto island
+  // opacity 0 man
 
+  gsap.to('.scene__man', {
+    opacity: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".side__sidebox--13",
+      start: "top center",
+      end: "+=500px",
+      scrub: 0.5,
+    }
+  })
+//opacity 1 green man
 
-
+gsap.to('.scene__man-green', {
+  opacity: 1,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".side__sidebox--14",
+    start: "top top",
+    end: "+=500px",
+    scrub: 0.5,
+  }
+})
 
   // media
 let mm = gsap.matchMedia();
@@ -315,7 +335,7 @@ const text3 = document.querySelectorAll(".actions__text");
 const options = {
   root: null,
   threshold: 1,
-  rootMargin: "50px",
+  rootMargin: "1px",
 };
 
 const observer = new IntersectionObserver(function (entries) {
