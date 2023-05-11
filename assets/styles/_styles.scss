@@ -113,6 +113,10 @@ body {
     gap: 0;
 }
 
+
+
+  
+
 // waves
 .scene {
     width: 100%;
@@ -209,6 +213,7 @@ body {
 .side {
     position: relative;
     width: 100%;
+    overflow: hidden;
     &__box {
     background-color: $skyblue;
     height: 170vh;
@@ -299,7 +304,43 @@ body {
         }
 }   
 
+.actions__man_2{
+    position: relative;
+    width: 90%;
+    height: 76.7vh;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    &__man {
+        position: relative;
+        z-index: 1;
+        transform: scale(1.5);
+        left: 8em;
+    }
 
+}
+
+.last_scene_textbox{
+    position: relative;
+    left: 67em;
+    top: 70px;
+    width: 600px;
+    height: 250px;
+    background-color: white;
+    border-radius: 80px 80px 80px 0px;
+    border-top-width: 10px;
+    border-top-style:ridge;
+    border-top-color: rgb(103, 67, 67);
+}
+
+.textbox{
+    position: relative;
+    top: 4px;
+    left: 30px;
+    font-size: 40px;
+    font-style: bold;
+}
 // fish
 
 // fish test
