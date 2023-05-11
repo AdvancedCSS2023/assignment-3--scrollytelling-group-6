@@ -103,6 +103,18 @@
   bottom: 70px;
 }
 
+.bird {
+  animation: bird 20s infinite;
+}
+
+@keyframes bird {
+  0% {
+    transform: translateX(500%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @keyframes boat {
   0% {
     transform: rotate(0deg) translate(0px) skewX(0deg);
@@ -296,6 +308,7 @@
 
 @keyframes swim-left {
   0% {
+    transform: translateX(500%);
     right: 20vh;
   }
   50% {
@@ -729,7 +742,7 @@ body {
   top: 3rem;
   z-index: 2;
   transform: translateY(100%);
-  animation: swim-left 7s linear forwards;
+  animation: swim-left 13s infinite;
 }
 
 .scene__deadfish1 {
@@ -742,7 +755,7 @@ body {
   animation-name: die;
   animation-duration: 8s;
   animation-delay: 7s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: die 10s infinite;
 }
 
 .garbage {
@@ -796,6 +809,12 @@ body {
   position: relative;
   top: 150px;
   animation: translateX(7%) co2 translateY(40px) translate(50px);
+}
+
+.bird {
+  position: absolute;
+  bottom: 50rem;
+  animation: bird;
 }
 
 .center-fadeIn {
@@ -884,6 +903,18 @@ body {
   bottom: 70px;
 }
 
+.bird {
+  animation: bird 20s infinite;
+}
+
+@keyframes bird {
+  0% {
+    transform: translateX(500%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @keyframes boat {
   0% {
     transform: rotate(0deg) translate(0px) skewX(0deg);
@@ -1077,6 +1108,7 @@ body {
 
 @keyframes swim-left {
   0% {
+    transform: translateX(500%);
     right: 20vh;
   }
   50% {

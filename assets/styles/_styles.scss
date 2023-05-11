@@ -359,7 +359,7 @@ body {
     top: 3rem;
     z-index: 2;
     transform: translateY(100%);
-    animation: swim-left 7s linear forwards;
+    animation: swim-left 13s infinite;
   }
   
   
@@ -373,7 +373,7 @@ body {
     animation-name: die;
     animation-duration: 8s;
     animation-delay: 7s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: die 10s infinite;
   }
   
  
@@ -434,4 +434,12 @@ body {
     top: 150px;
     animation: translateX(7%) co2 translateY(40px) translate($from--right);
 
+}
+
+// birds
+.bird{
+    position: absolute;
+    
+    bottom: 50rem;
+    animation: bird ;
 }
