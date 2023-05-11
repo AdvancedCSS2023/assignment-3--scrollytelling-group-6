@@ -95,6 +95,32 @@
     transform: rotate(-80deg) translateX(-80px);
   }
 }
+@keyframes eyes-blink {
+  0% {
+    transform: scaleY(1);
+  }
+  15% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  38% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1);
+  }
+}
 @keyframes blad {
   0% {
     transform: rotate(0deg) translate(0px) skewX(0deg);
@@ -109,6 +135,74 @@
     transform: rotate(1deg) translate(0px) skewX(0deg);
   }
 }
+#blader {
+  animation: blad 3s linear infinite alternate;
+}
+
+#blader_2 {
+  animation: blad 5s linear infinite alternate;
+}
+
+#blader_3 {
+  animation: blad 4s linear infinite alternate;
+}
+
+#blader_4 {
+  animation: blad 4s linear infinite alternate;
+}
+
+#blader_5 {
+  animation: blad 3s linear infinite alternate;
+}
+
+#blader_6 {
+  animation: blad 5s linear infinite alternate;
+}
+
+#blader_7 {
+  animation: blad 5s linear infinite alternate;
+}
+
+#blader_8 {
+  animation: blad 5s linear infinite alternate;
+}
+
+#blader_9 {
+  animation: blad 4s linear infinite alternate;
+}
+
+#blader_10 {
+  animation: blad 6s linear infinite alternate;
+}
+
+#blader_11 {
+  animation: blad 6s linear infinite alternate;
+}
+
+#blader_12 {
+  animation: blad 6s linear infinite alternate;
+}
+
+#blader_14 {
+  animation: blad 6s linear infinite alternate;
+}
+
+#blader_15 {
+  animation: blad 5s linear infinite alternate;
+}
+
+#blader_16 {
+  animation: blad 10s linear infinite alternate;
+}
+
+#blader_17 {
+  animation: blad 10s linear infinite alternate;
+}
+
+#blader_18 {
+  animation: blad 10s linear infinite alternate;
+}
+
 @keyframes swim-left {
   0% {
     right: 20vh;
@@ -155,7 +249,7 @@
     transform: rotate(1em);
   }
   100% {
-    transform: translateY(50em);
+    transform: translateY(30em);
     opacity: 0;
   }
 }
@@ -164,7 +258,7 @@
     transform: rotate(2em);
   }
   100% {
-    transform: translateY(10em);
+    transform: translateY(15em);
     opacity: 0;
   }
 }
@@ -201,7 +295,10 @@
   }
   100% {
     transform: translateY(-4.6em);
+<<<<<<< HEAD
     opacity: 1;
+=======
+>>>>>>> e6b711300d244a4ebdf30be356166c7844bd68a2
   }
 }
 * {
@@ -322,7 +419,6 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  border: 2px solid green;
 }
 .scene__wrapper {
   background: #75bfff;
@@ -384,14 +480,18 @@ body {
   bottom: -9em;
   right: -47em;
 }
+.scene__island-three {
+  position: absolute;
+  bottom: 0em;
+  right: -34em;
+}
 
 .side {
   width: 100%;
 }
 .side__box {
   background-color: #75bfff;
-  height: 150vh;
-  scroll-snap-type: y mandatory;
+  height: 170vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -403,11 +503,10 @@ body {
 }
 .side__inner {
   transform: translateX(-50px);
-  color: rgb(100, 100, 100);
+  color: rgb(245, 245, 245);
   font-size: 1.7rem;
   margin: 0 20%;
   opacity: 0;
-  scroll-snap-align: start;
 }
 .side__box:nth-child(1) span {
   background-color: #ffc401;
@@ -460,6 +559,11 @@ body {
   animation: move-arm 5s ease infinite alternate;
 }
 
+.eyes-man {
+  animation: eyes-blink 3s infinite;
+  transform-origin: center 20%;
+}
+
 .learn-more {
   z-index: 2;
   background: url(../img/trash-ocean.png) no-repeat center;
@@ -482,6 +586,188 @@ body {
   font-size: 1.3rem;
 }
 
+.scene__fish-container {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  bottom: -70em;
+  height: 100vh;
+  background: linear-gradient(180deg, #0693E3 0%, rgb(14, 26, 82) 100%);
+}
+
+.scene__fish1 {
+  position: absolute;
+  right: 10rem;
+  top: 4rem;
+  z-index: 2;
+  transform: translateY(100%);
+  animation: swim-left 7s linear forwards;
+}
+
+.scene__deadfish1 {
+  position: absolute;
+  z-index: 2;
+  left: 480px;
+  top: 110px;
+  transform: translateY(300deg);
+  opacity: 0;
+  animation-name: die;
+  animation-duration: 8s;
+  animation-delay: 7s;
+  animation-fill-mode: forwards;
+}
+
+.garbage {
+  position: absolute;
+  top: 350px;
+  left: 750px;
+  animation: garbage 30s linear infinite alternate;
+}
+
+.garbage1 {
+  position: absolute;
+  top: 350px;
+  left: 250px;
+  animation: garbage 50s linear infinite alternate;
+}
+
+.garbage2 {
+  position: absolute;
+  top: 550px;
+  left: 850px;
+  animation: garbage 20s linear infinite alternate;
+}
+
+.oil {
+  position: relative;
+  left: 15em;
+}
+
+.oil_1 {
+  position: absolute;
+  top: 30px;
+  left: 200px;
+  animation: oil_1 10s linear infinite;
+}
+
+.oil_2 {
+  position: absolute;
+  top: 80px;
+  left: 400px;
+  animation: oil_2 12s linear infinite;
+}
+
+.oil_3 {
+  position: absolute;
+  top: 1px;
+  left: 130px;
+  animation: oil_3 8s linear infinite;
+}
+
+.center-fadeIn {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 2s, opacity 2s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 4s ease-in;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+@keyframes title {
+  from {
+    opacity: 0;
+    letter-spacing: normal;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.1rem;
+  }
+}
+@keyframes color-change {
+  to {
+    color: #f84646;
+  }
+}
+@keyframes boat-move {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+@keyframes zoom-bg {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+@keyframes move-arm {
+  0% {
+    transform: rotate(-50deg) translateX(-60px);
+  }
+  50% {
+    transform: rotate(-90deg) translateX(-80px);
+  }
+  100% {
+    transform: rotate(-80deg) translateX(-80px);
+  }
+}
+@keyframes eyes-blink {
+  0% {
+    transform: scaleY(1);
+  }
+  15% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  38% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1);
+  }
+}
+@keyframes blad {
+  0% {
+    transform: rotate(0deg) translate(0px) skewX(0deg);
+  }
+  25% {
+    transform: rotate(1deg) translate(1px) skewX(0deg);
+  }
+  75% {
+    transform: rotate(0deg) translate(1px) skewX(0deg);
+  }
+  100% {
+    transform: rotate(1deg) translate(0px) skewX(0deg);
+  }
+}
 #blader {
   animation: blad 3s linear infinite alternate;
 }
@@ -550,12 +836,14 @@ body {
   animation: blad 10s linear infinite alternate;
 }
 
+<<<<<<< HEAD
 .fish-container {
   position: absolute;
   width: 100%;
   bottom: -10em;
   height: 100vh;
   background-color: #0693E3;
+  display: none;
 }
 
 .scene__fish1 {
@@ -705,6 +993,32 @@ body {
     transform: rotate(-80deg) translateX(-80px);
   }
 }
+@keyframes eyes-blink {
+  0% {
+    transform: scaleY(1);
+  }
+  15% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  38% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1);
+  }
+}
 @keyframes blad {
   0% {
     transform: rotate(0deg) translate(0px) skewX(0deg);
@@ -719,6 +1033,8 @@ body {
     transform: rotate(1deg) translate(0px) skewX(0deg);
   }
 }
+=======
+>>>>>>> e6b711300d244a4ebdf30be356166c7844bd68a2
 @keyframes swim-left {
   0% {
     right: 20vh;
@@ -765,7 +1081,7 @@ body {
     transform: rotate(1em);
   }
   100% {
-    transform: translateY(50em);
+    transform: translateY(30em);
     opacity: 0;
   }
 }
@@ -774,7 +1090,7 @@ body {
     transform: rotate(2em);
   }
   100% {
-    transform: translateY(10em);
+    transform: translateY(15em);
     opacity: 0;
   }
 }
@@ -811,7 +1127,10 @@ body {
   }
   100% {
     transform: translateY(-4.6em);
+<<<<<<< HEAD
     opacity: 1;
+=======
+>>>>>>> e6b711300d244a4ebdf30be356166c7844bd68a2
   }
 }
 @media (prefers-color-scheme: dark) {

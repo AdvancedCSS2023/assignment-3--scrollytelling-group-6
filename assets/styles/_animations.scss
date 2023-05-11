@@ -4,7 +4,6 @@ $from--left: -50px;
 $from--right: 50px;
 
 
-
 // class animations (for Intersection obs)
 
 .center-fadeIn {
@@ -101,6 +100,24 @@ $from--right: 50px;
 
 }
 
+@keyframes eyes-blink {
+    0% {
+       transform:scaleY(1)}
+    15% { 
+      transform:scaleY(1) }
+    20% { 
+      transform:scaleY(0) }
+    25% { 
+      transform:scaleY(1) }
+    38% { 
+      transform:scaleY(1) }
+    40% { 
+      transform:scaleY(0) }
+    45% { 
+      transform:scaleY(1) }
+    80% { 
+      transform:scaleY(1) }
+}
 
 @keyframes blad {
   0% {
@@ -122,6 +139,78 @@ $from--right: 50px;
       }
 
   }
+
+  #blader{
+    animation: blad 3s linear infinite alternate;
+}
+
+#blader_2{
+    animation: blad 5s linear infinite alternate;
+}
+
+#blader_3{
+    animation: blad 4s linear infinite alternate;
+}  
+
+
+#blader_4{
+    animation: blad 4s linear infinite alternate;
+}  
+
+
+#blader_5{
+    animation: blad 3s linear infinite alternate;
+}  
+
+#blader_6{
+    animation: blad 5s linear infinite alternate;
+}  
+
+#blader_7{
+    animation: blad 5s linear infinite alternate;
+}  
+
+
+#blader_8{
+    animation: blad 5s linear infinite alternate;
+}  
+
+
+#blader_9{
+    animation: blad 4s linear infinite alternate;
+}  
+
+#blader_10{
+    animation: blad 6s linear infinite alternate;
+}
+
+#blader_11{
+    animation: blad 6s linear infinite alternate;
+}  
+
+#blader_12{
+    animation: blad 6s linear infinite alternate;
+}  
+
+#blader_14{
+    animation: blad 6s linear infinite alternate;
+}
+
+#blader_15{
+    animation: blad 5s linear infinite alternate;
+}
+
+#blader_16{
+    animation: blad 10s linear infinite alternate;
+}
+
+#blader_17{
+    animation: blad 10s linear infinite alternate;
+}
+
+#blader_18{
+    animation: blad 10s linear infinite alternate;
+}
 
   @keyframes swim-left {
   
@@ -163,7 +252,6 @@ $from--right: 50px;
     }
   }
 
-
   @keyframes oil_1 {
     0% {
         transform: rotate(2em);
@@ -181,7 +269,7 @@ $from--right: 50px;
       }
        
       100% {
-        transform: translateY(50em);
+        transform: translateY(30em);
         opacity: 0;
       }
   }
@@ -191,7 +279,7 @@ $from--right: 50px;
       }
        
       100% {
-        transform: translateY(10em);
+        transform: translateY(15em);
         opacity: 0;
       }
   }
@@ -237,6 +325,5 @@ $from--right: 50px;
 
     100% {
     transform: translateY(-4.6em);
-      opacity: 1;
     }
   }

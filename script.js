@@ -34,7 +34,7 @@ gsap.to('.scene__wave--one', {
     ease: "power1.in",
     scrollTrigger: {
       trigger: ".side__sidebox--3",
-      start: "top 40%",
+      start: "top center",
       endTrigger: "#end-trigger", 
       scrub: 1,
       markers: true,
@@ -46,7 +46,7 @@ gsap.to('.scene__wave--one', {
     ease: "power1.in",
     scrollTrigger: {
       trigger: ".side__sidebox--3",
-      start: "top 40%",
+      start: "top center",
       endTrigger: "#end-trigger", 
       scrub: 1,
     }
@@ -57,7 +57,7 @@ gsap.to('.scene__wave--three', {
     ease: "power1.in",
     scrollTrigger: {
       trigger: ".side__sidebox--3",
-      start: "top 40%",
+      start: "top center",
       endTrigger: "#end-trigger", 
       scrub: 1,
 
@@ -70,15 +70,13 @@ gsap.to('.scene__wave--three', {
     scrollTrigger: {
       trigger: ".side__sidebox--1",
       start: "center",
-      end: "+=500px",
+      end: "+=450px",
       scrub: 0.5,
-      markers: true,
     }
   }); 
   bottleScroll.to('.scene__bottle', {
     motionPath: {
       path: "M33.834,60.412 C52.803,53.384 59.846,32.141 132.889,30.3 174.1335,29.25995 206.57465,33.52242 231.73044,50.10079 252.31246,63.66491 302.668,120.119 295.078,173.275",
-      duration: 5,
       align: "self",
       autoRotate: -35,
     }});
@@ -101,7 +99,7 @@ gsap.to('.scene__wave--three', {
     scrollTrigger: {
       trigger: ".side__sidebox--3",
       start: "top top",
-      end: "+=500px",
+      end: "+=400px",
       scrub: 0.5,
     }
   })
@@ -126,8 +124,8 @@ gsap.to('.scene__wave--three', {
     ease: "none",
     scrollTrigger: {
       trigger: ".side__sidebox--5",
-      start: "top top",
-      end: "+=400px",
+      start: "top center",
+      end: "+=300px",
       scrub: 0.5,
     }
   })
@@ -136,8 +134,8 @@ gsap.to('.scene__wave--three', {
     ease: "none",
     scrollTrigger: {
       trigger: ".side__sidebox--5",
-      start: "top top",
-      end: "+=400px",
+      start: "top center",
+      end: "+=300px",
       scrub: 0.5,
     }
   })
@@ -148,7 +146,7 @@ gsap.to('.scene__wave--three', {
     opacity: 0.8,
     ease: "none",
     scrollTrigger: {
-      trigger: ".side__sidebox--6",
+      trigger: ".side__sidebox--5",
       start: "top top",
       end: "+=500px",
       scrub: 0.5,
@@ -159,7 +157,7 @@ gsap.to('.scene__wave--three', {
     opacity: 0.8,
     ease: "none",
     scrollTrigger: {
-      trigger: ".side__sidebox--6",
+      trigger: ".side__sidebox--5",
       start: "top top",
       end: "+=800px",
       scrub: 0.5,
@@ -170,30 +168,97 @@ gsap.to('.scene__wave--three', {
     opacity: 0.8,
     ease: "none",
     scrollTrigger: {
-      trigger: ".side__sidebox--6",
+      trigger: ".side__sidebox--5",
       start: "top top",
       end: "+=1200px",
       scrub: 0.5,
     }
   })
 
-  gsap.to('.scene__island-two', {
-    x: -500,
+
+  gsap.to('.scene__co2-wrap', {
+    opacity: 0,
     ease: "none",
     scrollTrigger: {
       trigger: ".side__sidebox--7",
+      start: "top top",
+      end: "+=1000px",
+      scrub: 0.5,
+    }
+  })
+
+// seadive scene
+
+gsap.to('.scene__fish-container', {
+  y: -1120,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".side__sidebox--7",
+    start: "top center",
+    end: "+=800px",
+    scrub: 0.5,
+  }
+})
+
+gsap.to('.scene__fish-container', {
+  x: -1500,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".side__sidebox--9",
+    start: "top bottom",
+    end: "+=700px",
+    scrub: 0.5,
+  }
+})
+
+//island coming in
+
+  gsap.to('.scene__island-two', {
+    x: -610,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".side__sidebox--9",
       start: "top top",
       end: "+=700px",
       scrub: 0.5,
     }
   })
 
+
+// zoom scene
   gsap.to('.scene__wrapper', {
-   scale: 2,
+    keyframes: {
+      scale: [1, 1.8, 1.8, 1],
+   },
    transformOrigin: "0 80%",
+    ease: "sine.out",
+    scrollTrigger: {
+      trigger: ".side__sidebox--11",
+      start: "top top",
+      end: "+=5000",
+      scrub: 0.2,
+    }
+  })
+
+  // island going out
+  gsap.to('.scene__island-two', {
+    x: 610,
     ease: "none",
     scrollTrigger: {
-      trigger: ".side__sidebox--9",
+      trigger: ".side__sidebox--12",
+      start: "top center",
+      end: "+=300px",
+      scrub: 0.5,
+    }
+  })
+  
+
+  //last island coming in
+  gsap.to('.scene__island-three', {
+    x: -500,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".side__sidebox--12",
       start: "top center",
       end: "+=300px",
       scrub: 0.5,
@@ -201,6 +266,7 @@ gsap.to('.scene__wave--three', {
   })
 
 
+  //man going onto island
 
 
 
