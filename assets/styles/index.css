@@ -660,6 +660,43 @@ body {
   font-size: 1.3rem;
 }
 
+.actions__man_2 {
+  position: relative;
+  width: 90%;
+  height: 76.7vh;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.actions__man_2__man {
+  position: relative;
+  z-index: 1;
+  transform: scale(1.5);
+  left: 8em;
+}
+
+.last_scene_textbox {
+  position: relative;
+  left: 67em;
+  top: 70px;
+  width: 600px;
+  height: 250px;
+  background-color: white;
+  border-radius: 80px 80px 80px 0px;
+  border-top-width: 10px;
+  border-top-style: ridge;
+  border-top-color: rgb(103, 67, 67);
+}
+
+.textbox {
+  position: relative;
+  top: 4px;
+  left: 30px;
+  font-size: 40px;
+  font-style: bold;
+}
+
 .scene__fish-container {
   position: absolute;
   z-index: 5;
