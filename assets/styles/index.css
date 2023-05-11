@@ -659,40 +659,6 @@ body {
   height: 100vh;
   animation: zoom-bg 30s ease infinite;
 }
-.learn-more__textbox2 {
-  position: relative;
-  top: 70px;
-  width: 600px;
-  height: 250px;
-  background-color: white;
-  border-radius: 80px 70px 70px 0px;
-  border-top-width: 10px;
-  border-top-style: ridge;
-  border-top-color: rgb(103, 67, 67);
-  top: 50px;
-  left: 23em;
-  font-size: 40px;
-  font-style: bold;
-}
-.learn-more__man_2 {
-  position: relative;
-  width: 90%;
-  height: 76.7vh;
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-}
-.learn-more__man_2__man {
-  position: relative;
-  z-index: 1;
-  transform: scale(1.5);
-  left: 8em;
-}
-
-.textbox1 {
-  padding: 19px;
-}
 
 .portrait-info {
   height: 100vh;
@@ -705,6 +671,43 @@ body {
 .portrait-info p {
   margin: 0 25%;
   font-size: 1.3rem;
+}
+
+.actions__man_2 {
+  position: relative;
+  width: 90%;
+  height: 76.7vh;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.actions__man_2__man {
+  position: relative;
+  z-index: 1;
+  transform: scale(1.5);
+  left: 8em;
+}
+
+.last_scene_textbox {
+  position: relative;
+  left: 67em;
+  top: 70px;
+  width: 600px;
+  height: 250px;
+  background-color: white;
+  border-radius: 80px 80px 80px 0px;
+  border-top-width: 10px;
+  border-top-style: ridge;
+  border-top-color: rgb(103, 67, 67);
+}
+
+.textbox {
+  position: relative;
+  top: 4px;
+  left: 30px;
+  font-size: 40px;
+  font-style: bold;
 }
 
 .scene__fish-container {
@@ -722,7 +725,7 @@ body {
   top: 3rem;
   z-index: 2;
   transform: translateY(100%);
-  animation: swim-left 13s infinite;
+  animation: swim-left 7s linear forwards;
 }
 
 .scene__deadfish1 {
@@ -735,7 +738,7 @@ body {
   animation-name: die;
   animation-duration: 8s;
   animation-delay: 7s;
-  animation-fill-mode: die 10s infinite;
+  animation-fill-mode: forwards;
 }
 
 .garbage {
@@ -789,12 +792,6 @@ body {
   position: relative;
   top: 150px;
   animation: translateX(7%) co2 translateY(40px) translate(50px);
-}
-
-.bird {
-  position: absolute;
-  bottom: 50rem;
-  animation: bird;
 }
 
 .center-fadeIn {
