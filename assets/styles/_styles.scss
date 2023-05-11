@@ -114,6 +114,10 @@ body {
     gap: 0;
 }
 
+
+
+  
+
 // waves
 .scene {
     width: 100%;
@@ -209,6 +213,7 @@ body {
 
 .side {
     width: 100%;
+    overflow: hidden;
     &__box {
     background-color: $skyblue;
     height: 170vh;

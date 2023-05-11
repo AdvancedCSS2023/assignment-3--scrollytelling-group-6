@@ -23,31 +23,98 @@ $from--right: 50px;
 }
 
 
+
+
+
 .co2_Txt{
   position: relative;
-  top: 500px;
-  animation: blad 4s linear infinite alternate;
+  animation: co2 80s linear infinite alternate;
   opacity: 0.4;
+  top: 5em;
+  left: 30px;
+}
+
+.fish_txt1{
+  position: relative;
+  animation: co2 20s linear infinite alternate;
+  opacity: 0.4;
+  top: 8em;
+  left: 20px;
+}
+
+.fish_txt2{
+  position: relative;
+  animation: co2 20s linear infinite alternate;
+  opacity: 0.4;
+  top: 19em;
+  left: 55px;
+}
+
+.marine{
+  position: relative;
+  opacity: 3;
+  top: 10em;
+  left: 7px;
+}
+
+.smoke{
+  animation: co2 35s infinite alternate;
+  opacity: 0.8;
+  bottom: 70px;
+  width: 7em;;
+  scale: 5;
+
+}
+
+.miniBoat{
+  animation: boat 3s infinite alternate;
+  bottom: 70px;
  
 }
 
+
 //KEYFRAMES
-@keyframes co2 {
+
+@keyframes boat {
   0% {
-      transform: translateY(5px);
+    transform: rotate(0deg) translate(0px) skewX(0deg);
+    
   }
-  100% {
-      transform: translateY(36px);
-  }
+  25%{
+    transform: rotate(4deg) translateX(1px) skewX(0deg);
+      
+    }
+  
+    75%{
+        transform: rotate(0deg) translateX(7px) skewX(0deg);
+      
+    }
+  100%{
+      transform: rotate(1deg) translate(0px) skewX(0deg);
+      
+    }
+
+}
+
+
+@keyframes co2 {
+ 
+  0% {
+    transform: rotate(0) scale(1);
+}
+100% {
+    transform: scale(3);
+}
+
 }
 
 
 @keyframes spin-scale {
   0% {
-      transform: rotate(0) scale(4.5);
+      transform: rotate(0) scale(2);
   }
   100% {
-      transform: rotate(40deg) scale(3);
+      transform: rotate(40deg);
   }
 }
 // wave animation
