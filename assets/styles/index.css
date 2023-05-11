@@ -48,7 +48,7 @@
     transform: translateY(36px);
   }
 }
-@keyframes spin {
+@keyframes spin-scale {
   0% {
     transform: rotate(0) scale(4.5);
   }
@@ -703,6 +703,34 @@ body {
   transition: transform 4s ease-in;
 }
 
+.bigGarbage {
+  animation: spin-scale 35s infinite alternate;
+  opacity: 0.8;
+}
+
+.co2_Txt {
+  position: relative;
+  top: 500px;
+  animation: blad 4s linear infinite alternate;
+  opacity: 0.4;
+}
+
+@keyframes co2 {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(36px);
+  }
+}
+@keyframes spin-scale {
+  0% {
+    transform: rotate(0) scale(4.5);
+  }
+  100% {
+    transform: rotate(40deg) scale(3);
+  }
+}
 @keyframes wave {
   0% {
     transform: translateX(0);
