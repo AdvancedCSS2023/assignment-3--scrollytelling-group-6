@@ -270,7 +270,6 @@ body {
             list-style: none;
             text-align: left;
             margin-left: 2em;
-        
             &::before {
                 content: url(../img/light-bulb.png);
             }
@@ -422,13 +421,11 @@ body {
     position: relative;
     top: 150px;
     animation: translateX(7%) co2 translateY(40px) translate($from--right);
-
 }
 
 // birds
 .bird{
     position: absolute;
-    
     bottom: 50rem;
     animation: bird ;
 }
