@@ -1245,8 +1245,16 @@ footer {
   }
 }
 @media screen and (max-width: 950px) and (orientation: landscape) {
-  html {
-    height: auto;
+  .intro__title {
+    font-size: 3.2rem;
+  }
+  .intro__heading {
+    padding-top: 10rem;
+  }
+  .intro__para {
+    margin-top: 5em;
+    width: 150px;
+    font-size: 1rem;
   }
   .contain {
     display: grid;
@@ -1280,7 +1288,7 @@ footer {
     max-width: 300px;
   }
   .side__inner {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0 10%;
   }
   .scene__cup {
