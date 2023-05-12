@@ -104,7 +104,6 @@ body {
         }
     }
 }
-
 .bigGarbage{ 
     position: absolute;
     right: 60px;
@@ -270,7 +269,6 @@ body {
     &__inner {
         transform: translateX($from--left);
         padding-top: 3em;
-        color: $grayblue;
         font-size: 1.8rem;
         font-weight: 700;
         margin: 0 20%;
@@ -292,7 +290,7 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
-    color: $white;
+    color: $text__secondary;
     display: flex;
     flex-direction: row;
     text-align: left;
@@ -427,7 +425,7 @@ body {
 // birds
 .bird{
     position: absolute;
-    bottom: 50rem;
+    bottom:45rem;
 }
 
 .marine{

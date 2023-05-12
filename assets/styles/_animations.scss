@@ -4,17 +4,12 @@ $from--left: -50px;
 $from--right: 50px;
 
 
-// class animations (for Intersection obs)
+// class animations
 
 .center-fadeIn {
     transform: translateX(0);
     opacity: 1;
     transition: transform 2s, opacity 2s;
-}
-
-.rotate {
-    transform: rotate(180deg);
-    transition: transform 4s ease-in;
 }
 
 .bigGarbage{
@@ -73,17 +68,15 @@ $from--right: 50px;
   bottom: 70px;
   width: 7em;;
   scale: 5;
-
 }
 
 .miniBoat{
   animation: boat 3s infinite alternate;
   bottom: 70px;
- 
 }
 
 .bird{
-  animation: bird 20s infinite;
+  animation: bird 40s infinite;
 }
 
 

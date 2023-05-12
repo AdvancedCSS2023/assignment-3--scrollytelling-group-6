@@ -1,7 +1,37 @@
-@import "colors";
 
 // reduced motion
 @media (prefers-reduced-motion) {
+
+  .intro__title {
+    animation: unset;
+}
+  // changed to only opacity change
+  .center-fadeIn {
+    opacity: 1;
+    transition: opacity 2s;
+}
+// reduced arm motion
+.right-arm {
+  animation: move-arm 10s ease infinite alternate;
+}
+// bird speed
+.bird{
+  animation: bird 70s infinite;
+}
+.bigGarbage{
+  animation: spin-scale 70s infinite alternate;
+}
+.oil_1 {
+  animation: oil_1 15s linear infinite;
+}
+
+.oil_2{
+  animation: oil_2 18s linear infinite;
+}
+
+.oil_3{
+  animation: oil_3 12s linear infinite ;
+}
 }
 
 // color-scheme
@@ -80,8 +110,6 @@ main, footer {
   .intro__text {
     font-size: 2rem
   }
-
-
   .intro__clouds img{ //want to include more of the clouds in the viewport here..
     max-width: 60%;
     max-height: 60%;
@@ -90,7 +118,6 @@ main, footer {
   .scene__island {
     max-width: 500px;
   }
-
   .scene__man {
     left: 30em;
   }
@@ -102,17 +129,31 @@ main, footer {
     left: 25em;
     max-width: 300px;
   }
-
   .side__inner {
     font-size: 1.3rem;
     margin: 0 10%;
   }
-
+  .scene__cup {
+    left: 23em;
+  }
+.scene__question-marks {
+    bottom: 14em;
+    left: 7em;
+}
+.scene__bulb-idea {
+  bottom: 15em;
+  left: 8em;
+}
+.scene__co2-wrap {
+  position: absolute;
+  left: -5em;
+  bottom: 1em;
+  transform: scale(0.8);
+}
   .actions h2 {
     font-size: 1.2rem;
     margin-top: 2em;
   }
-
   .actions__man {
     position: relative;
     width: 25%;

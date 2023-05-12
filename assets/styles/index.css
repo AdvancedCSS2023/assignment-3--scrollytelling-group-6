@@ -6,11 +6,6 @@
   transition: transform 2s, opacity 2s;
 }
 
-.rotate {
-  transform: rotate(180deg);
-  transition: transform 4s ease-in;
-}
-
 .bigGarbage {
   animation: spin-scale 35s infinite alternate;
   opacity: 0.8;
@@ -75,7 +70,7 @@
 }
 
 .bird {
-  animation: bird 20s infinite;
+  animation: bird 40s infinite;
 }
 
 @keyframes bird {
@@ -634,7 +629,6 @@ body {
 .side__inner {
   transform: translateX(-50px);
   padding-top: 3em;
-  color: #2b2c33;
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0 20%;
@@ -658,7 +652,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  color: #fff;
+  color: #f0f8ff;
   display: flex;
   flex-direction: row;
   text-align: left;
@@ -796,7 +790,7 @@ body {
 
 .bird {
   position: absolute;
-  bottom: 50rem;
+  bottom: 45rem;
 }
 
 .marine {
@@ -820,11 +814,6 @@ footer {
   transform: translateX(0);
   opacity: 1;
   transition: transform 2s, opacity 2s;
-}
-
-.rotate {
-  transform: rotate(180deg);
-  transition: transform 4s ease-in;
 }
 
 .bigGarbage {
@@ -891,7 +880,7 @@ footer {
 }
 
 .bird {
-  animation: bird 20s infinite;
+  animation: bird 40s infinite;
 }
 
 @keyframes bird {
@@ -1188,6 +1177,33 @@ footer {
     transform: translateY(-4.6em);
   }
 }
+@media (prefers-reduced-motion) {
+  .intro__title {
+    animation: unset;
+  }
+  .center-fadeIn {
+    opacity: 1;
+    transition: opacity 2s;
+  }
+  .right-arm {
+    animation: move-arm 10s ease infinite alternate;
+  }
+  .bird {
+    animation: bird 70s infinite;
+  }
+  .bigGarbage {
+    animation: spin-scale 70s infinite alternate;
+  }
+  .oil_1 {
+    animation: oil_1 15s linear infinite;
+  }
+  .oil_2 {
+    animation: oil_2 18s linear infinite;
+  }
+  .oil_3 {
+    animation: oil_3 12s linear infinite;
+  }
+}
 @media (prefers-color-scheme: dark) {
   .intro {
     background: linear-gradient(180deg, #010C12 0%, #273953 100%);
@@ -1266,6 +1282,23 @@ footer {
   .side__inner {
     font-size: 1.3rem;
     margin: 0 10%;
+  }
+  .scene__cup {
+    left: 23em;
+  }
+  .scene__question-marks {
+    bottom: 14em;
+    left: 7em;
+  }
+  .scene__bulb-idea {
+    bottom: 15em;
+    left: 8em;
+  }
+  .scene__co2-wrap {
+    position: absolute;
+    left: -5em;
+    bottom: 1em;
+    transform: scale(0.8);
   }
   .actions h2 {
     font-size: 1.2rem;

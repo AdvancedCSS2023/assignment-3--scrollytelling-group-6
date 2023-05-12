@@ -46,9 +46,12 @@ ScrollTrigger.create({
   pinSpacing: false,
 });
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // clouds moving on scroll
 let clouds = gsap.timeline();
+
+if (!prefersReducedMotion) {
 ScrollTrigger.create({
     animation: clouds,
     trigger: "img",
@@ -56,6 +59,7 @@ ScrollTrigger.create({
     end: "300%",
     scrub: 1, 
 });
+}
 
 clouds.to(".intro__clouds--one", { x: 1200 }, 0,)
 clouds.to(".intro__clouds--two", { x: 900 }, 0)
@@ -287,7 +291,6 @@ desktop.to('.scene__fish-container', {
       scrub: 0.5,
     }
   })
-  
 
   //last island coming in
   desktop.to('.scene__island-three', {
@@ -300,7 +303,6 @@ desktop.to('.scene__fish-container', {
       scrub: 0.5,
     }
   })
-
 
   // opacity 0 man
 
@@ -322,7 +324,7 @@ desktop.to('.scene__man-green', {
   scrollTrigger: {
     trigger: ".side__sidebox--14",
     start: "top center",
-    end: "+=400px",
+    end: "+=300px",
     scrub: 0.5,
   }
 })
@@ -374,8 +376,8 @@ desktop.to(".scene__bulb-idea",{
   }
 }); 
 
-
-  // media
+  // --------------------------------------------------------------//
+  //  MATCHMEDIA for landscape view
 let mm = gsap.matchMedia();
 
 mm.add("(max-width: 950px)", () => {
@@ -387,7 +389,10 @@ mm.add("(max-width: 950px)", () => {
     x: -300,
     y: 42,
   })
-
+  tl.to(".scene__boat", {
+    scale: 0.6,
+    x: -150,
+  })
   tl.to(".scene__island",{
     scale: 0.7,
     y: 80,
@@ -407,10 +412,7 @@ mm.add("(max-width: 950px)", () => {
     y: 40,
   })
 
-  tl.to(".scene__boat", {
-    scale: 0.6,
-    x: -150,
-  })
+
 
   tl.to(".scene__man-green", {
     scale: 0.6,
@@ -450,22 +452,39 @@ mm.add("(max-width: 950px)", () => {
     }
   })  
 
-  tl.to('.scene__wrapper', {
+  gsap.killTweensOf('.scene__wrapper');
+
+  tl.to(".scene__cup",{
+    xPercent: 10,
+    yPercent: 40,
+    scale: 0.8
+  });
+
+  tl.to(".scene__cup",{
+    opacity: 1,
     keyframes: {
-      scale: [1, 1.5, 1.5, 1],
-   },
-   transformOrigin: "0 80%",
-    ease: "sine.out",
+      opacity: [0, 1, 1, 0]
+    },
     scrollTrigger: {
-      trigger: ".side__sidebox--11",
-      start: "top top",
-      end: "+=2000",
-      scrub: 0.2,
+      trigger: ".side__sidebox--14",
+      start: "top center",
+      end: "+=900px",
+      scrub: 0.5,
     }
-  })
+  });
 
-
-//opacity 1 green man
+  gsap.killTweensOf('.scene__bulb-idea');
+  tl.to(".scene__bulb-idea",{
+    keyframes: {
+      opacity: [0, 1, 1, 0]
+    },
+    scrollTrigger: {
+      trigger: ".side__sidebox--12",
+      start: "top center",
+      end: "+=1500px",
+      scrub: 0.5,
+    }
+  }); 
 
 })
  
