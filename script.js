@@ -1,9 +1,6 @@
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-
 
 
 //intersection observers
-
 
 const texts = document.querySelectorAll(".intro__text");
 const sectionText = document.querySelectorAll(".side__inner"); 
@@ -38,6 +35,7 @@ text3.forEach((text3) => {
 
 // ------------------------------------------------------------------------------------------/
 //GSAP SCROLL ANIMATIONS
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 // sticky container for the scenes frame
 ScrollTrigger.create({
@@ -78,7 +76,6 @@ desktop.to('.scene__wave--one', {
       start: "top center",
       endTrigger: "#end-trigger", 
       scrub: 1,
-      markers: true,
 
     }
   })
@@ -105,15 +102,14 @@ desktop.to('.scene__wave--three', {
     }
   })
 
-
   // bottle to ocean motion path
  
   desktop.to('.scene__bottle', {
-      scrollTrigger: {
-      trigger: ".side__sidebox--1",
-      start: "center",
-      end: "+=450px",
-      scrub: 0.5,
+    scrollTrigger: {
+      trigger: ".side__sidebox--2",
+      start: "top center",
+      end: "+=400",
+      scrub: 0.2,
     },
     motionPath: {
       path: "M33.834,60.412 C52.803,53.384 59.846,32.141 132.889,30.3 174.1335,29.25995 206.57465,33.52242 231.73044,50.10079 252.31246,63.66491 302.668,120.119 295.078,173.275",
@@ -295,7 +291,7 @@ desktop.to('.scene__fish-container', {
 
   //last island coming in
   desktop.to('.scene__island-three', {
-    x: -500,
+    xPercent: -88,
     ease: "none",
     scrollTrigger: {
       trigger: ".side__sidebox--12",
@@ -332,12 +328,12 @@ desktop.to('.scene__man-green', {
 })
 
 desktop.to(".scene__cup",{
-  x: 20,
-  y:40,
+  xPercent: 20,
+  yPercent: 70,
   scrollTrigger: {
     trigger: ".side__sidebox--14",
     start: "top top",
-    end: "+=450px",
+    end: "+=550px",
     scrub: 0.5,
   }
 });
@@ -355,6 +351,28 @@ desktop.to(".scene__cup",{
 }); 
 
 
+desktop.to(".scene__question-marks",{
+  keyframes: {
+    opacity: [0, 1, 1, 0]
+  },
+  scrollTrigger: {
+    trigger: ".side__sidebox--10",
+    start: "top center",
+    end: "+=2000px",
+    scrub: 0.5,
+  }
+}); 
+desktop.to(".scene__bulb-idea",{
+  keyframes: {
+    opacity: [0, 1, 1, 0]
+  },
+  scrollTrigger: {
+    trigger: ".side__sidebox--12",
+    start: "top center",
+    end: "+=2000px",
+    scrub: 0.5,
+  }
+}); 
 
 
   // media

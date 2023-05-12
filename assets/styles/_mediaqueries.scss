@@ -16,18 +16,32 @@
         background: $background__primary--dark;
     }
 
-    .textboxes__box {
-      background-color: $background__primary--dark;
+    .side__box {
+      background: $background__primary--dark;
+      
     }
-    
-    //waves -->
-    //text -->
+    .side__inner {
+      color: $text__primary--dark;    
+    }
+
+    .scene__wave--one, .scene__wave--two, .scene__wave--three {
+      fill: $waves--dark;
+    }
+
+    .scene__fish-container {
+      background: linear-gradient(180deg, $underSea__dark--one 0%, $underSea__dark--two 100%);
+    }
+    .learn-more__textbox2 {
+      background-color: $background__primary--dark;
+      color: $text__primary--dark;
+    }
+
   }
 
   // orientation portrait will ask to switch to landscape
 @media (orientation: portrait) {
 
-main {
+main, footer {
   display: none;
 }
 
@@ -47,6 +61,9 @@ main {
 // preferred orientation for the story for screens less than 950px
 @media screen and (max-width: 950px) and (orientation: landscape) {
 
+  html {
+    height: auto;
+  }
 
   .contain {
     display: grid;
@@ -93,17 +110,19 @@ main {
 
   .actions h2 {
     font-size: 1.2rem;
-    margin-bottom: 2.5em;
+    margin-top: 2em;
   }
 
   .actions__man {
-    transform: scale(0.7);
+    position: relative;
+    width: 25%;
+    left: 1em;
     bottom: 18em;
-    left: 3em;
+    margin: 0;
   }
   .actions__text {
     font-size: 1rem;
-    margin-left:0;
+    padding: .4em;
   }
 
   li::before {
@@ -114,6 +133,9 @@ main {
     width: 100%;
   }
 
+  .marine {
+    margin: 2em;
+  }
   .scene__fish-container > * {
     transform: scale(0.5);
   }
@@ -130,5 +152,16 @@ main {
     left: -10em;
   }
 
+  .learn-more__textbox2 {
+    width: 280px;
+    height: 140px;
+    font-size: 1em;
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+  .learn-more__man_2 {
+    transform: scale(1.2);
+    margin: 0;
 }
 
+}

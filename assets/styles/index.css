@@ -17,27 +17,22 @@
 }
 
 .co2_Txt {
-  position: absolute;
-  animation: blad 4s linear infinite alternate;
-  position: relative;
-  animation: co2 80s linear infinite alternate;
-  opacity: 0.4;
-  top: 5em;
-  left: 30px;
+  animation: co2 80s ease infinite alternate;
 }
 
 .fish_txt1 {
-  position: relative;
-  animation: co2 20s linear infinite alternate;
+  position: absolute;
+  animation: co2 15s linear infinite alternate;
   opacity: 0.4;
-  top: 8em;
   left: 20px;
+  z-index: -1;
 }
 
 .fish_txt2 {
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
+  z-index: -1;
 }
 
 .right-arm {
@@ -51,7 +46,7 @@
 }
 
 .fish_txt1 {
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
   top: 8em;
@@ -59,18 +54,11 @@
 }
 
 .fish_txt2 {
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
   top: 19em;
   left: 55px;
-}
-
-.marine {
-  position: relative;
-  opacity: 3;
-  top: 10em;
-  left: 7px;
 }
 
 .smoke {
@@ -117,7 +105,7 @@
     transform: rotate(0) scale(1);
   }
   100% {
-    transform: scale(3);
+    transform: rotate(10deg) scale(3);
   }
 }
 @keyframes spin-scale {
@@ -148,7 +136,7 @@
 }
 @keyframes color-change {
   to {
-    color: #f84646;
+    color: #ff4343;
   }
 }
 @keyframes boat-move {
@@ -291,7 +279,7 @@
 
 @keyframes swim-left {
   0% {
-    transform: translateX(500%);
+    transform: translateX(100%);
     right: 20vh;
   }
   50% {
@@ -388,7 +376,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid plum;
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -422,10 +413,11 @@ body {
 .intro__para {
   width: 200px;
   font-size: 1.2rem;
-  margin-top: 8em;
+  margin-top: 10em;
   border: 4px solid #f0f8ff;
   padding: 15px;
   border-radius: 10px;
+  opacity: 0.5;
 }
 .intro__texts {
   display: flex;
@@ -441,7 +433,7 @@ body {
   font-size: 2.2rem;
   font-weight: 600;
   position: absolute;
-  top: 30em;
+  top: 33em;
   opacity: 0;
   transform: translateX(-50px);
 }
@@ -490,7 +482,7 @@ body {
   right: 60px;
 }
 
-.contain {
+.main-container {
   display: grid;
   grid-template-columns: 1fr 1.7fr;
   gap: 0;
@@ -498,7 +490,7 @@ body {
 
 .scene {
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
 }
 .scene__wrapper {
@@ -564,7 +556,8 @@ body {
 .scene__island-three {
   position: absolute;
   bottom: 0em;
-  right: -34em;
+  right: -40em;
+  min-width: 52%;
 }
 .scene__man-green {
   position: absolute;
@@ -577,6 +570,47 @@ body {
   left: 54em;
   bottom: 10em;
   opacity: 0;
+}
+.scene__question-marks {
+  position: absolute;
+  bottom: 19em;
+  left: 15em;
+  opacity: 0;
+}
+.scene__bulb-idea {
+  position: absolute;
+  bottom: 21em;
+  left: 17em;
+  transform: rotate(15deg);
+  opacity: 0;
+}
+.scene__fish-container {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  bottom: -70em;
+  height: 100vh;
+  background: linear-gradient(180deg, #0693E3 0%, rgb(14, 26, 82) 100%);
+}
+.scene__fish1 {
+  position: absolute;
+  right: 10rem;
+  top: 3rem;
+  z-index: 2;
+  transform: translateY(100%);
+  animation: swim-left 13s infinite;
+}
+.scene__deadfish1 {
+  position: absolute;
+  z-index: 2;
+  left: 480px;
+  top: 120px;
+  transform: translateY(300deg);
+  opacity: 0;
+  animation-name: die;
+  animation-duration: 8s;
+  animation-delay: 7s;
+  animation-fill-mode: die 10s infinite;
 }
 
 .side {
@@ -605,9 +639,17 @@ body {
   font-weight: 700;
   margin: 0 20%;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .side__box:nth-child(1) span {
   background-color: #ffc401;
+}
+.side__sidebox--7 p {
+  margin-top: 8em;
 }
 
 .actions {
@@ -616,25 +658,21 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  animation: zoom-bg 30s ease infinite;
   color: #fff;
   display: flex;
   flex-direction: row;
   text-align: left;
 }
 .actions__man {
-  position: relative;
-  z-index: 1;
-  transform: scale(1.5);
-  left: 8em;
+  margin-left: 12em;
 }
 .actions__text {
   width: 60%;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 600;
-  margin-left: 8em;
   opacity: 0;
   transform: translateX(-50px);
+  padding: 4em 2em;
 }
 .actions__text li {
   margin-top: 2.5em;
@@ -646,10 +684,8 @@ body {
   content: url(../img/light-bulb.png);
 }
 .actions h2 {
-  margin-top: 2em;
-  margin-left: 5em;
-  margin-bottom: 0.5em;
-  font-size: 2.5rem;
+  margin-left: 3em;
+  font-size: 2.3rem;
 }
 
 .learn-more {
@@ -658,34 +694,36 @@ body {
   background-size: cover;
   width: 100%;
   height: 100vh;
-  animation: zoom-bg 30s ease infinite;
-  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
 }
 .learn-more__textbox2 {
   width: 500px;
   height: 250px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 80px 70px 70px 0px;
   border-top-width: 10px;
   border-top-style: ridge;
-  border-top-color: rgb(103, 67, 67);
-  font-size: 40px;
-  font-style: bold;
+  border-top-color: #001927;
+  font-size: 1.6em;
+  font-weight: 700;
   margin-bottom: 15em;
+  line-height: 1.8em;
+}
+.learn-more__innertext {
+  padding: 1em;
+  margin-top: 1.2em;
+}
+.learn-more__innertext a {
+  color: #75bfff;
 }
 .learn-more__man_2 {
-  color: #fff;
-}
-.learn-more__man_2__man {
-  z-index: 1;
-  left: 8em;
-}
-
-.textbox1 {
-  padding: 15px;
+  transform: scale(2);
+  margin-right: 4em;
 }
 
 .portrait-info {
@@ -699,37 +737,6 @@ body {
 .portrait-info p {
   margin: 0 25%;
   font-size: 1.3rem;
-}
-
-.scene__fish-container {
-  position: absolute;
-  z-index: 5;
-  width: 100%;
-  bottom: -70em;
-  height: 100vh;
-  background: linear-gradient(180deg, #0693E3 0%, rgb(14, 26, 82) 100%);
-}
-
-.scene__fish1 {
-  position: absolute;
-  right: 10rem;
-  top: 3rem;
-  z-index: 2;
-  transform: translateY(100%);
-  animation: swim-left 13s infinite;
-}
-
-.scene__deadfish1 {
-  position: absolute;
-  z-index: 2;
-  left: 480px;
-  top: 120px;
-  transform: translateY(300deg);
-  opacity: 0;
-  animation-name: die;
-  animation-duration: 8s;
-  animation-delay: 7s;
-  animation-fill-mode: die 10s infinite;
 }
 
 .garbage {
@@ -780,15 +787,33 @@ body {
 }
 
 .co2_Txt {
-  position: relative;
-  top: 150px;
-  animation: translateX(7%) co2 translateY(40px) translate(50px);
+  position: absolute;
+  top: 2em;
+  left: -4em;
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .bird {
   position: absolute;
   bottom: 50rem;
-  animation: bird;
+}
+
+.marine {
+  margin-top: 3em;
+  opacity: 1;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #000000;
+  color: #fff;
+  height: 5em;
+  width: 100%;
 }
 
 .center-fadeIn {
@@ -808,27 +833,22 @@ body {
 }
 
 .co2_Txt {
-  position: absolute;
-  animation: blad 4s linear infinite alternate;
-  position: relative;
-  animation: co2 80s linear infinite alternate;
-  opacity: 0.4;
-  top: 5em;
-  left: 30px;
+  animation: co2 80s ease infinite alternate;
 }
 
 .fish_txt1 {
-  position: relative;
-  animation: co2 20s linear infinite alternate;
+  position: absolute;
+  animation: co2 15s linear infinite alternate;
   opacity: 0.4;
-  top: 8em;
   left: 20px;
+  z-index: -1;
 }
 
 .fish_txt2 {
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
+  z-index: -1;
 }
 
 .right-arm {
@@ -842,7 +862,7 @@ body {
 }
 
 .fish_txt1 {
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
   top: 8em;
@@ -850,18 +870,11 @@ body {
 }
 
 .fish_txt2 {
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
   top: 19em;
   left: 55px;
-}
-
-.marine {
-  position: relative;
-  opacity: 3;
-  top: 10em;
-  left: 7px;
 }
 
 .smoke {
@@ -908,7 +921,7 @@ body {
     transform: rotate(0) scale(1);
   }
   100% {
-    transform: scale(3);
+    transform: rotate(10deg) scale(3);
   }
 }
 @keyframes spin-scale {
@@ -939,7 +952,7 @@ body {
 }
 @keyframes color-change {
   to {
-    color: #f84646;
+    color: #ff4343;
   }
 }
 @keyframes boat-move {
@@ -1082,7 +1095,7 @@ body {
 
 @keyframes swim-left {
   0% {
-    transform: translateX(500%);
+    transform: translateX(100%);
     right: 20vh;
   }
   50% {
@@ -1185,12 +1198,25 @@ body {
   .scene__wrapper {
     background: #273953;
   }
-  .textboxes__box {
+  .side__box {
+    background: #273953;
+  }
+  .side__inner {
+    color: #f0f8ff;
+  }
+  .scene__wave--one, .scene__wave--two, .scene__wave--three {
+    fill: #245399;
+  }
+  .scene__fish-container {
+    background: linear-gradient(180deg, #245399 0%, #163461 100%);
+  }
+  .learn-more__textbox2 {
     background-color: #273953;
+    color: #f0f8ff;
   }
 }
 @media (orientation: portrait) {
-  main {
+  main, footer {
     display: none;
   }
   .portrait-info, .portrait-info * {
@@ -1203,6 +1229,9 @@ body {
   }
 }
 @media screen and (max-width: 950px) and (orientation: landscape) {
+  html {
+    height: auto;
+  }
   .contain {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -1240,22 +1269,27 @@ body {
   }
   .actions h2 {
     font-size: 1.2rem;
-    margin-bottom: 2.5em;
+    margin-top: 2em;
   }
   .actions__man {
-    transform: scale(0.7);
+    position: relative;
+    width: 25%;
+    left: 1em;
     bottom: 18em;
-    left: 3em;
+    margin: 0;
   }
   .actions__text {
     font-size: 1rem;
-    margin-left: 0;
+    padding: 0.4em;
   }
   li::before {
     display: none;
   }
   .scene__fish-container {
     width: 100%;
+  }
+  .marine {
+    margin: 2em;
   }
   .scene__fish-container > * {
     transform: scale(0.5);
@@ -1270,5 +1304,16 @@ body {
     position: relative;
     top: 5em;
     left: -10em;
+  }
+  .learn-more__textbox2 {
+    width: 280px;
+    height: 140px;
+    font-size: 1em;
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+  .learn-more__man_2 {
+    transform: scale(1.2);
+    margin: 0;
   }
 }/*# sourceMappingURL=index.css.map */

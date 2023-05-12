@@ -23,27 +23,22 @@ $from--right: 50px;
 }
 
 .co2_Txt{
-  position: absolute;
-  animation: blad 4s linear infinite alternate;
-  position: relative;
-  animation: co2 80s linear infinite alternate;
-  opacity: 0.4;
-  top: 5em;
-  left: 30px;
+  animation: co2 80s ease infinite alternate;
 }
 
 .fish_txt1{
-  position: relative;
-  animation: co2 20s linear infinite alternate;
+  position: absolute;
+  animation: co2 15s linear infinite alternate;
   opacity: 0.4;
-  top: 8em;
   left: 20px;
+  z-index: -1;
 }
 
 .fish_txt2{
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
+  z-index: -1;
 }
 
 .right-arm {
@@ -57,7 +52,7 @@ $from--right: 50px;
 }
 
 .fish_txt1{
-  position: relative;
+  position: absolute  ;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
   top: 8em;
@@ -65,18 +60,11 @@ $from--right: 50px;
 }
 
 .fish_txt2{
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
   top: 19em;
   left: 55px;
-}
-
-.marine{
-  position: relative;
-  opacity: 3;
-  top: 10em;
-  left: 7px;
 }
 
 .smoke{
@@ -139,7 +127,7 @@ $from--right: 50px;
     transform: rotate(0) scale(1);
 }
 100% {
-    transform: scale(3);
+    transform: rotate(10deg) scale(3);
 }
 
 }
@@ -179,7 +167,7 @@ $from--right: 50px;
 // marker effect
 @keyframes color-change {
     to{
-       color: #f84646; 
+       color: $red; 
     }
 }
 
@@ -334,7 +322,7 @@ $from--right: 50px;
   @keyframes swim-left {
   
     0% {
-      transform: translateX(500%);
+      transform: translateX(100%);
       right: 20vh;
     }
     50%{
