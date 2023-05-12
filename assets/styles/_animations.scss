@@ -4,17 +4,12 @@ $from--left: -50px;
 $from--right: 50px;
 
 
-// class animations (for Intersection obs)
+// class animations
 
 .center-fadeIn {
     transform: translateX(0);
     opacity: 1;
     transition: transform 2s, opacity 2s;
-}
-
-.rotate {
-    transform: rotate(180deg);
-    transition: transform 4s ease-in;
 }
 
 .bigGarbage{
@@ -26,24 +21,25 @@ $from--right: 50px;
   position: absolute;
   animation: blad 4s linear infinite alternate;
   position: relative;
-  animation: co2 40s linear infinite alternate;
-  opacity: 0.5;
-  top: 20em;
+  animation: co2 80s linear infinite alternate;
+  opacity: 0.4;
+  top: 5em;
   left: 30px;
 }
 
 .fish_txt1{
-  position: relative;
-  animation: co2 20s linear infinite alternate;
+  position: absolute;
+  animation: co2 15s linear infinite alternate;
   opacity: 0.4;
-  top: 8em;
   left: 20px;
+  z-index: -1;
 }
 
 .fish_txt2{
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
+  z-index: -1;
 }
 
 .right-arm {
@@ -57,7 +53,7 @@ $from--right: 50px;
 }
 
 .fish_txt1{
-  position: relative;
+  position: absolute  ;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
   top: 8em;
@@ -65,7 +61,7 @@ $from--right: 50px;
 }
 
 .fish_txt2{
-  position: relative;
+  position: absolute;
   animation: co2 20s linear infinite alternate;
   opacity: 0.4;
   top: 19em;
@@ -75,8 +71,8 @@ $from--right: 50px;
 .marine{
   position: relative;
   opacity: 3;
-  top: 12em;
-  left: 6px;
+  top: 10em;
+  left: 7px;
 }
 
 .smoke{
@@ -85,17 +81,15 @@ $from--right: 50px;
   bottom: 70px;
   width: 7em;;
   scale: 5;
-
 }
 
 .miniBoat{
   animation: boat 3s infinite alternate;
   bottom: 70px;
- 
 }
 
 .bird{
-  animation: bird 20s infinite;
+  animation: bird 40s infinite;
 }
 
 
@@ -139,7 +133,7 @@ $from--right: 50px;
     transform: rotate(0) scale(1);
 }
 100% {
-    transform: scale(3);
+    transform: rotate(10deg) scale(3);
 }
 
 }
@@ -179,7 +173,7 @@ $from--right: 50px;
 // marker effect
 @keyframes color-change {
     to{
-       color: #f84646; 
+       color: $red; 
     }
 }
 
@@ -334,7 +328,7 @@ $from--right: 50px;
   @keyframes swim-left {
   
     0% {
-      transform: translateX(500%);
+      transform: translateX(100%);
       right: 20vh;
     }
     50%{
