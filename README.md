@@ -1,7 +1,7 @@
 # Scrollytelling website: Goal 14 | Life below water
 
 ### What the project does
-The project aims to deliver an animated scrollable website about UN goal 14: Life below water. Goal 14 focuses on the conservation and sustainable use of the world's oceans, seas, and marine resources. It addresses the significant challenges faced by marine ecosystems due to pollution, climate change, overfishing, and habitat destruction. The project created primarily tackles the human aspect, and how our behavior tends affects the oceans negatively, but also shows how humans can change for the better.
+The project aims to deliver an animated scrollable website about [UN goal 14](https://www.globalgoals.org/goals/14-life-below-water/): Life below water. Goal 14 focuses on the conservation and sustainable use of the world's oceans, seas, and marine resources. It addresses the significant challenges faced by marine ecosystems due to pollution, climate change, overfishing, and habitat destruction. The project created primarily tackles the human aspect, and how our behavior tends affects the oceans negatively, but also shows how humans can change for the better.
 ### Why the project is useful
 The project is useful since it helps to raise awereness about the importance of protecting marine life and achieving sustainable development. The goal with the webpage is to encourage viewers to become more enlightened on the subject and feel inspired to take action. The page is meant for the target audience: adults between 35-45 years old, so it should be mostly useful for this group, but also the general public. The design is meant to be illustrative as well as easy to read and understand.
 ### How users can get started with the project
