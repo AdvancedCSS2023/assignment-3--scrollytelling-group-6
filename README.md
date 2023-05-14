@@ -13,6 +13,9 @@ This is how users and developers can get started with the project:
 Users can reach out to the project maintainers and contributors thourgh the GitHub repository's issue tracker for any questions or help needed. If not, then users are open to contact the contributors directly.
 ### Which technology is used
 The technology used in this project include: HTML, CSS/SASS, BEM, Javascript and GSAP (GreenStock Animation Platform). Using SASS allows us to organize the code in a clearer and more efficient manner than with regular CSS. This also allows us to use SASS variables and BEM intertwined with SASS which comes in handy. We used Live Sass Compiler extention for compiling the files. In the Javascript, Intersection Observer API was utilized alongside GSAP library. Since the page is intended to be a scrollytelling experience, we used primarily GSAP "Scrolltrigger" plugin to to coordinate how elements move with scroll, and this allows us to give an immersive experience. While the intersection observer controls how text and other elements animates in. 
+#### Other notes
+- It was attempted to get this webpage more responsive, and most of it runs alright to an extent when switching to landscape orientation. The struggle was mostly getting story responsive with GSAP, so there are a few bugs in that translation.
+- "@import animations" had to be included in the beginning of the "layout.scss" in order for the files to run without facing problems. There was an attempt to fix this in the "index.scss" file, but even when "@import layout" was stated after "animations", the files did not communicate as they should have. 
 ### Who maintains and contributes to the project
 This project was made during the course [Advanced CSS](https://www.ntnu.edu/studies/courses/IDG1293/#tab=omEmnet) as part of a portfolio project.
 The contents of the page is created and maintained by Maja Brunsvik and Sabrina Altahrawi, web development students at NTNU.
