@@ -20,3 +20,27 @@
         letter-spacing: .1rem;
     }
 }
+
+@keyframes scrollArrow {
+    100% {
+        bottom: .5rem;
+    }
+}
+
+@keyframes cloud1 {
+    100% {
+        transform: translateX(130vw);
+    }
+}
+
+@keyframes cloud2 {
+    100% {
+        transform: translateX(140vw);
+    }
+}
+
+@keyframes cloud3 {
+    100% {
+        transform: translateX(125vw);
+    }
+}

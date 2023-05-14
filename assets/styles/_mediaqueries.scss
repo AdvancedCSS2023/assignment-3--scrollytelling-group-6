@@ -5,30 +5,26 @@
 }
 
 // color-scheme
-  @media (prefers-color-scheme: dark) {
-    .intro {
-        background: linear-gradient(180deg, $background__secondary--dark 0%, $background__primary--dark 100%); ;
-        &__clouds {
-            opacity: 0.5;
-        }
-    }
-    .scene__wrapper {
-        background: $background__primary--dark;
-    }
-    
-    //waves -->
-    //text -->
+@media (prefers-color-scheme: dark) {
+  .sky-container {
+      background: linear-gradient(180deg, $background__secondary--dark 0%, $background__primary--dark 100%); ;
+      &__clouds {
+          opacity: 0.5;
+      }
   }
+  .section1__wrapper {
+      background: $background__primary--dark;
+  }
+  
+  //waves -->
+  //text -->
+}
 
   // orientation
 @media screen and (max-width: 600px) and (orientation: portrait) {
+  
+}
 
-    .scene__beach {
-        bottom: -2em;
-        left: -4em;
-    }
-  }
+@media screen and (max-width: 800px) and (orientation: landscape) {
 
-  @media screen and (max-width: 800px) and (orientation: landscape) {
-
-  }
+}

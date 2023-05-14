@@ -9,101 +9,46 @@
 body {
   font-family: "Nunito", sans-serif;
   color: #000000;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
 }
 
 .intro {
-  width: 100%;
-  min-height: 330vh;
-  background: linear-gradient(180deg, #001927 0%, #75bfff 100%);
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-}
-.intro__container {
-  position: absolute;
 }
 .intro__heading {
   text-align: center;
   position: relative;
-  top: 10%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #f0f8ff;
 }
 .intro__title {
-  font-size: 7rem;
+  font-size: 10vw;
   font-family: "Nixie One", cursive;
   animation: title 2s linear forwards;
 }
-.intro__para {
-  font-size: 1.2rem;
+.intro__scroll-arrow {
   position: absolute;
   left: 50%;
+  bottom: 2rem;
   transform: translate(-50%, -50%);
-  margin-top: 10em;
-  border: 4px solid #f0f8ff;
-  padding: 15px;
-  border-radius: 10px;
-}
-.intro__text--one {
-  display: block;
-  color: #f0f8ff;
-  max-width: 350px;
-  line-height: 4rem;
-  font-size: 2.5rem;
-  font-weight: 600;
-  position: relative;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.intro__text--two {
-  color: #f0f8ff;
-  line-height: 4rem;
-  font-size: 2.5rem;
-  font-weight: 600;
-  position: relative;
-  top: 40%;
-  transform: translateX(-50%, -50%);
-  text-align: center;
-}
-.intro__clouds--one {
-  position: relative;
-  top: 50em;
-  left: 10em;
-}
-.intro__clouds--two {
-  position: relative;
-  top: 65em;
-  right: 50em;
-}
-.intro__clouds--three {
-  position: relative;
-  top: 85em;
-  left: -90em;
-}
-.intro__clouds--four {
-  position: relative;
-  top: 85em;
-  right: -50em;
-}
-.intro__clouds--five {
-  position: relative;
-  top: 110em;
-  left: 10em;
+  animation: scrollArrow 0.5s infinite alternate;
 }
 
-section {
-  height: 100vh;
-  width: 100%;
-  background-color: rgb(32, 52, 83);
-}
-
-.scene::before {
+.section1::before {
   display: block;
   content: "";
-  height: 1200vh;
+  height: 400vh;
 }
-.scene__wrapper {
+.section1__wrapper {
   background: #75bfff;
   position: relative;
   width: 100%;
@@ -112,18 +57,166 @@ section {
   position: sticky;
   bottom: 0em;
 }
-.scene__ocean {
+.section1__ocean {
   position: absolute;
-  left: -5em;
-  bottom: -10px;
+  height: 20vw;
+  bottom: -1px;
   animation: wave linear 5s infinite alternate;
 }
-.scene__beach {
+.section1__beach {
   position: absolute;
   z-index: 2;
-  bottom: -5em;
-  left: -3em;
+  bottom: 5vw;
+  left: -10vw;
   min-width: 480px;
+}
+.section1__beach-svg {
+  width: 60vw;
+}
+
+.shy-container {
+  background: linear-gradient(180deg, #001927 0%, #75bfff 100%);
+}
+.shy-container__cloud {
+  position: absolute;
+  display: block;
+}
+.shy-container__cloud--one {
+  width: 30vw;
+  top: 100vh;
+  left: -30vw;
+  animation: cloud1 5.2s linear infinite;
+}
+.shy-container__cloud--two {
+  width: 40vw;
+  top: 180vh;
+  left: -40vw;
+  animation: cloud2 4.5s linear 1.7s infinite;
+}
+.shy-container__cloud--three {
+  width: 25vw;
+  top: 270vh;
+  left: -25vw;
+  animation: cloud3 6s linear 5s infinite;
+}
+
+.man {
+  width: 5vw;
+  position: absolute;
+  bottom: 10vw;
+  left: 30vw;
+}
+
+.boat {
+  z-index: 999;
+  position: absolute;
+  width: 35vw;
+  bottom: 9vw;
+  left: 60vw;
+}
+
+.center-text {
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f0f8ff;
+  font-size: 5vw;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 10vw;
+}
+
+.beach2 {
+  position: absolute;
+  left: 200vw;
+  width: 50vw;
+  bottom: -3vw;
+}
+
+.section2 {
+  height: 10vh;
+}
+
+.section3 {
+  height: 10vh;
+  width: 100%;
+  background-color: green;
+  z-index: 800;
+}
+
+.actions {
+  background: url(../img/beach-cleaning.png) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.actions__man {
+  position: relative;
+  z-index: 1;
+  transform: scale(1.5);
+  left: 8em;
+}
+.actions__text {
+  width: 60%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 8em;
+  transform: translateX(-50px);
+}
+.actions__text li {
+  margin-top: 2.5em;
+  list-style: none;
+  text-align: left;
+  margin-left: 2em;
+}
+.actions__text li::before {
+  content: url(../img/light-bulb.png);
+}
+.actions h2 {
+  margin-top: 2em;
+  margin-left: 5em;
+  margin-bottom: 0.5em;
+  font-size: 2.5rem;
+}
+
+.learn-more {
+  z-index: 2;
+  background: url(../img/trash-ocean.png) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.learn-more__textbox2 {
+  width: 500px;
+  height: 250px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 80px 70px 70px 0px;
+  font-size: 40px;
+  font-style: bold;
+  margin-bottom: 15em;
+}
+.learn-more__man_2 {
+  color: #fff;
+}
+.learn-more__man_2__man {
+  z-index: 1;
+  left: 8em;
+}
+
+.textbox1 {
+  padding: 15px;
 }
 
 @keyframes wave {
@@ -144,20 +237,34 @@ section {
     letter-spacing: 0.1rem;
   }
 }
-@media (prefers-color-scheme: dark) {
-  .intro {
-    background: linear-gradient(180deg, #010C12 0%, #273953 100%);
-  }
-  .intro__clouds {
-    opacity: 0.5;
-  }
-  .scene__wrapper {
-    background: #273953;
+@keyframes scrollArrow {
+  100% {
+    bottom: 0.5rem;
   }
 }
-@media screen and (max-width: 600px) and (orientation: portrait) {
-  .scene__beach {
-    bottom: -2em;
-    left: -4em;
+@keyframes cloud1 {
+  100% {
+    transform: translateX(130vw);
+  }
+}
+@keyframes cloud2 {
+  100% {
+    transform: translateX(140vw);
+  }
+}
+@keyframes cloud3 {
+  100% {
+    transform: translateX(125vw);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .sky-container {
+    background: linear-gradient(180deg, #010C12 0%, #273953 100%);
+  }
+  .sky-container__clouds {
+    opacity: 0.5;
+  }
+  .section1__wrapper {
+    background: #273953;
   }
 }/*# sourceMappingURL=index.css.map */
