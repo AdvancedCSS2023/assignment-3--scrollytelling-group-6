@@ -1,0 +1,321 @@
+//vars
+$from--left: -50px;
+$from--right: 50px;
+// class animations
+
+//class for intersection observer
+.center-fadeIn {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 2s, opacity 2s;
+}
+
+// general animations
+.side__bigGarbage{
+  animation: spin-scale 35s infinite alternate;
+  opacity: 0.8; 
+}
+.side__co2--Txt{
+  animation: co2 80s linear infinite alternate;
+}
+.side__fishes--1{
+  animation: co2 20s linear infinite alternate;
+}
+.side__fishes--2{
+  animation: co2 20s linear infinite alternate;
+}
+.side__smoke{
+  animation: co2 35s infinite alternate;
+}
+.side__miniBoat{
+  animation: boat 3s infinite alternate;
+  bottom: 70px;
+}
+.scene__bird{
+  animation: bird 40s linear infinite;
+}
+.actions__man--right-arm {
+  transform-origin: 35%;
+  animation: move-arm 5s ease infinite alternate;
+}
+.actions__man--eyes {
+  animation: eyes-blink 3s infinite;
+  transform-origin: center 20%;
+}
+
+//KEYFRAMES
+
+@keyframes bird {
+  0% {
+    transform: translateX(500%);
+}
+100% {
+    transform: translateX(-100%);
+}
+}
+
+@keyframes boat {
+  0% {
+    transform: rotate(0deg) translate(0px) skewX(0deg); 
+  }
+  25%{
+    transform: rotate(4deg) translateX(1px) skewX(0deg);
+    }
+    75%{
+        transform: rotate(0deg) translateX(7px) skewX(0deg);
+    }
+  100%{
+      transform: rotate(1deg) translate(0px) skewX(0deg);
+    }
+}
+
+@keyframes co2 {
+ 
+  0% {
+    transform: rotate(0) scale(1.2);
+}
+100% {
+    transform: rotate(10deg) scale(3);
+}
+}
+
+@keyframes spin-scale {
+  0% {
+      transform: rotate(0) scale(5);
+  }
+  100% {
+      transform: rotate(40deg) scale(3);
+  }
+}
+// wave animation
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-5%);
+    }
+}
+
+// title entrance
+@keyframes title {
+    from {
+        opacity: 0;
+        letter-spacing: normal;
+    }
+    to {
+        opacity: 1;
+        letter-spacing: .1rem;
+    }
+}
+
+// marker effect
+@keyframes color-change {
+    to{
+       color: $red; 
+    }
+}
+
+@keyframes move-arm {
+  0% {
+    transform: rotate(-50deg) translateX(-60px);
+  }
+  50% {
+    transform: rotate(-90deg) translateX(-80px);
+  }
+  100% {
+    transform: rotate(-80deg) translateX(-80px);
+  }
+}
+
+@keyframes eyes-blink {
+    0% {
+       transform:scaleY(1)}
+    15% { 
+      transform:scaleY(1) }
+    20% { 
+      transform:scaleY(0) }
+    25% { 
+      transform:scaleY(1) }
+    38% { 
+      transform:scaleY(1) }
+    40% { 
+      transform:scaleY(0) }
+    45% { 
+      transform:scaleY(1) }
+    80% { 
+      transform:scaleY(1) }
+}
+
+@keyframes blad {
+0% {
+    transform: rotate(0deg) translate(0px) skewX(0deg);
+  }
+  25%{
+    transform: rotate(1deg) translate(1px) skewX(0deg);
+    }
+    75%{
+        transform: rotate(0deg) translate(1px) skewX(0deg);
+    }
+  100%{
+      transform: rotate(1deg) translate(0px) skewX(0deg);
+    }
+}
+// palm leaf animations
+#blader{
+    animation: blad 3s linear infinite alternate;
+}
+#blader_2{
+    animation: blad 5s linear infinite alternate;
+}
+#blader_3{
+    animation: blad 4s linear infinite alternate;
+}  
+#blader_4{
+    animation: blad 4s linear infinite alternate;
+}  
+#blader_5{
+    animation: blad 3s linear infinite alternate;
+}  
+#blader_6{
+    animation: blad 5s linear infinite alternate;
+}  
+#blader_7{
+    animation: blad 5s linear infinite alternate;
+} 
+#blader_8{
+    animation: blad 5s linear infinite alternate;
+}  
+#blader_9{
+    animation: blad 4s linear infinite alternate;
+}  
+#blader_10{
+    animation: blad 6s linear infinite alternate;
+}
+#blader_11{
+    animation: blad 6s linear infinite alternate;
+}  
+#blader_12{
+    animation: blad 6s linear infinite alternate;
+}  
+#blader_14{
+    animation: blad 6s linear infinite alternate;
+}
+#blader_15{
+    animation: blad 5s linear infinite alternate;
+}
+#blader_16{
+    animation: blad 10s linear infinite alternate;
+}
+#blader_17{
+    animation: blad 10s linear infinite alternate;
+}
+#blader_18{
+    animation: blad 10s linear infinite alternate;
+}
+
+@keyframes swim-left {
+
+  0% {
+    transform: translateX(100%);
+    right: 20vh;
+  }
+  50%{
+      transform: rotate(40em);
+      transform: translateY(2em);
+    }
+  80%{
+      transform: translateY(1em);
+      transform: scaleY(-1);
+      opacity: 1;
+    }
+  100% {
+    right: calc(55vh);
+    transform: translateY(2em) rotate(-8deg); 
+    transform: scaleY(-1);
+    opacity: 0;
+  }
+}
+
+
+@keyframes die {
+  0% {
+    transform: rotate(1deg);
+  }
+  50%{
+      transform: translateY(-4.7em) rotate(-30deg);
+    }
+  100% {
+  transform: translateY(-2.6em);
+    opacity: 1;
+  }
+}
+
+@keyframes oil_1 {
+0% {
+    transform: rotate(2em);
+  }
+100% {
+  transform: translateY(20em);
+  opacity: 0;
+}
+}
+ 
+@keyframes oil_2 {
+  0% {
+      transform: rotate(1em);
+    }
+    100% {
+      transform: translateY(30em);
+      opacity: 0;
+    }
+}
+@keyframes oil_3 {
+  0% {
+      transform: rotate(2em);
+    }
+      
+    100% {
+      transform: translateY(15em);
+      opacity: 0;
+    }
+}
+
+@keyframes garbage {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%{
+      transform: rotate(-50deg);
+    }
+  100% {
+  transform: translateX(-2em);
+    opacity: 1;
+  }
+}
+
+@keyframes garbage1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%{
+      transform: translateX(4.7em) rotate(60deg);
+    }
+  100% {
+  transform: translateX(-4.6em);
+    opacity: 1;
+  }
+}
+@keyframes garbage2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50%{
+      transform: translateY(-4.7em) rotate(-10deg);
+    }
+
+  100% {
+  transform: translateY(-4.6em);
+  }
+}
