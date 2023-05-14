@@ -354,14 +354,14 @@ body {
   .scene__deadfish1{
     position: absolute;
     z-index: 2;
-    left: 480px;
+    left: 40rem;
     top: 120px;
     transform: translateY(300deg);
     opacity: 0;
     animation-name: die;
     animation-duration: 8s;
     animation-delay: 7s;
-    animation-fill-mode: die 12s linear infinite;
+    animation-fill-mode: forwards;
   }
   
  

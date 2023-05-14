@@ -232,7 +232,7 @@
     right: 20vh;
   }
   50% {
-    transform: rotate 40em;
+    transform: rotate(40em);
     transform: translateY(2em);
   }
   80% {
@@ -1022,7 +1022,7 @@ footer a {
     right: 20vh;
   }
   50% {
-    transform: rotate 40em;
+    transform: rotate(40em);
     transform: translateY(2em);
   }
   80% {
