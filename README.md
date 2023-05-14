@@ -20,7 +20,8 @@ The technology used in this project include: HTML, CSS/SASS, BEM, Javascript and
 This project was made during the course [Advanced CSS](https://www.ntnu.edu/studies/courses/IDG1293/#tab=omEmnet) as part of a portfolio project.
 The contents of the page is created and maintained by Maja Brunsvik and Sabrina Altahrawi, web development students at NTNU.
 
-## Visit the webpage
+## Visit our webpage
+[Scrollytelling website - Life below water](https://advancedcss2023.github.io/assignment-3--scrollytelling-group-6/)
 
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/E1TYCvbT)
