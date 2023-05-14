@@ -1,0 +1,40 @@
+// Descriptive Colors
+$white: #fff;
+$black: #000000;
+$aliceblue: #f0f8ff;
+$skyblue: #75bfff;
+$darkblue: #001927;
+$red: #ff4343;
+$green: #36b110;
+$yellow: #ffc401;
+$darkWave: #0693E3;
+$darkerWave: #0e1a52;
+$grayblue: #2b2c33;
+
+    //darkmode colors
+    $darkGradient: #010C12;
+    $lighterGradient: #273953;
+    $waveblue: #245399;
+    $deepOcean:#163461;
+
+// Functional Colors
+// (default scheme)
+$background__primary: $skyblue;
+$background__secondary: $darkblue;
+$text__primary: $grayblue;
+$text__secondary: $aliceblue;
+$text__accent: $green;
+$underSea__light--one: $darkWave;
+$underSea__light--two: $darkerWave;
+$span__red: $red;
+$span__yellow: $yellow;
+$span__green: $green;
+
+
+// dark scheme
+$background__secondary--dark: $darkGradient;
+$background__primary--dark: $lighterGradient;
+$text__primary--dark: $aliceblue;
+$waves--dark: $waveblue;
+$underSea__dark--one: $waveblue;
+$underSea__dark--two: $deepOcean;
