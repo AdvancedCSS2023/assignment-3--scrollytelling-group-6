@@ -1,84 +1,47 @@
-//vars to use
-
+//vars
 $from--left: -50px;
 $from--right: 50px;
-
-
 // class animations
 
+//class for intersection observer
 .center-fadeIn {
     transform: translateX(0);
     opacity: 1;
     transition: transform 2s, opacity 2s;
 }
 
-.bigGarbage{
+// general animations
+.side__bigGarbage{
   animation: spin-scale 35s infinite alternate;
-  opacity: 0.8;
+  opacity: 0.8; 
 }
-
-.co2_Txt{
-  animation: co2 80s ease infinite alternate;
+.side__co2--Txt{
+  animation: co2 80s linear infinite alternate;
 }
-
-.fish_txt1{
-  position: absolute;
-  animation: co2 15s linear infinite alternate;
-  opacity: 0.4;
-  left: 20px;
-  z-index: -1;
-}
-
-.fish_txt2{
-  position: absolute;
+.side__fishes--1{
   animation: co2 20s linear infinite alternate;
-  opacity: 0.4;
-  z-index: -1;
 }
-
-.right-arm {
-  transform-origin: 35%;
-  animation: move-arm 5s ease infinite alternate;
-}
-
-.eyes-man {
-  animation: eyes-blink 3s infinite;
-  transform-origin: center 20%;
-}
-
-.fish_txt1{
-  position: absolute  ;
+.side__fishes--2{
   animation: co2 20s linear infinite alternate;
-  opacity: 0.4;
-  top: 8em;
-  left: 20px;
 }
-
-.fish_txt2{
-  position: absolute;
-  animation: co2 20s linear infinite alternate;
-  opacity: 0.4;
-  top: 19em;
-  left: 55px;
-}
-
-.smoke{
+.side__smoke{
   animation: co2 35s infinite alternate;
-  opacity: 0.8;
-  bottom: 70px;
-  width: 7em;;
-  scale: 5;
 }
-
-.miniBoat{
+.side__miniBoat{
   animation: boat 3s infinite alternate;
   bottom: 70px;
 }
-
-.bird{
-  animation: bird 40s infinite;
+.scene__bird{
+  animation: bird 40s linear infinite;
 }
-
+.actions__man--right-arm {
+  transform-origin: 35%;
+  animation: move-arm 5s ease infinite alternate;
+}
+.actions__man--eyes {
+  animation: eyes-blink 3s infinite;
+  transform-origin: center 20%;
+}
 
 //KEYFRAMES
 
@@ -89,42 +52,32 @@ $from--right: 50px;
 100% {
     transform: translateX(-100%);
 }
-
 }
 
 @keyframes boat {
   0% {
-    transform: rotate(0deg) translate(0px) skewX(0deg);
-    
+    transform: rotate(0deg) translate(0px) skewX(0deg); 
   }
   25%{
     transform: rotate(4deg) translateX(1px) skewX(0deg);
-      
     }
-  
     75%{
         transform: rotate(0deg) translateX(7px) skewX(0deg);
-      
     }
   100%{
       transform: rotate(1deg) translate(0px) skewX(0deg);
-      
     }
-
 }
-
 
 @keyframes co2 {
  
   0% {
-    transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1.2);
 }
 100% {
     transform: rotate(10deg) scale(3);
 }
-
 }
-
 
 @keyframes spin-scale {
   0% {
@@ -149,7 +102,6 @@ $from--right: 50px;
     from {
         opacity: 0;
         letter-spacing: normal;
-
     }
     to {
         opacity: 1;
@@ -164,40 +116,16 @@ $from--right: 50px;
     }
 }
 
-@keyframes boat-move {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(1deg);
-    }
-}
-
-
-@keyframes zoom-bg {
-    0% {
-      background-size: 100%;
-  
-    }
-    50% {
-      background-size: 110%;
-    }
-    100% {
-      background-size: 100%;
-    }
+@keyframes move-arm {
+  0% {
+    transform: rotate(-50deg) translateX(-60px);
   }
-
-  @keyframes move-arm {
-    0% {
-      transform: rotate(-50deg) translateX(-60px);
-    }
-    50% {
-      transform: rotate(-90deg) translateX(-80px);
-    }
-    100% {
-      transform: rotate(-80deg) translateX(-80px);
-    }
-
+  50% {
+    transform: rotate(-90deg) translateX(-80px);
+  }
+  100% {
+    transform: rotate(-80deg) translateX(-80px);
+  }
 }
 
 @keyframes eyes-blink {
@@ -220,211 +148,173 @@ $from--right: 50px;
 }
 
 @keyframes blad {
-  0% {
-      transform: rotate(0deg) translate(0px) skewX(0deg);
-      
-    }
-    25%{
-      transform: rotate(1deg) translate(1px) skewX(0deg);
-        
-      }
-    
-      75%{
-          transform: rotate(0deg) translate(1px) skewX(0deg);
-        
-      }
-    100%{
-        transform: rotate(1deg) translate(0px) skewX(0deg);
-        
-      }
-
+0% {
+    transform: rotate(0deg) translate(0px) skewX(0deg);
   }
-
-  #blader{
+  25%{
+    transform: rotate(1deg) translate(1px) skewX(0deg);
+    }
+    75%{
+        transform: rotate(0deg) translate(1px) skewX(0deg);
+    }
+  100%{
+      transform: rotate(1deg) translate(0px) skewX(0deg);
+    }
+}
+// palm leaf animations
+#blader{
     animation: blad 3s linear infinite alternate;
 }
-
 #blader_2{
     animation: blad 5s linear infinite alternate;
 }
-
 #blader_3{
     animation: blad 4s linear infinite alternate;
 }  
-
-
 #blader_4{
     animation: blad 4s linear infinite alternate;
 }  
-
-
 #blader_5{
     animation: blad 3s linear infinite alternate;
 }  
-
 #blader_6{
     animation: blad 5s linear infinite alternate;
 }  
-
 #blader_7{
     animation: blad 5s linear infinite alternate;
-}  
-
-
+} 
 #blader_8{
     animation: blad 5s linear infinite alternate;
 }  
-
-
 #blader_9{
     animation: blad 4s linear infinite alternate;
 }  
-
 #blader_10{
     animation: blad 6s linear infinite alternate;
 }
-
 #blader_11{
     animation: blad 6s linear infinite alternate;
 }  
-
 #blader_12{
     animation: blad 6s linear infinite alternate;
 }  
-
 #blader_14{
     animation: blad 6s linear infinite alternate;
 }
-
 #blader_15{
     animation: blad 5s linear infinite alternate;
 }
-
 #blader_16{
     animation: blad 10s linear infinite alternate;
 }
-
 #blader_17{
     animation: blad 10s linear infinite alternate;
 }
-
 #blader_18{
     animation: blad 10s linear infinite alternate;
 }
 
-  @keyframes swim-left {
-  
-    0% {
-      transform: translateX(100%);
-      right: 20vh;
-    }
-    50%{
-        transform: rotate (40em);
-        transform: translateY(2em);
-      }
+@keyframes swim-left {
 
-    80%{
-        transform: translateY(1em);
-       transform: scaleY(-1);
-        opacity: 1;
-      }
-    100% {
-      right: calc(55vh);
-      transform: translateY(2em) rotate(-8deg); 
+  0% {
+    transform: translateX(100%);
+    right: 20vh;
+  }
+  50%{
+      transform: rotate (40em);
+      transform: translateY(2em);
+    }
+  80%{
+      transform: translateY(1em);
       transform: scaleY(-1);
+      opacity: 1;
+    }
+  100% {
+    right: calc(55vh);
+    transform: translateY(2em) rotate(-8deg); 
+    transform: scaleY(-1);
+    opacity: 0;
+  }
+}
+
+@keyframes die {
+  0% {
+    transform: rotate(1deg);
+  }
+  50%{
+      transform: translateY(-4.7em) rotate(-30deg);
+    }
+  100% {
+  transform: translateY(-2.6em);
+    opacity: 1;
+  }
+}
+
+@keyframes oil_1 {
+0% {
+    transform: rotate(2em);
+  }
+100% {
+  transform: translateY(20em);
+  opacity: 0;
+}
+}
+ 
+@keyframes oil_2 {
+  0% {
+      transform: rotate(1em);
+    }
+    100% {
+      transform: translateY(30em);
       opacity: 0;
     }
-  }
-
-  @keyframes die {
-    0% {
-      transform: rotate(1deg);
+}
+@keyframes oil_3 {
+  0% {
+      transform: rotate(2em);
+    }
       
-    }
-
-    50%{
-        transform: translateY(-4.7em) rotate(-30deg);
-        
-      }
-
     100% {
-    transform: translateY(-2.6em);
-      opacity: 2;
+      transform: translateY(15em);
+      opacity: 0;
     }
+}
+
+@keyframes garbage {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%{
+      transform: rotate(-50deg);
+    }
+  100% {
+  transform: translateX(-2em);
+    opacity: 1;
+  }
+}
+
+@keyframes garbage1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%{
+      transform: translateX(4.7em) rotate(60deg);
+    }
+  100% {
+  transform: translateX(-4.6em);
+    opacity: 1;
+  }
+}
+@keyframes garbage2 {
+  0% {
+    transform: rotate(0deg);
   }
 
-  @keyframes oil_1 {
-    0% {
-        transform: rotate(2em);
-      }
-       
-      100% {
-        transform: translateY(20em);
-        opacity: 0;
-      }
-  }
- 
-  @keyframes oil_2 {
-    0% {
-        transform: rotate(1em);
-      }
-       
-      100% {
-        transform: translateY(30em);
-        opacity: 0;
-      }
-  }
-  @keyframes oil_3 {
-    0% {
-        transform: rotate(2em);
-      }
-       
-      100% {
-        transform: translateY(15em);
-        opacity: 0;
-      }
-  }
-
- @keyframes garbage {
-    0% {
-      transform: rotate(0deg);
+  50%{
+      transform: translateY(-4.7em) rotate(-10deg);
     }
 
-    50%{
-        transform: rotate(-50deg);
-      }
-
-    100% {
-    transform: translateX(-2em);
-      opacity: 1;
-    }
+  100% {
+  transform: translateY(-4.6em);
   }
-
-   
- @keyframes garbage1 {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    50%{
-        transform: translateX(4.7em) rotate(60deg);
-      }
-
-    100% {
-    transform: translateX(-4.6em);
-      opacity: 1;
-    }
-  }
- @keyframes garbage2 {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    50%{
-        transform: translateY(-4.7em) rotate(-10deg);
-      }
-
-    100% {
-    transform: translateY(-4.6em);
-    }
-  }
+}

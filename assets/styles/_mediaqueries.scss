@@ -2,36 +2,39 @@
 // reduced motion
 @media (prefers-reduced-motion) {
 
-  .intro__title {
-    animation: unset;
+.intro__title {
+  animation: unset;
 }
-  // changed to only opacity change
-  .center-fadeIn {
-    opacity: 1;
-    transition: opacity 2s;
+.center-fadeIn {
+  opacity: 1;
+  transition: opacity 2s;
 }
 // reduced arm motion
-.right-arm {
+.actions__man--right-arm {
   animation: move-arm 10s ease infinite alternate;
 }
 // bird speed
-.bird{
+.scene__bird{
   animation: bird 70s infinite;
 }
-.bigGarbage{
+.side__bigGarbage{
   animation: spin-scale 70s infinite alternate;
 }
-.oil_1 {
+.scene__oil--1 {
   animation: oil_1 15s linear infinite;
 }
-
-.oil_2{
+.scene__oil--2{
   animation: oil_2 18s linear infinite;
 }
-
-.oil_3{
+.scene__oil--3{
   animation: oil_3 12s linear infinite ;
 }
+}
+.side__fishes--1{
+  animation: co2 40s linear infinite alternate;
+}
+.side__fishes--2{
+  animation: co2 40s linear infinite alternate;
 }
 
 // color-scheme
@@ -45,7 +48,6 @@
     .scene__wrapper {
         background: $background__primary--dark;
     }
-
     .side__box {
       background: $background__primary--dark;
       
@@ -53,11 +55,9 @@
     .side__inner {
       color: $text__primary--dark;    
     }
-
     .scene__wave--one, .scene__wave--two, .scene__wave--three {
       fill: $waves--dark;
     }
-
     .scene__fish-container {
       background: linear-gradient(180deg, $underSea__dark--one 0%, $underSea__dark--two 100%);
     }
@@ -65,7 +65,6 @@
       background-color: $background__primary--dark;
       color: $text__primary--dark;
     }
-
   }
 
   // orientation portrait will ask to switch to landscape
@@ -74,57 +73,44 @@
 main, footer {
   display: none;
 }
-
 .portrait-info, .portrait-info * {
   display: flex !important;
 }
 }
-
 @media (orientation: landscape) {
   .portrait-info, .portrait-info * {
     display: none;
   }
-
 }
-
 
 // preferred orientation for the story for screens less than 950px
 @media screen and (max-width: 950px) and (orientation: landscape) {
 
-  .intro__title {
-    font-size: 3.2rem;
-
-  }
-  .intro__heading {
-    padding-top: 10rem;
-    
-  }
-  .intro__para {
-    margin-top: 5em;
-    width: 150px;
-    font-size: 1rem;
-  }
-
-  .contain {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 0;
-}
   .portrait-info, .portrait-info * {
     display: none;
   }
-  
+  .intro__title {
+    font-size: 3.2rem;
+  }
+  .intro__heading {
+    padding-top: 9rem;
+  }
+  .intro__para {
+    margin-top: 5em;
+    width: 130px;
+    font-size: 0.8rem;
+    padding: 0.5em;
+  }
   .intro {
     min-height: 700vh;
   }
   .intro__text {
-    font-size: 2rem
+    font-size: 1.6rem
   }
-  .intro__clouds img{ //want to include more of the clouds in the viewport here..
+  .intro__clouds img{
     max-width: 60%;
     max-height: 60%;
   }
-
   .scene__island {
     max-width: 500px;
   }
@@ -132,16 +118,22 @@ main, footer {
     left: 30em;
   }
   .scene__bottle {
-    left: 32em;
+    left: 13.5em;
+    bottom: 9em;
   }
-
   .scene__boat {
     left: 25em;
     max-width: 300px;
   }
   .side__inner {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0 10%;
+  }
+  .side__bigGarbage {
+    width: 40%;
+  }
+  .side__smoke {
+    width: 30%;
   }
   .scene__cup {
     left: 23em;
@@ -174,18 +166,20 @@ main, footer {
   .actions__text {
     font-size: 1rem;
     padding: .4em;
+    width: 90%;
   }
-
   li::before {
     display: none;
   }
-
   .scene__fish-container {
     width: 100%;
   }
-
-  .marine {
+  .side__marine {
     margin: 2em;
+  }
+  .side__co2--Txt {
+    width: 100%;
+    left: 0;
   }
   .scene__fish-container > * {
     transform: scale(0.5);
@@ -193,16 +187,14 @@ main, footer {
   .scene__deadfish1 {
     left:10em;
   }
-
-  .oil {
+  .scene__oil {
     left: 0;
   }
-  .garbage-wrapper {
+  .scene__garbage-wrapper {
     position: relative;
     top: 5em;
     left: -10em;
   }
-
   .learn-more__textbox2 {
     width: 280px;
     height: 140px;
@@ -213,6 +205,9 @@ main, footer {
   .learn-more__man_2 {
     transform: scale(1.2);
     margin: 0;
-}
-
+  }
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
 }

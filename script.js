@@ -1,11 +1,8 @@
 
-
 //intersection observers
-
 const texts = document.querySelectorAll(".intro__text");
 const sectionText = document.querySelectorAll(".side__inner"); 
 const text3 = document.querySelectorAll(".actions__text");
-
 
 const options = {
   root: null,
@@ -66,7 +63,6 @@ clouds.to(".intro__clouds--two", { x: 900 }, 0)
 clouds.to(".intro__clouds--three", { x: 600 }, 0)
 clouds.to(".intro__clouds--four", { x: 500 }, 0)
 clouds.to(".intro__clouds--five", { x: -900 }, 0)
-
 
 // waves 
 
@@ -144,7 +140,6 @@ desktop.to('.scene__wave--three', {
     }
   })
 
-
   //move island out of frame
   desktop.to('.scene__island', {
     xPercent: -300,
@@ -214,8 +209,6 @@ desktop.to('.scene__wave--three', {
       scrub: 0.5,
     }
   })
-
-
   desktop.to('.scene__co2-wrap', {
     opacity: 0,
     ease: "none",
@@ -262,7 +255,7 @@ desktop.to('.scene__fish-container', {
       end: "+=700px",
       scrub: 0.5,
     }
-  })
+  })  
 
 
 // zoom scene
@@ -351,8 +344,6 @@ desktop.to(".scene__cup",{
     scrub: 0.5,
   }
 }); 
-
-
 desktop.to(".scene__question-marks",{
   keyframes: {
     opacity: [0, 1, 1, 0]
@@ -383,7 +374,9 @@ let mm = gsap.matchMedia();
 mm.add("(max-width: 950px)", () => {
  
   let tl = gsap.timeline();
-
+  tl.to(".scene__bottle", {
+    scale: 0.6,
+  })
   tl.to(".scene__man", {
     scale: 0.6,
     x: -300,
@@ -406,12 +399,6 @@ mm.add("(max-width: 950px)", () => {
     scale: 0.6,
     xPercent: 15,
   })
-  tl.to(".scene__bottle", {
-    scale: 0.6,
-    xPercent: -530,
-    y: 40,
-  })
-
 
 
   tl.to(".scene__man-green", {
@@ -419,7 +406,6 @@ mm.add("(max-width: 950px)", () => {
     xPercent: -610,
   })
 
-  
   tl.to('.scene__man', {
     xPercent: 170,
     ease: "none",
@@ -488,35 +474,7 @@ mm.add("(max-width: 950px)", () => {
 
 })
  
-
 //reload reset
 window.onbeforeunload = function() {
     window.scrollTo(0, 0);
 }
-
-
-//**
-
-// intersection observers for intro
-
-/** const garbage = document.querySelectorAll(".bigGarbage");
-
-const options_garbage = {
-  root: null,
-  threshold: 1,
-  rootMargin: "50px",
-};
-
-const observer_garbage = new IntersectionObserver(function (entries) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    }
-    entry.target.classList.add(".bigGarbage-anim");
-  });
-}, options_garbage);  
-
-garbage.forEach((garbage) => {
-  observer_garbage.observe(garbage);
-});
- */

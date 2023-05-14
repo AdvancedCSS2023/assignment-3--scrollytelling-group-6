@@ -1,5 +1,3 @@
-@import "colors";
-@import "mixins";
 @import "animations";
 
 * {
@@ -7,10 +5,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    height: 100%;
-}
-
 body {
     font-family: 'Nunito', sans-serif;
     color: $text__primary;
@@ -25,7 +19,6 @@ body {
     &__container {
         position: absolute;
     }
-
     &__heading {
         @include flex;
         color: $text__secondary;
@@ -71,6 +64,10 @@ body {
             top: 70em;
             opacity: 0;
             transform: translateX($from--right);
+            span {
+                background-color: $red;
+                padding: 0 5px;
+            }
         }
     }
     &__clouds {
@@ -79,24 +76,21 @@ body {
         top: 50em;
         left: 10em;
         }
-
         &--two {
         position: relative;
         top: 65em;
         right: 50em;
         }
-
         &--three {
         position: relative;
         top: 85em;
         left: -90em;
         }
-
         &--four {
         position: relative;
         top: 85em;
         right: -50em;
-    }
+        }
         &--five {
         position: relative;
         top: 110em;
@@ -104,17 +98,12 @@ body {
         }
     }
 }
-.bigGarbage{ 
-    position: absolute;
-    right: 60px;
-}
 
 .main-container {
     display: grid;
     grid-template-columns: 1fr 1.7fr;
     gap: 0;
 }
-// waves
 .scene {
     width: 100%;
     max-height: 100vh;
@@ -126,131 +115,165 @@ body {
     width: 100%;
     height: 100%;
     }
-&__ocean {
+    &__ocean {
     position:absolute;
     bottom:-1em;
     left: -2em;
     z-index: 0;
     animation: wave linear 5s infinite alternate;
     }
+    &__island {
+        position: absolute;
+        bottom: -2em;
+        left: -5em;
+        z-index: 1;
+    }
+    &__boat {
+        position: absolute;
+        bottom: 5em;
+        left: 38em;
+        z-index: 4;
+    }
+    &__man {
+        position: absolute;
+        left: 25em;
+        bottom: 6em;
+        z-index: 2;
+    }
+    &__bottle {
+        position: absolute;
+        bottom: 11em;
+        left: 28em;
+        z-index: 3;
+    }
+    &__co2--1{
+        position: absolute;
+        bottom: 8em;
+        left: 10em;
+        opacity: 0;
+    }
+    &__co2--2{
+        position: absolute;
+        bottom: 9.5em;
+        left: 7em;
+        opacity: 0;
+    }
+    &__co2--3{
+        position: absolute;
+        bottom: 12em;
+        left: 5em;
+        opacity: 0;
+    }
+    &__island-two {
+        position: absolute;
+        bottom: -9em;
+        right: -47em;
+    }
+    &__island-three {
+        position: absolute;
+        bottom: 0em;
+        right: -40em;
+        min-width: 52%;
+    }
+    &__man-green {
+        position: absolute;
+        left: 50em;
+        bottom: 6em; 
+        opacity: 0;
+    }
+    &__cup{
+        position: absolute;
+        left: 54em;
+        bottom: 10em;
+        opacity: 0;
+    }
+    &__question-marks {
+        position: absolute;
+        bottom: 19em;
+        left: 15em;
+        opacity: 0; 
+    }
+    &__bulb-idea {
+        position: absolute;
+        bottom: 21em;
+        left: 17em;
+        transform: rotate(15deg);
+        opacity: 0;
+    }
+    &__bird{
+        position: absolute;
+        bottom:45rem;
+    }
 
-&__island {
-    position: absolute;
-    bottom: -2em;
-    left: -5em;
-    z-index: 1;
-}
-&__boat {
-    position: absolute;
-    bottom: 5em;
-    left: 38em;
-    z-index: 4;
-   // animation: boat-move 1s linear infinite alternate;
-}
-
-&__man {
-    position: absolute;
-    left: 25em;
-    bottom: 6em;
-    z-index: 2;
-}
-&__bottle {
-    position: absolute;
-    bottom: 11em;
-    left: 28em;
-    z-index: 3;
-}
-&__co2--1{
-    position: absolute;
-    bottom: 8em;
-    left: 10em;
-    opacity: 0;
-}
-&__co2--2{
-    position: absolute;
-    bottom: 9.5em;
-    left: 7em;
-    opacity: 0;
-}
-&__co2--3{
-    position: absolute;
-    bottom: 12em;
-    left: 5em;
-    opacity: 0;
-}
-
-&__island-two {
-    position: absolute;
-    bottom: -9em;
-    right: -47em;
-}
-
-&__island-three {
-    position: absolute;
-    bottom: 0em;
-    right: -40em;
-    min-width: 52%;
-}
-
-&__man-green {
-    position: absolute;
-    left: 50em;
-    bottom: 6em; 
-    opacity: 0;
-}
-
-&__cup{
-    position: absolute;
-    left: 54em;
-    bottom: 10em;
-    opacity: 0;
-}
-&__question-marks {
-    position: absolute;
-    bottom: 19em;
-    left: 15em;
-    opacity: 0; 
-}
-&__bulb-idea {
-    position: absolute;
-    bottom: 21em;
-    left: 17em;
-    transform: rotate(15deg);
-    opacity: 0; 
-}
-
-
-// fish
-&__fish-container{
-    position: absolute;
-    z-index: 5;
-    width: 100%;
-    bottom: -70em;
-    height: 100vh;
-    background: linear-gradient(180deg, $darkWave 0%, rgb(14, 26, 82) 100%);
-  }
-  
-  &__fish1{
-    position: absolute; 
-    right: 10rem;
-    top: 3rem;
-    z-index: 2;
-    transform: translateY(100%);
-    animation: swim-left 13s infinite;
-  }
-  
-  &__deadfish1{
-    position: absolute;
-    z-index: 2;
-    left: 480px;
-    top: 120px;
-    transform: translateY(300deg);
-    opacity: 0;
-    animation-name: die;
-    animation-duration: 8s;
-    animation-delay: 7s;
-    animation-fill-mode: die 10s infinite;
-  }
+    // underwater scene
+    &__fish-container{
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        bottom: -70em;
+        height: 100vh;
+        background: linear-gradient(180deg, $darkWave 0%, rgb(14, 26, 82) 100%);
+    }
+    &__fish1{
+        position: absolute; 
+        right: 10rem;
+        top: 3rem;
+        z-index: 2;
+        transform: translateY(100%);
+        animation: swim-left 13s infinite;
+    }
+    &__deadfish1{
+        position: absolute;
+        z-index: 2;
+        left: 480px;
+        top: 120px;
+        transform: translateY(300deg);
+        opacity: 0;
+        animation-name: die;
+        animation-duration: 8s;
+        animation-delay: 7s;
+        animation-fill-mode: die 10s infinite;
+    }
+    &__garbage--1{
+        position: absolute;
+        top: 350px;
+        left: 750px;
+        animation: garbage 30s linear infinite alternate;
+    }
+    &__garbage--2{
+        position: absolute;
+        top: 350px;
+        left: 250px;
+        animation: garbage 50s linear infinite alternate;
+    }
+    &__garbage--3{
+        position: absolute;
+        top: 550px;
+        left: 850px;
+        animation: garbage 20s linear infinite alternate;
+    }
+    &__oil{
+        position: relative;
+        left: 15em;
+    }
+    &__oil--1 {
+        position: absolute;
+        top: 30px;
+        left: 200px;
+        animation: oil_1 10s linear infinite;
+    }
+    &__oil--2{
+        position: absolute;
+        top: 80px;
+        left: 400px;
+        animation: oil_2 12s linear infinite;
+    }
+    &__oil--3{
+        position: absolute;
+        top: 1px;
+        left: 130px;
+        animation: oil_3 8s linear infinite ;
+    }
 }
 
 .side {
@@ -265,7 +288,11 @@ body {
         &:last-child {
         height: 100vh;
     }
+}
+    &__bigGarbage{ 
+        position: absolute;
     }
+    
     &__inner {
         transform: translateX($from--left);
         padding-top: 3em;
@@ -278,9 +305,46 @@ body {
     &__box:nth-child(1) 
         span {
             background-color: $yellow;
+            padding: 0 5px;
         }
     &__sidebox--7 p{
         margin-top: 8em;
+    }
+    &__sidebox--12 span {
+        background-color: $green;
+        padding: 0 5px;
+    }
+    &__marine{
+        margin-top: 3em;
+        opacity: 1;
+      }
+    &__fishes--1{
+    position: absolute;
+    opacity: 0.4;
+    top: 8em;
+    left: 20px;
+    z-index: -1;
+    }
+    
+    &__fishes--2{
+    position: absolute;
+    opacity: 0.4;
+    top: 19em;
+    left: 55px;
+    z-index: -1;
+    }
+    &__co2--Txt{
+    position: absolute;
+    top: 2em;
+    left: -4em;
+    opacity: 0.1;
+    z-index: -1;
+    }
+    &__smoke{
+    opacity: 0.8;
+    bottom: 70px;
+    width: 7em;;
+    scale: 5;
     }
 }
 
@@ -299,7 +363,7 @@ body {
     }
     &__text{
         width: 60%;
-        font-size: 1.6em;
+        font-size: 1.5em;
         font-weight: 600;
         opacity: 0;
         transform: translateX($from--left);
@@ -310,7 +374,8 @@ body {
             text-align: left;
             margin-left: 2em;
             &::before {
-                content: url(../img/light-bulb.png);
+                content: url(../img/light-bulb.svg);
+                padding-right: 5px;
             }
         }
     }
@@ -355,88 +420,21 @@ body {
     }
 }
 
+footer {
+@include flex;
+background-color: $black;
+color: $white;
+height: 5em;
+width: 100%;
+    a {
+        color: $white;
+    }
+}
 .portrait-info {
     height: 100vh;
     @include flex;
-        p { 
-            margin: 0 25%;
-            font-size: 1.3rem;
-        }
-}   
-
-  
- .garbage{
-    position: absolute;
-    top: 350px;
-    left: 750px;
-    animation: garbage 30s linear infinite alternate;
- }
-
- .garbage1{
-    position: absolute;
-    top: 350px;
-    left: 250px;
-    animation: garbage 50s linear infinite alternate;
- }
-
- .garbage2{
-    position: absolute;
-    top: 550px;
-    left: 850px;
-    animation: garbage 20s linear infinite alternate;
- }
-
-// oil
-
-.oil{
-    position: relative;
-    left: 15em;
-}
-
-.oil_1 {
-    position: absolute;
-    top: 30px;
-    left: 200px;
-    animation: oil_1 10s linear infinite;
-}
-
-.oil_2{
-    position: absolute;
-    top: 80px;
-    left: 400px;
-    animation: oil_2 12s linear infinite;
-}
-
-.oil_3{
-    position: absolute;
-    top: 1px;
-    left: 130px;
-    animation: oil_3 8s linear infinite ;
-}
-
-.co2_Txt{
-    position: absolute;
-    top: 2em;
-    left: -4em;
-    opacity: 0.2;
-    z-index: -1;
-}
-
-// birds
-.bird{
-    position: absolute;
-    bottom:45rem;
-}
-
-.marine{
-    margin-top: 3em;
-    opacity: 1;
-  }
-
-  footer {
-    @include flex;
-    background-color: $black;
-    color: $white;
-    height: 5em;
-    width: 100%;
-  }
+    p { 
+        margin: 0 25%;
+        font-size: 1.3rem;
+    }
+}  

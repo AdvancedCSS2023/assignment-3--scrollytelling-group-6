@@ -4,7 +4,7 @@ $black: #000000;
 $aliceblue: #f0f8ff;
 $skyblue: #75bfff;
 $darkblue: #001927;
-$green: #2c970c;
+$green: #36b110;
 $yellow: #ffc401;
 $darkWave: #0693E3;
 $grayblue: #2b2c33;
@@ -12,7 +12,7 @@ $red: #ff4343;
 
     //darkmode colors
     $darkGradient: #010C12;
-    $blue-darker: #273953;
+    $lighterGradient: #273953;
     $waveblue: #245399;
     $deepOcean:#163461;
 
@@ -26,9 +26,8 @@ $text__accent: $green;
 
 
 // dark scheme
-
 $background__secondary--dark: $darkGradient;
-$background__primary--dark: $blue-darker;
+$background__primary--dark: $lighterGradient;
 $text__primary--dark: $aliceblue;
 $waves--dark: $waveblue;
 $underSea__dark--one: $waveblue;
