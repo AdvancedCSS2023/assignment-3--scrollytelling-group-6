@@ -8,6 +8,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     color: $text__primary;
+    background-color: $background__primary;
 }
 
 .intro {
@@ -15,7 +16,6 @@ body {
     min-height: 350vh;
     background: linear-gradient(180deg, $background__secondary 0%, $background__primary 100%);
     overflow: hidden;
-
     &__container {
         position: absolute;
     }
