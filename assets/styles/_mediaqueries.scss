@@ -135,7 +135,10 @@ main, footer {
     width: 30%;
   }
   .scene__cup {
-    left: 23em;
+    left: 25em;
+  }
+  .scene__man-green {
+    left: 52em;
   }
   .scene__bird {
     bottom: 20em;
@@ -217,5 +220,8 @@ main, footer {
   footer {
     font-size: 0.8rem;
     padding: 1rem;
+  }
+  .intro__logo {
+    width: 70px;
   }
 }
