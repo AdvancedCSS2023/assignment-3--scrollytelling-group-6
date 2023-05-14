@@ -221,7 +221,7 @@ $from--right: 50px;
     right: 20vh;
   }
   50%{
-      transform: rotate (40em);
+      transform: rotate(40em);
       transform: translateY(2em);
     }
   80%{
@@ -236,6 +236,7 @@ $from--right: 50px;
     opacity: 0;
   }
 }
+
 
 @keyframes die {
   0% {
