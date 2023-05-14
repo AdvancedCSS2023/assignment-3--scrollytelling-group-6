@@ -3,6 +3,8 @@
 const texts = document.querySelectorAll(".intro__text");
 const sectionText = document.querySelectorAll(".side__inner"); 
 const text3 = document.querySelectorAll(".actions__text");
+const textbox = document.querySelectorAll(".learn-more__textbox2");
+const man = document.querySelectorAll(".learn-more__man_2");
 
 const options = {
   root: null,
@@ -29,6 +31,15 @@ sectionText.forEach((text2) => {
 text3.forEach((text3) => {
   observer.observe(text3);
 });
+
+textbox.forEach((text4) => {
+  observer.observe(text4);
+});
+
+man.forEach((man) => {
+  observer.observe(man);
+});
+
 
 // ------------------------------------------------------------------------------------------/
 //GSAP SCROLL ANIMATIONS

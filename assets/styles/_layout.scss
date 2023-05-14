@@ -13,7 +13,7 @@ body {
 .intro {
     width: 100%;
     min-height: 350vh;
-    background: linear-gradient(180deg, $darkblue 0%, $skyblue 100%);
+    background: linear-gradient(180deg, $background__secondary 0%, $background__primary 100%);
     overflow: hidden;
 
     &__container {
@@ -33,7 +33,7 @@ body {
         width: 200px;
         font-size: 1.2rem;
         margin-top: 10em;
-        border: 4px solid #f0f8ff;
+        border: 4px solid $text__secondary;
         padding: 15px;
         border-radius: 10px;
         opacity: 0.5;
@@ -65,7 +65,7 @@ body {
             opacity: 0;
             transform: translateX($from--right);
             span {
-                background-color: $red;
+                background-color: $span__red;
                 padding: 0 5px;
             }
         }
@@ -110,7 +110,7 @@ body {
     overflow: hidden;
 
     &__wrapper {
-    background: $skyblue;
+    background: $background__primary;
     position: relative;
     width: 100%;
     height: 100%;
@@ -212,7 +212,7 @@ body {
         width: 100%;
         bottom: -70em;
         height: 100vh;
-        background: linear-gradient(180deg, $darkWave 0%, rgb(14, 26, 82) 100%);
+        background: linear-gradient(180deg, $underSea__light--one 0%, $underSea__light--two 100%);
     }
     &__fish1{
         position: absolute; 
@@ -281,7 +281,7 @@ body {
     width: 100%;
     overflow: hidden;
     &__box {
-    background-color: $skyblue;
+    background-color: $background__primary;
     height: 170vh;
     overflow:hidden;
     @include flex;
@@ -304,14 +304,14 @@ body {
     }
     &__box:nth-child(1) 
         span {
-            background-color: $yellow;
+            background-color: $span__yellow;
             padding: 0 5px;
         }
     &__sidebox--7 p{
         margin-top: 8em;
     }
     &__sidebox--12 span {
-        background-color: $green;
+        background-color: $span__green;
         padding: 0 5px;
     }
     &__marine{
@@ -360,16 +360,18 @@ body {
     text-align: left;
     &__man {
         margin-left: 12em;
+        padding-bottom: 7em;
     }
     &__text{
-        width: 60%;
-        font-size: 1.5em;
+        width:75%;
+        font-size: 1.3em;
         font-weight: 600;
         opacity: 0;
         transform: translateX($from--left);
-        padding: 4em 2em;
+        padding: 3em 1em;
+        @include flex;
         li{
-            margin-top: 2.5em;
+            margin-top: 1.5em;
             list-style: none;
             text-align: left;
             margin-left: 2em;
@@ -380,8 +382,7 @@ body {
         }
     }
     h2 {
-        margin-left: 3em;
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
 }
 
@@ -405,18 +406,21 @@ body {
         font-weight: 700;
         margin-bottom: 15em;
         line-height: 1.8em;
+        transform: translateX($from--right);
+        opacity: 0;
     }
     &__innertext {
         padding: 1em;
         margin-top: 1.2em;
+        color: $text__primary;
 
         a {
             color: $skyblue;
         }
     }
     &__man_2 {
-        transform: scale(2);
-        margin-right: 4em;
+        transform: translateX($from--left);
+        opacity: 0;
     }
 }
 

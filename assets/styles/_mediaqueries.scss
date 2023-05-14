@@ -50,7 +50,6 @@
     }
     .side__box {
       background: $background__primary--dark;
-      
     }
     .side__inner {
       color: $text__primary--dark;    
@@ -138,6 +137,11 @@ main, footer {
   .scene__cup {
     left: 23em;
   }
+  .scene__bird {
+    bottom: 20em;
+    width: 45%;
+    animation: bird 30s linear infinite;
+  }
 .scene__question-marks {
     bottom: 14em;
     left: 7em;
@@ -154,19 +158,23 @@ main, footer {
 }
   .actions h2 {
     font-size: 1.2rem;
-    margin-top: 2em;
   }
   .actions__man {
     position: relative;
-    width: 25%;
+    width: 20%;
     left: 1em;
-    bottom: 18em;
+    bottom: 16em;
     margin: 0;
+    padding: unset;
   }
   .actions__text {
-    font-size: 1rem;
+    font-size: 0.85rem;
     padding: .4em;
-    width: 90%;
+    width: 80%;
+  }
+  .actions li {
+    margin-top: 1.5em;
+    list-style: circle;
   }
   li::before {
     display: none;
